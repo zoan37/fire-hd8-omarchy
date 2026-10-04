@@ -1,0 +1,38 @@
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Inode 7, i_size is 3317776384, should be 3321974784.  Fix? yes
+
+Deleted inode 277446 has zero dtime.  Fix? yes
+
+Inodes that were part of a corrupted orphan linked list found.  Fix? yes
+
+Inode 277477 was part of the orphaned inode list.  FIXED.
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+Block bitmap differences:  -(1312--1334)
+Fix? yes
+
+Free blocks count wrong for group #0 (4267, counted=4290).
+Fix? yes
+
+Free blocks count wrong for group #98 (15998, counted=15742).
+Fix? yes
+
+Free blocks count wrong (2344477, counted=2344244).
+Fix? yes
+
+Inode bitmap differences:  -277446 -277477
+Fix? yes
+
+Free inodes count wrong for group #34 (8123, counted=8125).
+Fix? yes
+
+Free inodes count wrong (778452, counted=778454).
+Fix? yes
+
+
+/dev/block/mmcblk0p24: ***** FILE SYSTEM WAS MODIFIED *****
+/dev/block/mmcblk0p24: 29386/807840 files (0.1% non-contiguous), 883788/3228032 blocks
+GIZA_FSCK_EXIT=1

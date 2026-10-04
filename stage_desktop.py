@@ -91,8 +91,12 @@ def main():
     shell(f"tar -xpf /data/omarchy-stage/giza-overlay.tar -C {DEVICE_ROOT} && sync")
     output = shell(f"chroot {DEVICE_ROOT} /usr/bin/bash --noprofile --norc -c " + shlex.quote(
         "set -e; echo NATIVE_DESKTOP_BINARIES; "
+        "export XDG_RUNTIME_DIR=/var/tmp/giza-version-runtime; "
+        "mkdir -p \"$XDG_RUNTIME_DIR\"; chmod 700 \"$XDG_RUNTIME_DIR\"; "
         "LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/Hyprland --version; "
         "weston --version; /usr/lib/Xorg -version; "
+        "/usr/local/libexec/giza/busybox uname -m; "
+        "/usr/local/libexec/giza/busybox-extras --list | grep -qx telnetd; "
         "test -x /sbin/giza-init && test -x /usr/local/bin/giza-desktop"))
     (ROOT / "reports/desktop-binary-check.txt").write_text(output)
     print(output, flush=True)

@@ -22,21 +22,27 @@ Omarchy installer** and does not support newer Fire HD 8 models.
 
 **Full Omarchy has not yet run.** The kernel lacks DRM display support.
 The next experiment uses Xorg's framebuffer driver, Weston, and patched ARM64
-Hyprland userspace. That route remains unverified on this device.
+Hyprland userspace. The first test reached an Xorg-style cursor, but the complete
+desktop remains unverified on this device.
 
 ## Latest checkpoint
 
-The ARM64 desktop bundle and seven additional display packages were downloaded
-and verified. A minimal Arch ARM Bash/glibc environment ran successfully under
-the recovery kernel. The full root filesystem transfer passed its SHA256 check,
-but extraction encountered an ext4 block-bitmap/free-block accounting error.
-The journal aborted and the data partition became read-only. Recovery's unmount
-and restart paths subsequently stalled; a physical restart into TWRP is needed
-before an offline filesystem check can proceed.
+An offline filesystem repair fixed the earlier ext4 accounting error after a
+physical recovery restart. The full ARM64 userspace extracted, seven verified
+display packages installed, and native Hyprland/Weston/Xorg version checks
+succeeded under recovery. A final offline filesystem check passed cleanly.
 
-The desktop boot image has **not** been flashed or tested. The original boot_x
-image remains restored. No disk I/O failures were identified in the inspected
-kernel log; the filesystem error alone does not establish a hardware fault.
+The first desktop test image was flashed and its entire boot_x partition read
+back successfully. The user saw the postmarketOS splash followed by an outlined
+X cursor, consistent with Xorg starting. USB networking responds to ping, but
+the diagnostic shell did not start. A BusyBox helper naming mistake was found
+and corrected locally; the correction has not yet been installed. The same
+mistake affects the first test's automatic restart, so physical return to TWRP
+is needed to retrieve logs and continue.
+
+The temporary desktop boot image is currently installed in boot_x. The original
+verified backup remains local and can be restored with `test_desktop_boot.py
+--restore` from TWRP. Full Omarchy has not yet appeared on screen.
 
 ## Files
 
@@ -52,6 +58,9 @@ kernel log; the filesystem error alone does not establish a hardware fault.
 - `build_desktop_overlay.py`, `stage_desktop.py`: native startup configuration
   and guarded offline package staging; neither flashes a boot partition.
 - `port/giza/README.md`: experimental desktop architecture and prerequisites.
+- `test_desktop_boot.py`: guarded temporary boot_x write, full readback, and
+  restoration of the original verified image.
+- `usb_shell.py`: local USB diagnostic shell client for native Linux boots.
 - `patches/`: reviewed changes to the original unlock distribution.
 - `sources.lock.json`: upstream repositories and exact inspected revisions.
 - `prepared/manifest.json`, `prepared/SHA256SUMS`: downloaded artifact inventory.

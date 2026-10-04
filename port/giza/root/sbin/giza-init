@@ -10,8 +10,8 @@ exec >>/var/log/giza/init.log 2>&1
 echo "Native Arch Linux ARM boot; PID=$$"
 uname -a
 
-busybox=/usr/local/libexec/giza-busybox
-extras=/usr/local/libexec/giza-busybox-extras
+busybox=/usr/local/libexec/giza/busybox
+extras=/usr/local/libexec/giza/busybox-extras
 # USB diagnostic service remains available after the real root transition.
 "$extras" telnetd -b 172.16.42.1:23 -l /bin/bash
 "$busybox" ifconfig rndis0 172.16.42.1 netmask 255.255.255.0 up

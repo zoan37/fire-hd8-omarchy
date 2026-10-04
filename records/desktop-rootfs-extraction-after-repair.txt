@@ -1,0 +1,5 @@
+GIZA_EXTRACT_EXIT=0
+GIZA_BASH_PRESENT
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/block/mmcblk0p20 on /cache type ext4 (rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered)
+/dev/block/mmcblk0p24 on /data type ext4 (rw,seclabel,noatime,data=ordered)

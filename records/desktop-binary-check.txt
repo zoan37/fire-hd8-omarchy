@@ -1,0 +1,25 @@
+NATIVE_DESKTOP_BINARIES
+Hyprland 0.56.1 built from branch  at commit 5c897c03500d98ff6be4d04663a6217f25601a62 clean (render: carry proven Android KGSL presentation path).
+Date: Sun Aug 30 02:32:15 2026
+Tag: v0.56.1-1-g5c897c03, commits: 7644
+
+Libraries:
+Hyprgraphics: built against 0.5.1, system has 0.5.1
+Hyprutils: built against 0.14.1, system has 0.14.1
+Hyprcursor: built against 0.1.13, system has 0.1.13
+Hyprlang: built against 0.6.8, system has 0.6.8
+Aquamarine: built against 0.14.0, system has 0.14.0
+
+Version ABI string: 5c897c03500d98ff6be4d04663a6217f25601a62_aq_0.14_hu_0.14_hg_0.5_hc_0.1_hlg_0.6
+no flags were set
+
+weston 15.0.1
+
+X.Org X Server 1.21.1.24
+X Protocol Version 11, Revision 0
+Current Operating System: Linux localhost 3.18.19-g4f38db79049 #1 SMP PREEMPT Thu Dec 31 18:53:29 UTC 2020 aarch64
+
+Current version of pixman: 0.46.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+GIZA_REMOTE_EXIT=0

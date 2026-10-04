@@ -1,8 +1,8 @@
 # Experimental native desktop port
 
 This is an unfinished hardware experiment for giza, the 2016 Fire HD 8. The
-postmarketOS Linux 3.18.19 kernel has booted on the tablet. The desktop path
-below has not yet been tested on hardware.
+postmarketOS Linux 3.18.19 kernel has booted on the tablet. The first desktop
+test reached an Xorg-style cursor; the complete desktop remains unverified.
 
 The kernel exposes `/dev/fb0` and vendor Mali interfaces, but no DRM device.
 The proposed display stack is Xorg with fbdev and evdev, Weston with its X11
@@ -52,6 +52,8 @@ extracted to `/data/omarchy-rootfs` in giza TWRP. Staging checks the device mode
 package transfers, pacman dependencies, and key executable versions.
 
 Do not flash the desktop image until the filesystem is healthy and staging
-succeeds. The present checkpoint requires a physical recovery restart followed
-by an offline data filesystem repair. Preserve original partition backups and
-the tested recovery route. There is no finished unattended installer.
+succeeds. The earlier data filesystem error was repaired and a final offline
+check passed. The present checkpoint requires physical recovery restart to
+retrieve first-boot logs and install the corrected BusyBox helper names.
+Preserve original partition backups and the tested recovery route. There is
+no finished unattended installer.

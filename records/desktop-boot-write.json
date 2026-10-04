@@ -1,0 +1,7 @@
+{
+  "action": "desktop test",
+  "partition": "boot_x / mmcblk0p7",
+  "bytes": 16658432,
+  "sha256": "4cd769a5e0a47c57f58030a05409d30021739ca716a0f3766fa8d34a5793e2f7",
+  "full_readback_verified": true
+}

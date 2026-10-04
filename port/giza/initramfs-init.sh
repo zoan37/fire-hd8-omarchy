@@ -42,9 +42,11 @@ fi
 
 # Keep the tested musl helpers alongside Arch's glibc. There is no Android
 # userspace, PRoot, or CPU emulation after switch_root.
-mkdir -p /newroot/usr/local/libexec /newroot/usr/lib /newroot/var/log
-cp /bin/busybox /newroot/usr/local/libexec/giza-busybox
-cp /bin/busybox-extras /newroot/usr/local/libexec/giza-busybox-extras
+mkdir -p /newroot/usr/local/libexec/giza /newroot/usr/lib /newroot/var/log
+# BusyBox chooses its applet from argv[0]. Preserve a busybox-prefixed
+# basename so invoking this binary with an applet argument works.
+cp /bin/busybox /newroot/usr/local/libexec/giza/busybox
+cp /bin/busybox-extras /newroot/usr/local/libexec/giza/busybox-extras
 cp -L /lib/ld-musl-aarch64.so.1 /newroot/usr/lib/ld-musl-aarch64.so.1
 ln -sf ld-musl-aarch64.so.1 /newroot/usr/lib/libc.musl-aarch64.so.1
 cp /probe.log /newroot/var/log/giza-initramfs.log

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Package the native giza configuration without changing upstream Omarchy."""
 import io
+import gzip
 import pathlib
 import tarfile
+from build_linux_probe import read_newc
 
 ROOT = pathlib.Path(__file__).resolve().parent
 WORK = ROOT / "working/desktop"
@@ -14,6 +16,19 @@ def main():
     for path in payload.rglob("*"):
         if path.is_file():
             files[str(path.relative_to(payload))] = path.read_bytes()
+    # Stage the diagnostic helpers ahead of boot so their actual applet
+    # dispatch can be checked under the recovery kernel.
+    ramdisk = gzip.decompress(gzip.decompress((ROOT / "prepared/linux/initramfs.gz").read_bytes()))
+    helper_paths = {
+        "bin/busybox": "usr/local/libexec/giza/busybox",
+        "bin/busybox-extras": "usr/local/libexec/giza/busybox-extras",
+        "lib/ld-musl-aarch64.so.1": "usr/lib/ld-musl-aarch64.so.1",
+    }
+    for name, _, data in read_newc(ramdisk):
+        if name in helper_paths:
+            files[helper_paths[name]] = data
+    if not all(destination in files for destination in helper_paths.values()):
+        raise RuntimeError("Missing native diagnostic helper in source ramdisk")
     home = "home/omarchy"
     original = WORK / "rootfs" / home / ".config/hypr/hyprland.lua"
     config = original.read_text()
@@ -35,9 +50,14 @@ def main():
         for name, data in sorted(files.items()):
             item = tarfile.TarInfo(name)
             item.size = len(data)
-            item.mode = 0o755 if data.startswith(b"#!") else 0o644
+            item.mode = 0o755 if data.startswith((b"#!", b"\x7fELF")) else 0o644
             item.uid = item.gid = 1000 if name.startswith("home/omarchy/") else 0
             archive.addfile(item, io.BytesIO(data))
+        alias = tarfile.TarInfo("usr/lib/libc.musl-aarch64.so.1")
+        alias.type = tarfile.SYMTYPE
+        alias.linkname = "ld-musl-aarch64.so.1"
+        alias.mode = 0o777
+        archive.addfile(alias)
     print(f"Built native configuration overlay: {len(files)} files, {output.stat().st_size} bytes")
 
 
