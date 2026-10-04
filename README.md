@@ -16,7 +16,7 @@ Omarchy installer** and does not support newer Fire HD 8 models.
 - The tablet displayed the postmarketOS splash. A USB network connection and
   root shell worked, and charging was reported.
 - The framebuffer is 800 × 1280, 32 bpp. The Goodix touchscreen driver is
-  detected; a native input adapter now exposes an absolute click pointer; physical taps remain unconfirmed.
+  detected; a native input adapter now exposes an absolute click pointer; physical tapping and typing have been confirmed.
 - The test returned automatically to TWRP. The full original boot partition
   was restored and verified against its original SHA256.
 
@@ -34,11 +34,15 @@ configuration reload and error checks pass; its output is 800 × 1280 at 30 Hz
 and scale 1.25. Omarchy's real Quickshell bar and wallpaper are visible.
 
 A small native adapter converts the Goodix driver's multitouch positions into
-an absolute click pointer for Xorg. Physical touch and typing confirmation are
-still pending. The wvkbd on-screen keyboard was compiled on the tablet from a
-pinned source revision. Simulated pointer clicks verified typing into the terminal and the show/hide
+an absolute click pointer for Xorg. Physical touch and typing were confirmed by the user. The wvkbd on-screen keyboard was compiled on the tablet from a
+pinned source revision. Simulated pointer clicks also verified typing into the terminal and the show/hide
 button. A user plugin adds a
 **Keys** button to Omarchy's bar. A terminal and keyboard start with the desktop.
+
+Typing currently has roughly one second of visible lag reported by the user.
+A timing trace shows physical touch reaching the keyboard event handler within
+about 1–4 ms; the remaining delay needs presentation-path investigation.
+VFR now avoids continuous repainting while idle.
 
 USB networking and the diagnostic root shell work. Wi-Fi, audio, suspend,
 rotation, and broader application compatibility remain unverified. Current

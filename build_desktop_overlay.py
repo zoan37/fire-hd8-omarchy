@@ -41,7 +41,7 @@ def main():
     files[f"{home}/.config/hypr/looknfeel.lua.giza-original"] = original_look.read_bytes()
     files[f"{home}/.config/hypr/looknfeel.lua"] = (
         original_look.read_text() + "\n-- Keep the software-rendered giza desktop responsive.\n"
-        "hl.config({ animations = { enabled = false }, debug = { enable_stdout_logs = true }, "
+        "hl.config({ animations = { enabled = false }, debug = { enable_stdout_logs = true, vfr = true }, "
         "xwayland = { enabled = false } })\n"
     ).encode()
     shell_config = json.loads((WORK / "rootfs" / home / ".config/omarchy/shell.json").read_text())

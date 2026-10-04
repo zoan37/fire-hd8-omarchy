@@ -1,0 +1,49 @@
+cat /var/log/giza/raw-touch-timing.log; cat /home/omarchy/.local/state/giza/keyboard-timing.log; giza_rc=$?; printf '\nGIZA_COMMAND_88815459cf0a4fdaa24011de6b7757ed=%s\n' "$giza_rc"
+
+[root@fire-giza /]# cat /var/log/giza/raw-touch-timing.log; cat /home/omarchy/.local/state/giza/keyboard-timing.log; giza_rc=$?; printf '\nGIZA_COMMAND_88815459cf0a4fdaa24011de6b7757ed=%s\n' "$giza_rc"
+raw_edge state=1 age_us=-1791079000486105 mono_ms=592607
+raw_edge state=0 age_us=-1791079000485998 mono_ms=592683
+raw_edge state=1 age_us=-1791079000486198 mono_ms=594890
+raw_edge state=0 age_us=-1791079000486002 mono_ms=594944
+raw_edge state=1 age_us=-1791079000486182 mono_ms=596176
+raw_edge state=0 age_us=-1791079000486212 mono_ms=596230
+raw_edge state=1 age_us=-1791079000486182 mono_ms=597266
+raw_edge state=0 age_us=-1791079000486205 mono_ms=597353
+raw_edge state=1 age_us=-1791079000486169 mono_ms=598335
+raw_edge state=0 age_us=-1791079000486224 mono_ms=598389
+raw_edge state=1 age_us=-1791079000485827 mono_ms=599316
+raw_edge state=0 age_us=-1791079000486200 mono_ms=599369
+raw_edge state=1 age_us=-1791079000486181 mono_ms=600207
+raw_edge state=0 age_us=-1791079000486206 mono_ms=600250
+raw_edge state=1 age_us=-1791079000486167 mono_ms=601199
+raw_edge state=0 age_us=-1791079000486208 mono_ms=601242
+raw_edge state=1 age_us=-1791079000486189 mono_ms=602102
+raw_edge state=0 age_us=-1791079000486025 mono_ms=602156
+raw_edge state=1 age_us=-1791079000486222 mono_ms=602984
+raw_edge state=0 age_us=-1791079000486213 mono_ms=603048
+Initializing keyboard
+Found 54 layouts
+Found 2 layers
+Resize 640x300 1.000000, 55 layouts
+button state=1 age_ms=-77638054 mono_ms=587371
+button state=0 age_ms=-77638044 mono_ms=587481
+button state=1 age_ms=-77638051 mono_ms=592611
+button state=0 age_ms=-77637909 mono_ms=592828
+button state=1 age_ms=-77638054 mono_ms=594893
+button state=0 age_ms=-77637893 mono_ms=595106
+button state=1 age_ms=-77638054 mono_ms=596177
+button state=0 age_ms=-77637894 mono_ms=596390
+button state=1 age_ms=-77638052 mono_ms=597269
+button state=0 age_ms=-77637925 mono_ms=597483
+button state=1 age_ms=-77638053 mono_ms=598337
+button state=0 age_ms=-77637894 mono_ms=598550
+button state=1 age_ms=-77638052 mono_ms=599319
+button state=0 age_ms=-77637892 mono_ms=599532
+button state=1 age_ms=-77638053 mono_ms=600209
+button state=0 age_ms=-77637883 mono_ms=600422
+button state=1 age_ms=-77638053 mono_ms=601200
+button state=0 age_ms=-77637882 mono_ms=601414
+button state=1 age_ms=-77638053 mono_ms=602104
+button state=0 age_ms=-77637893 mono_ms=602318
+button state=1 age_ms=-77638053 mono_ms=602985
+button state=0 age_ms=-77637906 mono_ms=603197

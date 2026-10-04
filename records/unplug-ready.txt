@@ -1,0 +1,8 @@
+touch /run/giza-keep-running; test -e /run/giza-keep-running && echo AUTO_RETURN_SUPPRESSED; cat /sys/class/power_supply/battery/capacity; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 getoption debug.vfr; kill 1305; echo DIAGNOSTIC_READER_STOPPED; sync; giza_rc=$?; printf '\nGIZA_COMMAND_b7436e3d10b3412da06120cd61759e5c=%s\n' "$giza_rc"
+
+[root@fire-giza /]# touch /run/giza-keep-running; test -e /run/giza-keep-running && echo AUTO_RETURN_SUPPRESSED; cat /sys/class/power_supply/battery/capacity; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 getoption debug.vfr; kill 1305; echo DIAGNOSTIC_READER_STOPPED; sync; giza_rc=$?; printf '\nGIZA_COMMAND_b7436e3d10b3412da06120cd61759e5c=%s\n' "$giza_rc"
+AUTO_RETURN_SUPPRESSED
+58
+bool: true
+set: true
+DIAGNOSTIC_READER_STOPPED

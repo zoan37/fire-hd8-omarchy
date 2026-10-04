@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-04T02:00:24.835894+00:00",
+  "updated_at_utc": "2026-10-04T02:08:27.679209+00:00",
   "target": "Fire HD 8 2016 / giza / KFGIWI",
   "original_battery_percent": 48,
   "latest_recovery_battery_percent": 58,
@@ -16,9 +16,9 @@
   "current_observed_usb": "Native Linux USB RNDIS; root diagnostic shell works",
   "linux_probe": "BOOT SUCCEEDED: native aarch64 Linux 3.18.19 #5-postmarketOS, framebuffer splash visible, USB root shell reachable; original boot_x restored and fully verified",
   "native_omarchy": "Native Arch ARM boot; Hyprland + real Omarchy Quickshell bar/background + foot + wvkbd rendered. Automatic desktop startup passed after reboot.",
-  "next_required_user_action": "Physical Power hold and Power + Volume Down to return to TWRP for logs and corrected helper",
+  "next_required_user_action": "User can unplug and try the live desktop; keep powered on because the recovery boot flag remains armed",
   "temporary_host_rule": "/run/udev/rules.d/99-fire-hd8-codex-1000.rules",
-  "user_observed_screen": "PostmarketOS splash followed by hollow white X cursor on otherwise empty screen",
+  "user_observed_screen": "Real Omarchy desktop, terminal and on-screen keyboard; physical typing confirmed by user",
   "recovery_followup": {
     "observed_at": "2026-10-04T00:20:30.126934+00:00",
     "screen": "User reports Fire optimizing system storage and applications still displayed after extended wait",
@@ -51,7 +51,7 @@
     "display": "800x1280@30 Hz; scale 1.25; XRGB8888; software Mesa",
     "configuration": "hyprctl reload succeeded; configerrors empty",
     "keyboard": "Pinned wvkbd source built natively; simulated pointer clicks verified Keys button toggling and typing q into foot, then deleting it with Backspace",
-    "touch": "Goodix -> native uinput absolute click pointer -> Xorg. Physical finger confirmation pending",
+    "touch": "Physical finger tapping and typing confirmed by user",
     "limitations": [
       "Xwayland disabled because initialization blocked compositor",
       "Wi-Fi and audio not working",
@@ -59,6 +59,8 @@
       "Bash PID 1 because old kernel cannot run current systemd"
     ],
     "next_boot": "recovery flag armed; current timed return suppressed with /run/giza-keep-running",
-    "idle": "stay-awake indicator set during development"
+    "idle": "stay-awake indicator set during development",
+    "performance": "User reports roughly one-second visible typing latency. Raw touch to keyboard button delivery is around 1\u20134 ms in timing trace. VFR enabled reduced idle CPU work. Manual four-core floor was reset by kernel input power policy; it is not persisted.",
+    "next_step": "Compare software compositor capture timing with physical panel updates to locate presentation lag"
   }
 }

@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Run a command through the native probe's local USB Telnet diagnostic shell."""
 import argparse
+import base64
+import hashlib
 import re
 import socket
+import shlex
 import time
 import uuid
 
@@ -67,6 +70,25 @@ def run(command, timeout=45):
             if match:
                 return clean[:match.start()].decode(errors="replace"), int(match.group(1))
     raise TimeoutError(bytes(output).decode(errors="replace"))
+
+
+def put(path, data, mode=0o644):
+    """Atomically transfer a small file without an extra USB HTTP service."""
+    temporary = path + '.giza-transfer-' + uuid.uuid4().hex
+    for offset in range(0, len(data) or 1, 768):
+        encoded = base64.b64encode(data[offset:offset + 768]).decode()
+        code = ('import base64; open(' + repr(temporary) + ',' +
+                repr('wb' if offset == 0 else 'ab') + ').write(base64.b64decode(' + repr(encoded) + '))')
+        _, status = run('python3 -c ' + shlex.quote(code))
+        if status:
+            raise RuntimeError('USB file transfer failed')
+    code = ('import hashlib,os; p=' + repr(temporary) +
+            '; assert hashlib.sha256(open(p,"rb").read()).hexdigest()==' +
+            repr(hashlib.sha256(data).hexdigest()) + '; os.chmod(p,' + str(mode) +
+            '); os.replace(p,' + repr(path) + ')')
+    _, status = run('python3 -c ' + shlex.quote(code))
+    if status:
+        raise RuntimeError('USB file verification failed')
 
 
 def main():

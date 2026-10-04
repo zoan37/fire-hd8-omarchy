@@ -2,7 +2,7 @@
 
 This is an unfinished hardware experiment for giza, the 2016 Fire HD 8. The
 postmarketOS Linux 3.18.19 kernel has booted on the tablet. Hyprland, Omarchy's real Quickshell shell, a terminal, and wvkbd have rendered
-on the tablet. Physical tapping and typing remain unconfirmed.
+on the tablet. Physical tapping and typing have been confirmed.
 
 The kernel exposes `/dev/fb0` and vendor Mali interfaces, but no DRM device.
 The tested display stack is Xorg with fbdev and evdev, Weston with its X11
@@ -89,3 +89,17 @@ input path but does not replace a physical finger test.
 `giza-launch-shell` creates the bundle's required plugin index and then invokes
 its packaged launcher. Omitting that index previously produced an empty bar.
 User plugin/config changes preserve the packaged Omarchy tree.
+
+## Performance checkpoint
+
+The user confirmed physical typing but reports roughly one second before the
+keyboard highlight and terminal glyph appear. Paired raw-touch/keyboard timing
+logs put event delivery around 1–4 ms, so presentation needs further inspection.
+A temporary keyboard build currently logs button timestamps for diagnosis; it
+does not log key labels. The raw-touch timing reader has been stopped.
+
+Enabling `debug.vfr` sharply reduced idle Xorg/Weston CPU work. A temporary
+four-core floor took effect, but the vendor input power controller restored the
+previous floor; no CPU-frequency or thermal-limit changes were persisted.
+Next, compare compositor capture timing against physical panel updates and
+inspect the legacy framebuffer driver's refresh path.

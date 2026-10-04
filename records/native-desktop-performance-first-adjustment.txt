@@ -1,0 +1,16 @@
+echo 4 >/proc/hps/num_base_perf_serv; sleep 0.5; cat /sys/devices/system/cpu/online; cat /proc/hps/num_base_perf_serv /proc/hps/num_limit_thermal; for p in /sys/class/thermal/thermal_zone*/temp; do echo "$p $(cat "$p")"; done; giza_rc=$?; printf '\nGIZA_COMMAND_167c0912a8704d29aaf43159a7094de1=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo 4 >/proc/hps/num_base_perf_serv; sleep 0.5; cat /sys/devices/system/cpu/online; cat /proc/hps/num_base_perf_serv /proc/hps/num_limit_thermal; for p in /sys/class/thermal/thermal_zone*/temp; do echo "$p $(cat "$p")"; done; giza_rc=$?; printf '\nGIZA_COMMAND_167c0912a8704d29aaf43159a7094de1=%s\n' "$giza_rc"
+0-3
+4
+4
+/sys/class/thermal/thermal_zone0/temp 0
+/sys/class/thermal/thermal_zone1/temp 31000
+/sys/class/thermal/thermal_zone2/temp 44200
+/sys/class/thermal/thermal_zone3/temp 42300
+/sys/class/thermal/thermal_zone4/temp 44200
+/sys/class/thermal/thermal_zone5/temp 44200
+/sys/class/thermal/thermal_zone6/temp 43700
+/sys/class/thermal/thermal_zone7/temp 43629
+/sys/class/thermal/thermal_zone8/temp 31000
+/sys/class/thermal/thermal_zone9/temp 33946
