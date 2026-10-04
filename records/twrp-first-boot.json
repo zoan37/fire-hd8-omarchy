@@ -1,0 +1,14 @@
+{
+  "ro.product.device": "giza",
+  "ro.product.model": "omni_giza",
+  "ro.twrp.version": "3.3.1-0",
+  "ro.bootmode": "unknown",
+  "ro.boot.pl_version": "6",
+  "ro.boot.lk_version": "1",
+  "ro.boot.tee_version": "102",
+  "root": "uid=0(root) gid=0(root) groups=1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats) context=u:r:su:s0",
+  "battery": "49",
+  "kernel": "Linux localhost 3.18.19-g4f38db79049 #1 SMP PREEMPT Thu Dec 31 18:53:29 UTC 2020 aarch64 GNU/Linux",
+  "twrp_cli": "__bionic_open_tzdata: couldn't find any tzdata when looking for localtime!\n__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!\n__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!\n-rwxr-x---    1 root     root          9856 Jan  1  1970 /sbin/twrp",
+  "mounts": "rootfs / rootfs rw,seclabel 0 0\ntmpfs /dev tmpfs rw,seclabel,nosuid,relatime,mode=755 0 0\ndevpts /dev/pts devpts rw,seclabel,relatime,mode=600 0 0\nproc /proc proc rw,relatime 0 0\nsysfs /sys sysfs rw,seclabel,relatime 0 0\nselinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0\ntmpfs /tmp tmpfs rw,seclabel,relatime 0 0\nadb /dev/usb-ffs/adb functionfs rw,relatime 0 0\n/dev/block/mmcblk0p20 /cache ext4 rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered 0 0"
+}

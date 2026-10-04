@@ -1,0 +1,253 @@
+��������
+
+/ # echo PROBE_BEGIN; uname -a; cat /proc/cmdline; cat /proc/meminfo | head -5;
+
+cat /sys/class/power_supply/battery/capacity; cat /sys/class/power_supply/batter
+
+y/status; ls -l /dev/fb* /dev/dri /dev/input; cat /proc/bus/input/devices; cat /
+
+sys/class/graphics/fb0/virtual_size; cat /sys/class/graphics/fb0/bits_per_pixel;
+
+ cat /probe.log; dmesg | tail -80; echo PROBE_END
+PROBE_BEGIN
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 Linux
+console=tty0 console=ttyS0,921600n1 console=ttyMT0,921600n1 earlycon=uart8250,mmio32,0x11002000 root=/dev/ram vmalloc=496M androidboot.hardware=mt8163 androidboot.unlocked_kernel=true androidboot.rpmb_state=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.pl_version=6 androidboot.tee_version=102 androidboot.lk_version=1 androidboot.pl_build_desc=07d3bbd-20181011_014731 androidboot.lk_build_desc=f4a2747-20160909_050229 bootopt=64S3,32N2,64N2 loglevel=6 console=tty0 rdinit=/init net.ifnames=0 ipv6.disable=1 lcm=1-nt35521_wxga_dsi_vdo_giza fps=5982 vram=16777216 androidboot.selinux=enforce printk.disable_uart=1 bootprof.pl_t=4945 bootprof.lk_t=11412 boot_reason=4 androidboot.serialno=REDACTED_DEVICE_SERIAL androidboot.bootreason=wdt_by_pass_pwk nt35521_id=39 lp855x_vmax=28
+MemTotal:        1389700 kB
+MemFree:         1344292 kB
+MemAvailable:    1345540 kB
+Buffers:               0 kB
+Cached:             6884 kB
+54
+Charging
+ls: /dev/dri: No such file or directory
+crw-rw----    1 0        0          29,   0 Jan  1  1970 /dev/fb0
+
+/dev/input:
+total 0
+crw-rw----    1 0        0          13,  64 Jan  1  1970 event0
+crw-rw----    1 0        0          13,  65 Jan  1  1970 event1
+crw-rw----    1 0        0          13,  66 Jan  1  1970 event2
+crw-rw----    1 0        0          13,  67 Jan  1  1970 event3
+crw-rw----    1 0        0          13,  68 Jan  1  1970 event4
+crw-rw----    1 0        0          13,  69 Jan  1  1970 event5
+crw-rw----    1 0        0          13,  70 Jan  1  1970 event6
+crw-rw----    1 0        0          13,  71 Jan  1  1970 event7
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="ACCDET"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input0
+U: Uniq=
+H: Handlers=kbd gpufreq_ib event0 dynamic_boost
+B: PROP=0
+B: EV=3
+B: KEY=40 0 0 0 0 0 0 1000000000 c000000000000 0
+
+I: Bus=0019 Vendor=2454 Product=6500 Version=0010
+N: Name="mtk-kpd"
+P: Phys=
+S: Sysfs=/devices/soc/10010000.keypad/input/input1
+U: Uniq=
+H: Handlers=kbd gpufreq_ib event1 dynamic_boost
+B: PROP=0
+B: EV=3
+B: KEY=1c000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="hall_sensors"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input2
+U: Uniq=
+H: Handlers=gpufreq_ib event2 dynamic_boost
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0018 Vendor=dead Product=beef Version=28bb
+N: Name="goodix-ts"
+P: Phys=input/ts
+S: Sysfs=/devices/virtual/input/input3
+U: Uniq=
+H: Handlers=gpufreq_ib event3 dynamic_boost
+B: PROP=2
+B: EV=b
+B: KEY=0
+B: ABS=265800000000000
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="hwmdata"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input4
+U: Uniq=
+H: Handlers=gpufreq_ib event4 dynamic_boost
+B: PROP=0
+B: EV=5
+B: REL=6
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_alsps_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input5
+U: Uniq=
+H: Handlers=gpufreq_ib event5 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=6
+B: ABS=101
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_acc_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input6
+U: Uniq=
+H: Handlers=gpufreq_ib event6 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=c1
+B: ABS=107
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_gyro_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input7
+U: Uniq=
+H: Handlers=gpufreq_ib event7 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=c1
+B: ABS=107
+
+800,1280
+32
+Giza temporary boot-partition Linux diagnostic probe
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 Linux
+1+0 records in
+1+0 records out
+Recovery flag armed; no filesystems mounted.
+NOTE: Waiting 10 seconds for the framebuffer /dev/fb0.
+If your device does not have a framebuffer, disable this with:
+no_framebuffer=true in <https://postmarketos.org/deviceinfo>
+Setting framebuffer mode to: U:800x1280p-0
+Setup usb network
+  Setting up an USB gadget through android_usb
+  Setting up an USB gadget through configfs
+mkdir: can't create directory '/config/usb_gadget/g1/functions/rndis.usb0': No such file or directory
+  Couldn't create /config/usb_gadget/g1/functions/rndis.usb0
+ln: /config/usb_gadget/g1/configs/c.1/rndis.usb0: No such file or directory
+  Couldn't symlink rndis.usb0
+sh: write error: Resource busy
+  Couldn't write UDC
+Starting unudhcpd
+  Using interface rndis0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: rndis0
+USB diagnostic shell listening on 172.16.42.1:23
+1: lo: <LOOPBACK> mtu 65536 qdisc noop state DOWN
+    link/loopback REDACTED_MAC brd REDACTED_MAC
+2: ifb0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN qlen 32
+    link/ether REDACTED_MAC brd REDACTED_MAC
+3: ifb1: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN qlen 32
+    link/ether REDACTED_MAC brd REDACTED_MAC
+4: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN
+    link/ipip 0.0.0.0 brd 0.0.0.0
+5: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN
+    link/sit 0.0.0.0 brd 0.0.0.0
+6: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN
+    link/tunnel6 REDACTED_MAC:REDACTED_MAC:00:00:00:00 brd REDACTED_MAC:REDACTED_MAC:00:00:00:00
+7: rndis0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+    link/ether REDACTED_MAC brd REDACTED_MAC
+    inet 172.16.42.1/16 brd 172.16.255.255 scope global rndis0
+       valid_lft forever preferred_lft forever
+[    2.310615] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=adb
+[    2.311873] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=acm
+[    2.313131] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=mtp
+[    2.314389] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=ptp
+[    2.315647] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=ecm
+[    2.316905] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=eem
+[    2.318164] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=gser
+[    2.319449] <0> (2)[1:init][name:g_android&][g_android][USB]android_enable_function: name = rndis, f->name=rndis
+[    2.320777] <0> (2)[1:init][name:g_android&][g_android][USB]enable_store: device_attr->attr.name: enable
+[    2.321951] <0> (2)[1:init][name:g_android&][g_android][USB]enable function 'rndis'/ffffffc000e78ef8
+[    2.323088] <0> (2)[1:init][name:g_android&][g_android][USB]android_bind_enabled_functions:
+[    2.323957] <0> (2)[1:init][name:g_android&][g_android][USB]bind_config function 'rndis'/ffffffc000e78ef8
+[    2.325170] <0> (2)[1:init][name:g_android&][g_android][USB]rndis_function_bind_config:
+[    2.326180] <0> (2)[1:init][name:g_android&][g_android]rndis_function_bind_config MAC: REDACTED_MAC
+[    2.326212] <0> (2)[1:init]android_usb gadget: using random self ethernet address
+[    2.327137] <0> (2)[1:init]android_usb gadget: using random host ethernet address
+[    2.328470] <0> (2)[1:init]rndis0: MAC REDACTED_MAC
+[    2.328478] <0> (2)[1:init]rndis0: HOST MAC REDACTED_MAC
+[    2.328539] <0> (2)[1:init]USB_RNDISrndis_bind: rndis_bind begin
+[    2.329331] <0> (2)[1:init]USB_RNDISRNDIS: dual speed IN/ep1in OUT/ep1out NOTIFY/ep2in
+[    2.330315] <0> (2)[1:init]USB_RNDISrndis_bind_config_vendor: rndis_bind_config_vendor done, status is 0
+[    2.331510] <0> (2)[1:init]android_usb gadget: cfg 1/ffffffc000e78598 speeds: high full
+[    2.342428] <0> (2)[1:init]usb phy read default eye value, Addr: 0x5=0x77
+[    2.343267] <0> (2)[1:init]usb phy read eye value after set, Addr: 0x5=0x77
+[    2.344163] <0> (2)[1:init][name:g_android&][g_android][USB]enable_store: enable 0->1 case, device_desc.idVendor = 0x18d1, device_desc.idProduct = 0xd001
+[    2.597597] <0> (0)[0:swapper/0][name:musb_qmu&]QMU_WARN,<musb_disable_q_all 338>, disable_q_all
+[    2.882452] <0> (1)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[    2.894707] <0> (1)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(1), cv(-1)
+
+[    2.895205] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    2.895248] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=CONNECTED
+[    2.895255] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+[    2.901720] <0> (1)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[    2.909318] <0> (1)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+[    2.987161] <0> (0)[0:swapper/0][name:musb_qmu&]QMU_WARN,<musb_disable_q_all 338>, disable_q_all
+[    2.988269] <0> (0)[0:swapper/0][name:g_android&][g_android][USB]android_disconnect:
+[    2.989253] <0> (0)[0:swapper/0][name:g_android&][g_android][USB]android_disconnect: dev->connected = 0
+[    2.990436] <0> (0)[0:swapper/0]android_usb gadget: [COM]composite_disconnect: reassign the complete function!!
+[    2.990501] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    2.991661] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=DISCONNECTED
+[    2.992973] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+[    3.282135] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    3.283350] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=CONNECTED
+[    3.284651] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+[    3.288169] <0> (0)[0:swapper/0]android_usb gadget: high-speed config #1: android
+[    3.288187] <0> (0)[0:swapper/0]USB_RNDISrndis_set_alt - interface : 0, rndis ctrl id : 0, rndis data id : 1
+[    3.289410] <0> (0)[0:swapper/0]USB_RNDISinit rndis ctrl 0
+[    3.290109] <0> (0)[0:swapper/0]USB_RNDISrndis_set_alt - interface : 1, rndis ctrl id : 0, rndis data id : 1
+[    3.291331] <0> (0)[0:swapper/0]USB_RNDISinit rndis
+[    3.291971] <0> (0)[0:swapper/0]USB_RNDISrndis_open
+[    3.292650] <0> (0)[0:swapper/0]android_usb gadget: [COM]USB_REQ_SET_CONFIGURATION: value=0
+[    3.292743] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    3.293937] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=CONFIGURED
+[    3.295248] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+[    3.318374] <0> (0)[0:swapper/0]android_usb gadget: [COM]USB_REQ_GET_STATUS
+[    3.318394] <0> (0)[0:swapper/0]android_usb gadget: [ratelimit]non-core control req21.00 v0000 i0000 l24
+[    3.318525] <0> (0)[0:swapper/0]android_usb gadget: [COM][ratelimit]USB_REQ_CLEAR_FEATURE w_value=0
+[    3.318543] <0> (0)[0:swapper/0]android_usb gadget: [ratelimit]non-core control reqa1.01 v0000 i0000 l1025
+[    3.318638] <0> (0)[0:swapper/0]android_usb gadget: [COM]USB_REQ_GET_STATUS
+[    4.569023] <0> (0)[129:display_idle_de][name:primary_display&][DISP]primary_display_save_power_for_idle, hwc not enable ,just return !
+[    5.882489] <0> (0)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[    5.894771] <0> (0)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(4), cv(-1)
+
+[    5.898189] <0> (0)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[    5.906088] <0> (0)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+[   15.882518] <0> (0)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[   15.894872] <0> (0)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(14), cv(-1)
+
+[   15.898312] <0> (0)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[   15.906263] <0> (0)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+[   20.252603] <0> (0)[0:swapper/0][name:random&]random: nonblocking pool is initialized
+[   25.882548] <0> (0)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[   25.894778] <0> (0)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(24), cv(-1)
+
+[   25.898593] <0> (0)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[   25.906495] <0> (0)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+[   35.882577] <0> (0)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[   35.894802] <0> (0)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(34), cv(-1)
+
+[   35.898245] <0> (0)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[   35.906549] <0> (0)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+[   45.882602] <0> (0)[144:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+
+[   45.894836] <0> (0)[144:bat_thread_kthr][name:battery_common&]total_time_plug_in(44), cv(-1)
+
+[   45.898277] <0> (0)[144:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+[   45.906605] <0> (0)[144:bat_thread_kthr][name:battery_common&]battery status: charging
+PROBE_END
+/ #

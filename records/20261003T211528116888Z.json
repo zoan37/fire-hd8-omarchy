@@ -1,0 +1,45 @@
+{
+  "collected_at": "2026-10-03T21:15:28.116888+00:00",
+  "properties": {
+    "ro.product.model": "KFGIWI",
+    "ro.product.device": "giza",
+    "ro.product.board": "giza",
+    "ro.product.cpu.abi": "arm64-v8a",
+    "ro.product.cpu.abilist": "armeabi-v7a,armeabi",
+    "ro.build.version.release": "5.1.1",
+    "ro.build.version.sdk": "22",
+    "ro.build.version.security_patch": "2018-03-01",
+    "ro.build.display.id": "LVY48F",
+    "ro.build.version.incremental": "49.6.2.6_user_626533320",
+    "ro.build.version.fireos": "5.3.6.4",
+    "ro.build.version.name": "Fire OS 5.3.6.4 (626533320)",
+    "ro.boot.tee_version": "0x0102",
+    "ro.boot.lk_version": "0x0001",
+    "ro.boot.pl_version": "0x0006",
+    "ro.boot.flash.locked": "",
+    "ro.boot.verifiedbootstate": ""
+  },
+  "diagnostics": {
+    "kernel": {
+      "output": "Linux version 3.18.19-01677-g4f38db79049 (build@i3-ri-14-use1a-b-95) (gcc version 4.9 20140514 (prerelease) (GCC) ) #1 SMP PREEMPT Mon Nov 12 18:07:17 UTC 2018"
+    },
+    "memory": {
+      "output": "MemTotal:        1406888 kB\nMemFree:           89256 kB\nMemAvailable:     769096 kB\nBuffers:           28280 kB\nCached:           708668 kB\nSwapCached:            0 kB\nActive:           730136 kB\nInactive:         365256 kB\nActive(anon):     361720 kB\nInactive(anon):     1008 kB\nActive(file):     368416 kB\nInactive(file):   364248 kB\nUnevictable:        2960 kB\nMlocked:               0 kB\nSwapTotal:             0 kB\nSwapFree:              0 kB\nDirty:                20 kB\nWriteback:             0 kB\nAnonPages:        361400 kB\nMapped:           282564 kB\nShmem:              1348 kB\nSlab:              55948 kB\nSReclaimable:      23088 kB\nSUnreclaim:        32860 kB\nKernelStack:       21120 kB\nPageTables:        18012 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      703444 kB\nCommitted_AS:   24735292 kB\nVmallocTotal:   260046784 kB\nVmallocUsed:       82660 kB\nVmallocChunk:   259871444 kB"
+    },
+    "input_devices": {
+      "output": "I: Bus=0019 Vendor=0000 Product=0000 Version=0000\nN: Name=\"ACCDET\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input0\nU: Uniq=\nH: Handlers=gpufreq_ib event0 dynamic_boost \nB: PROP=0\nB: EV=3\nB: KEY=40 0 0 0 0 0 0 1000000000 c000000000000 0\n\nI: Bus=0019 Vendor=2454 Product=6500 Version=0010\nN: Name=\"mtk-kpd\"\nP: Phys=\nS: Sysfs=/devices/soc/10010000.keypad/input/input1\nU: Uniq=\nH: Handlers=gpufreq_ib event1 dynamic_boost \nB: PROP=0\nB: EV=3\nB: KEY=1c000000000000 0\n\nI: Bus=0000 Vendor=0000 Product=0000 Version=0000\nN: Name=\"hall_sensors\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input2\nU: Uniq=\nH: Handlers=gpufreq_ib event2 dynamic_boost \nB: PROP=0\nB: EV=21\nB: SW=1\n\nI: Bus=0018 Vendor=dead Product=beef Version=28bb\nN: Name=\"goodix-ts\"\nP: Phys=input/ts\nS: Sysfs=/devices/virtual/input/input3\nU: Uniq=\nH: Handlers=gpufreq_ib event3 dynamic_boost \nB: PROP=2\nB: EV=b\nB: KEY=0\nB: ABS=265800000000000\n\nI: Bus=0000 Vendor=0000 Product=0000 Version=0000\nN: Name=\"hwmdata\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input4\nU: Uniq=\nH: Handlers=gpufreq_ib event4 dynamic_boost \nB: PROP=0\nB: EV=5\nB: REL=6\n\nI: Bus=0000 Vendor=0000 Product=0000 Version=0000\nN: Name=\"m_alsps_input\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input5\nU: Uniq=\nH: Handlers=gpufreq_ib event5 dynamic_boost \nB: PROP=0\nB: EV=d\nB: REL=6\nB: ABS=101\n\nI: Bus=0000 Vendor=0000 Product=0000 Version=0000\nN: Name=\"m_acc_input\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input6\nU: Uniq=\nH: Handlers=gpufreq_ib event6 dynamic_boost \nB: PROP=0\nB: EV=d\nB: REL=c1\nB: ABS=107\n\nI: Bus=0000 Vendor=0000 Product=0000 Version=0000\nN: Name=\"m_gyro_input\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input7\nU: Uniq=\nH: Handlers=gpufreq_ib event7 dynamic_boost \nB: PROP=0\nB: EV=d\nB: REL=c1\nB: ABS=107\n\nI: Bus=0005 Vendor=0000 Product=0000 Version=0008\nN: Name=\"amazon_touch\"\nP: Phys=\nS: Sysfs=/devices/virtual/input/input10\nU: Uniq=\nH: Handlers=gpufreq_ib event8 dynamic_boost \nB: PROP=0\nB: EV=b\nB: KEY=400 0 0 0 0 0\nB: ABS=265000001000000"
+    },
+    "block_partitions": {
+      "output": "major minor  #blocks  name\n\n   7        0      87028 loop0\n   7        1      10240 loop1\n 179        0   15388672 mmcblk0\n 179        1       3072 mmcblk0p1\n 179        2       5120 mmcblk0p2\n 179        3      10240 mmcblk0p3\n 179        4      10240 mmcblk0p4\n 179        5        256 mmcblk0p5\n 179        6        500 mmcblk0p6\n 179        7      16268 mmcblk0p7\n 179        8      16384 mmcblk0p8\n 179        9       6144 mmcblk0p9\n 179       10        512 mmcblk0p10\n 179       11       8192 mmcblk0p11\n 179       12      10240 mmcblk0p12\n 179       13       1024 mmcblk0p13\n 179       14       5120 mmcblk0p14\n 179       15       5120 mmcblk0p15\n 179       16      40320 mmcblk0p16\n 179       17       1024 mmcblk0p17\n 179       18       1024 mmcblk0p18\n 179       19    1653024 mmcblk0p19\n 179       20     434176 mmcblk0p20\n 179       21        512 mmcblk0p21\n 179       22      16384 mmcblk0p22\n 179       23       4320 mmcblk0p23\n 179       24   13138927 mmcblk0p24\n 179       96       4096 mmcblk0rpmb\n 179       64       4096 mmcblk0boot1\n 179       32       1024 mmcblk0boot0\n 179       33          2 mmcblk0boot0p1\n 179       34          2 mmcblk0boot0p2\n 179       35        256 mmcblk0boot0p3\n 179       36        747 mmcblk0boot0p4"
+    },
+    "partition_links": {
+      "unavailable": "/dev/block/platform/soc/by-name: Permission denied"
+    },
+    "display_nodes": {
+      "unavailable": "/dev/graphics: Permission denied\n/dev/dri: No such file or directory\n/dev/mali: No such file or directory"
+    },
+    "battery": {
+      "output": "Current Battery Service state:\n  AC powered: false\n  USB powered: true\n  Wireless powered: false\n  status: 2\n  health: 2\n  present: true\n  level: 2\n  scale: 100\n  voltage: 3644\n  temperature: 270\n  technology: Li-ion"
+    }
+  }
+}

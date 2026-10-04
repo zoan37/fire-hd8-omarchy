@@ -1,0 +1,15 @@
+2026-10-04T00:29:18.850350+00:00
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+[host Wi-Fi addresses omitted]
+
+List of devices attached
+
+
+2026-10-04T00:29:25.025870+00:00
+Bus 003 Device 026: ID 18d1:d001 Google Inc. Nexus 4 (fastboot)
+lo               UNKNOWN        127.0.0.1/8 ::1/128
+[host Wi-Fi addresses omitted]
+enp0s20f0u1      UNKNOWN        172.16.42.2/24 REDACTED_IPV6/64
+
+List of devices attached

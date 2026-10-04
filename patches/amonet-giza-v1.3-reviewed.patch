@@ -1,0 +1,66 @@
+--- /dev/null
++++ b/bin/mount-root.sh
+@@ -0,0 +1,3 @@
++#!/system/bin/sh
++set -e
++exec /data/local/tmp/busybox mount /data/local/tmp/minisu.img /system/xbin/
+--- a/functions.inc
++++ b/functions.inc
+@@ -8,12 +8,15 @@
+     echo "Trying to use mtk-su to get temp root..."
+     check_su
+     push_root
+-    while [ $ROOT -ne 0 ]; do
+-      adb shell /data/local/tmp/mtk-su -c "/data/local/tmp/busybox mount /data/local/tmp/minisu.img /system/xbin/"
+-      adb shell su -c id | grep uid=0\(root\)
+-      ROOT=$?
+-      [ $ROOT -ne 0 ] && sleep 1
+-    done
++    adb push bin/mount-root.sh /data/local/tmp/fire-mount-root.sh
++    adb shell chmod 755 /data/local/tmp/fire-mount-root.sh
++    adb shell /data/local/tmp/mtk-su -c /data/local/tmp/fire-mount-root.sh
++    adb shell su -c id | grep uid=0\(root\)
++    ROOT=$?
++    if [ $ROOT -ne 0 ]; then
++      echo "Temporary root mount failed; stopping before bootloader writes."
++      exit 1
++    fi
+   fi
+   echo ""
+   set -e
+--- a/modules/common.py
++++ b/modules/common.py
+@@ -33,7 +33,7 @@
+         else:
+             portHwid = port[2]
+             portDevice = port[0]
+-        if vid and pid in portHwid:
++        if port.vid == int(vid, 16) and port.pid == int(pid, 16):
+             try:
+                 s = serial.Serial(portDevice, timeout=TIMEOUT)
+                 s.close()
+--- a/modules/main.py
++++ b/modules/main.py
+@@ -52,7 +52,7 @@
+     while len(data) % 0x200 != 0:
+         data += b"\x00"
+ 
+-    flash_data(dev, data, start_block, max_size=0)
++    flash_data(dev, data, start_block, max_size=max_size)
+ 
+ def dump_binary(dev, path, start_block, max_size=0):
+     with open(path, "w+b") as fout:
+@@ -221,8 +221,11 @@
+     # 10) Downgrade preloader
+     log("Flash preloader header")
+     switch_boot0(dev)
+-    flash_binary(dev, "../bin/preloader.hdr0", 0, 4)
+-    flash_binary(dev, "../bin/preloader.hdr1", 4, 4)
++    flash_binary(dev, "../bin/preloader.hdr0", 0, 4 * 0x200)
++    flash_binary(dev, "../bin/preloader.hdr1", 4, 4 * 0x200)
++
++    # 10.1) Wait some time so data is flushed to EMMC
++    time.sleep(5)
+ 
+     # Reboot (to fastboot)
+     log("Reboot to unlocked fastboot")

@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "directory": "research/amonet-giza",
+      "url": "https://github.com/R0rt1z2/amonet.git",
+      "revision": "dfe7f719bae9227cf8379ce3e7054aef2825962d"
+    },
+    {
+      "directory": "research/mtkclient",
+      "url": "https://github.com/bkerler/mtkclient.git",
+      "revision": "cd25cf9c1ff6d36e82697ac2c798e69e9cfb78c3"
+    },
+    {
+      "directory": "research/omarchy-android",
+      "url": "https://github.com/BlackFireAlex/omarchy-android.git",
+      "revision": "f5617b005c2229f01dec98eff08d23162c8812c0"
+    },
+    {
+      "directory": "research/pmaports-amazon",
+      "url": "https://github.com/hexdump0815/pmaports-amazon.git",
+      "revision": "ddd2b2f63d6135239f866460345342ae5a1d8002"
+    }
+  ]
+}

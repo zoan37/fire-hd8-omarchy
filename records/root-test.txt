@@ -1,0 +1,30 @@
+armv8l machine
+param1: 0x3000, param2: 0x10000, type: 1
+Building symbol table
+kallsyms_addresses pa 0x40afc100
+kallsyms_num_syms 67998, addr_count 67998
+kallsyms_names pa 0x40b80f00, size 817197
+kallsyms_markers pa 0x40c48800
+kallsyms_token_table pa 0x40c49100
+kallsyms_token_index pa 0x40c49500
+Patching credentials
+Parsing current_is_single_threaded
+ffffffc000328888+50: ADRP x0, 0xffffffc000f0a000
+ffffffc000328888+54: ADD Rd, x0, 0xa20
+Possible list_head tasks at offset 0x338
+comm swapper/0 at offset 0x5a8
+Found own task_struct at node 1
+cred VA: 0xffffffc0530fe280
+init_task VA: 0xffffffc000f0aa20
+Parsing avc_denied
+ffffffc0002d0364+20: ADRP x0, 0xffffffc001062000
+ffffffc0002d0364+24: LDR [x0, 0xffc]
+selinux_enforcing VA: 0xffffffc001062ffc
+Setting selinux_enforcing
+Retrying...
+Retrying...
+Switched selinux to permissive
+starting id
+UID: 0  cap: 3fffffffff  selinux: permissive
+uid=0(root) gid=0(root) context=u:r:shell:s0
+__ROOT_TEST_EXIT__:0

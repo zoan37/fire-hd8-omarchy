@@ -1,0 +1,18 @@
+# Device-specific backups, identifiers, and raw transcripts stay local.
+/backups/
+/reports/
+*.log
+/.venv/
+__pycache__/
+*.pyc
+
+# Reproducible upstream checkouts and large downloaded/generated images.
+/research/
+/working/
+/prepared/*
+!/prepared/manifest.json
+!/prepared/SHA256SUMS
+!/prepared/python-dependencies.json
+!/prepared/linux-release.json
+
+# Explicit sanitized records and reviewed text patches are versioned.

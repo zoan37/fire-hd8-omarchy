@@ -1,0 +1,535 @@
+{
+  "target": "Amazon Fire HD 8 (2016, 6th gen), KFGIWI, giza",
+  "prepared_at_utc": "2026-10-03T22:35:38.674188+00:00",
+  "flash_ready": false,
+  "artifacts": [
+    {
+      "path": "linux/boot.img.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/boot.img.gz",
+      "expected_bytes": 8161219,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 8161219,
+      "sha256": "a4f38e171575092bfce3ae46cf5108781dace9034168f15ee89a99996b7cdd3c"
+    },
+    {
+      "path": "linux/config-amazon-giza.aarch64.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/config-amazon-giza.aarch64.gz",
+      "expected_bytes": 24135,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 24135,
+      "sha256": "48e89709e59d845eaaa3d8136cb7a478a5683e47a982ab720f95afdabf764633"
+    },
+    {
+      "path": "linux/initramfs-extra.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/initramfs-extra.gz",
+      "expected_bytes": 2818106,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 2818106,
+      "sha256": "0e8c4eea069fee7015f0cb233941675fc34dc5f885776c51a66a7844401a3ce0"
+    },
+    {
+      "path": "linux/initramfs.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/initramfs.gz",
+      "expected_bytes": 1534381,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 1534381,
+      "sha256": "52e051040867f1f2a05ed0c6904a03c6c9640aa0125df20bddc57a24b386d2b4"
+    },
+    {
+      "path": "linux/lib-modules.tar.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/lib-modules.tar.gz",
+      "expected_bytes": 926350,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 926350,
+      "sha256": "b93d589dab317501d881fd818ab148fba4592e82c8adb0ade1ec2d23f9bff0da"
+    },
+    {
+      "path": "linux/linux-amazon-giza-3.18.19-r4.apk",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/linux-amazon-giza-3.18.19-r4.apk",
+      "expected_bytes": 7602142,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 7602142,
+      "sha256": "a9ea23a5516d5cd46b735beec64a02d2f58ff1b661bb7d97c80c246867d3595a"
+    },
+    {
+      "path": "linux/vmlinuz.gz",
+      "url": "https://github.com/hexdump0815/pmaports-amazon/releases/download/linux-amazon-giza-3.18.19-r4/vmlinuz.gz",
+      "expected_bytes": 6625903,
+      "upstream_digest": null,
+      "purpose": "Experimental giza Linux; upstream explicitly says still untested",
+      "bytes": 6625903,
+      "sha256": "38f33bd535b7be7fea30e755ace8d785b23eace072adcbad5b8ad6dbab49edd1"
+    },
+    {
+      "path": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "url": "https://fireos-tablet-src.s3.amazonaws.com/93olgKwMW8ecGINzUwwqQmLz43/update-kindle-49.6.2.6_user_626533320.bin",
+      "expected_bytes": 737907632,
+      "expected_sha256": "0ea9dcb2474a8a068cca98dc92a438fc233ff778d0ed1b4cd345f4fccef872ae",
+      "digest_source": "https://github.com/fireos-archive/fireos-archive",
+      "purpose": "Stock Fire OS 5.3.6.4 recovery reference; not an unlock downgrade",
+      "bytes": 737907632,
+      "sha256": "0ea9dcb2474a8a068cca98dc92a438fc233ff778d0ed1b4cd345f4fccef872ae"
+    },
+    {
+      "path": "sources/amonet-giza-source.tar.gz",
+      "source_revision": "dfe7f719bae9227cf8379ce3e7054aef2825962d",
+      "bytes": 74198,
+      "sha256": "3f5fb6d7799d2cf1a9da621dabad1eda0b6aa5677d9b4989446287ffe98d4c48",
+      "purpose": "Pinned source snapshot; not an install package"
+    },
+    {
+      "path": "sources/pmaports-amazon-source.tar.gz",
+      "source_revision": "ddd2b2f63d6135239f866460345342ae5a1d8002",
+      "bytes": 444687,
+      "sha256": "7bf033761d987c0ffcc3663066c161897d9f05542b0f16383c0f9aaf3016b97b",
+      "purpose": "Pinned source snapshot; not an install package"
+    },
+    {
+      "path": "linux-release.json",
+      "url": "https://api.github.com/repos/hexdump0815/pmaports-amazon/releases/tags/linux-amazon-giza-3.18.19-r4",
+      "purpose": "GitHub release metadata refreshed during preparation",
+      "bytes": 14747,
+      "sha256": "c6989689c2fb4512cab64ec515328d2526d8f95b034d13d39cf17bd6df5073c4"
+    },
+    {
+      "path": "host-tools/bin/dos2unix",
+      "url": "https://geo.mirror.pkgbuild.com/extra/os/x86_64/dos2unix-7.5.7-1-x86_64.pkg.tar.zst",
+      "purpose": "Local host utility, package or detached signature; Arch signature verified",
+      "bytes": 63624,
+      "sha256": "5a55c3c72c4617c6af43457c25be2de57bd595675fe43e4ff48b138cc458f8dd"
+    },
+    {
+      "path": "host-tools/dos2unix-7.5.7-1-x86_64.pkg.tar.zst",
+      "url": "https://geo.mirror.pkgbuild.com/extra/os/x86_64/dos2unix-7.5.7-1-x86_64.pkg.tar.zst",
+      "purpose": "Local host utility, package or detached signature; Arch signature verified",
+      "bytes": 420024,
+      "sha256": "f7e022287d8918fc4cf6f6121dbd0bcce098cedd1dcf69fbdeb230f4a85b4e81"
+    },
+    {
+      "path": "host-tools/dos2unix-7.5.7-1-x86_64.pkg.tar.zst.sig",
+      "url": "https://geo.mirror.pkgbuild.com/extra/os/x86_64/dos2unix-7.5.7-1-x86_64.pkg.tar.zst",
+      "purpose": "Local host utility, package or detached signature; Arch signature verified",
+      "bytes": 119,
+      "sha256": "f58982f9d560b1c56ae05765cd48862a724845d9bcb2d8b703800f1e0d87f5b3"
+    },
+    {
+      "path": "linux/boot-header.json",
+      "bytes": 315,
+      "sha256": "45b2ed3cede6eedb3fa116ab2035c0c0635941b60a43ffca1acb29ab5d9b54ee"
+    },
+    {
+      "path": "linux/boot.img",
+      "derived_from": "linux/boot.img.gz",
+      "purpose": "Decompressed experimental Linux image; not hardware-tested",
+      "bytes": 8341504,
+      "sha256": "63a607a8082ef5d43c4b300cc1c61cefa0a15fe33c4a7f79775cc6e2af982218"
+    },
+    {
+      "path": "python-dependencies.json",
+      "bytes": 3039,
+      "sha256": "ab3cb5be0d8267bc217c871139d7b2d3fc528f6ead972398940208239abca4e2"
+    },
+    {
+      "path": "stock/reference-parts/META-INF/com/android/metadata",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 130,
+      "sha256": "a8f501587e58267f6b0e0230839d6dd14c15514e1285266ae75cd44cda0a0c76"
+    },
+    {
+      "path": "stock/reference-parts/META-INF/com/google/android/updater-script",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 1286,
+      "sha256": "6e554f582aa7054d1ae3bf4cfb503d160a736ae7e00fa101d8653bf172e91e37"
+    },
+    {
+      "path": "stock/reference-parts/boot.img",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 8607744,
+      "sha256": "341a24a78330aa6e2003bc53b6f41da1876516227380a48da98f8dc6d8b3193b"
+    },
+    {
+      "path": "stock/reference-parts/images/lk.bin",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 487392,
+      "sha256": "ba83fc0ce58259c0d37e4c1d683d41ca45349ffc4a9391f643bcacb6f977a866"
+    },
+    {
+      "path": "stock/reference-parts/images/preloader.bin",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 138924,
+      "sha256": "23eb6d5ce70aa35fe207eb1f999d3fa77924d25f1bc413f17a4a15bc9c5cb34f"
+    },
+    {
+      "path": "stock/reference-parts/images/preloader.hdr0",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 2048,
+      "sha256": "114f4cbdb58c110168df273be2508b6efa36e2ef432f2255ed4f67ba35e97262"
+    },
+    {
+      "path": "stock/reference-parts/images/preloader.hdr1",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 2048,
+      "sha256": "e86ae322a97975e75cb3ec7dca89ea4ac24639c1ecdcc3f45fe1bd509fc0c0ff"
+    },
+    {
+      "path": "stock/reference-parts/images/tz.img",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 3307008,
+      "sha256": "86a9b604a5caabdee6080250ec3f5328c0caf462e9a5db62f05a88c1f2951ed1"
+    },
+    {
+      "path": "stock/reference-parts/system/build.prop",
+      "derived_from": "stock/update-kindle-49.6.2.6_user_626533320.bin",
+      "purpose": "Unchanged selected stock archive component",
+      "bytes": 7499,
+      "sha256": "c2670775d1a8ef04089ebaba50cda23f7c2064628f4cf2dbcbf85d2c939a7039"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/META-INF/com/google/android/update-binary",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 2847,
+      "sha256": "86e21f3b0b37b08ea7b9c612acc7953f9740e46bd16133abae1f354a11a41b39"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/META-INF/com/google/android/updater-script",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 8,
+      "sha256": "102b8a5962c11f81bb5c2f53faab89a70eeb3cdd3d9bf6ef88cc7699b60f8ad7"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/boot-recovery.bin",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 14,
+      "sha256": "91c4ed26e830783303b227f5943556445be1b964fae0601fdd544165f8df8912"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/boot.hdr",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 256,
+      "sha256": "e353bb298ef00f7391db21cc47da9cc01ead5ca186166227976ce1b10937c6aa"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/boot.payload",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 491148,
+      "sha256": "d7e3bf1323480ac8c01adf84d938682a03291a0914eb8ca1d49295cdb3dc3e70"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/boot0short.img",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 141356,
+      "sha256": "5770232c5aecd8713107e9ca4edec8c697eac4bb6b25e97bef5de74cf1ac87c2"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/busybox",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 587368,
+      "sha256": "9595efda6a4f0a20a928f6f12cc553052685ffa3065cfba0302c2bf6f42ca0b8"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/gpt-giza.bin",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 17408,
+      "sha256": "0b8b3417509d273cc98b783ab96ea75341feed07811605aa1878f78672bb47ff"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/lk.bin",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 485004,
+      "sha256": "2e4a9f15838e26b917223cefe94b801159b447787e6d09dfe59e4331dd5a1b1e"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/minisu.img",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 1048576,
+      "sha256": "ccb1ca61cfec93fa31c4097bc26dc681e007669c4e1b2a4eebfb52c03e084750"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/mtk-su",
+      "url": "https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/",
+      "purpose": "Root utility for personal use; no execution; staged ARM binary added separately where needed",
+      "bytes": 60840,
+      "sha256": "b69e0ee37ba9cef064758ba36a9e0c0246c12f318b39da8a0abcfa8db98dcac4"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/preloader.bin",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 137260,
+      "sha256": "1757303ec1696cf5309d3d8b9c1393774b4a9824a604495f340d94e5b3e976a0"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/preloader.hdr0",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 2048,
+      "sha256": "ea32a73dbb60c94b2e3cda97804ba5c802ab8709c4ba79fea1fd7f9188a4fcbc"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/preloader.hdr1",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 2048,
+      "sha256": "81effdac313aa02f712d3a883fceaab3bee01f480126ff0c7f03b24df3872c39"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/recovery.img",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 16777216,
+      "sha256": "c62de268e5f5adde770dec799bd2f1955f92cd4bacdb6db64a35348daecb9693"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/twrp.img",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 13019136,
+      "sha256": "c007a7457efaa9c570ad95e1e2495b4e3efc6f768b307e76c7ee0d506879d397"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bin/tz.img",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 3307008,
+      "sha256": "9e16d12d45e57e177120e1728c99f35ce8b25904f81668d0be458005486d7a39"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/boot-fastboot.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 69,
+      "sha256": "bc27cb0f070ad13620ae6601525aea1edff83cdced7add285117639713ef5f57"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/boot-recovery.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 69,
+      "sha256": "ad7d62eb9c4ba323cd1e1604b4f3ce0a26fe58ead60b81321a240976f9bb667f"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bootrom-step-minimal.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 62,
+      "sha256": "551c11bf2add877b62e655e5c908ccb59da568e3b03a3a6e57fbd4e51a175cd8"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/bootrom-step.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 54,
+      "sha256": "c7c93a2aff2b17bb2cd9fd1a90fcea7ac22699986f14c445d434668e56126799"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/brom-payload/build/payload.bin",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 18648,
+      "sha256": "baafc55502fe5fc6a578e66c8091596c148b45698c61b268854b2c244171dcf6"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/fastboot-step.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 327,
+      "sha256": "618590fcf823dc32a243d542f9ca85351cc4d754d915ec250cfbb44523976c99"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/functions.inc",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 1222,
+      "sha256": "cbfcbd9b6b386c54e6494c574b9a834359ff88eb8d7c2154d7b8f2f8780c19b0"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/gpt-fix.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 61,
+      "sha256": "9e0611a3eb3b771fafd86f727054fc62f9ddec77bb5cf7ef82c5ac7e9e960850"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/common.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 6877,
+      "sha256": "c7375186aceccb371749f05aed6807667d0630bc3612ceeaaac46fce511010e3"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/gpt.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 12430,
+      "sha256": "bef85112cecc80a96b72d47688ebd90951524c923a2ad74d9fbb7d92fd7c8fa7"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/handshake.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 291,
+      "sha256": "7fe3147ba76d464678da495a7fecff2385ed83cb5800f1b8ef8accce74adbbcf"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/handshake2.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 431,
+      "sha256": "057db6e4051c0b241b4835d41db4f740d50c228abf9d342217746e1761a2653e"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/load_payload.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 5186,
+      "sha256": "eb26df09b1bff8dd0587d1a69d88f6ad53b73b08fd0ba1203a7c2f35d7076034"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/logger.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 176,
+      "sha256": "6edcab194d402f24805538ab5f16f4331eff6de6bbc5cd760baad7f34961e69d"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/modules/main.py",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 7560,
+      "sha256": "f28dd5caa3234aa4dcdd03aa875254dc78a9f14a13d1bd29b017c39397273fa0"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/return-to-stock.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 2067,
+      "sha256": "a0c7b87cc0438c870b0cba656a37292858812755396611c9bc293021363d6463"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/step-1.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 2628,
+      "sha256": "4613097285d11256a8f37c4ff327bfc3d6a12fc8a6108dbb364ab4c9088e9153"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3/step-2.sh",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 3754,
+      "sha256": "6229dd18df72865f88e8d2bf96dc9651ea1718954820c70cc566cd5c03377f14"
+    },
+    {
+      "path": "unlock/amonet-giza-v1.3.zip",
+      "url": "https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/",
+      "purpose": "Original giza unlock distribution or unchanged extracted component; not hardware-tested here",
+      "bytes": 30829874,
+      "sha256": "6cf9b4d5fa99c6044daaf2d1bb99710e0a54e20ef20e4b1fe6af81ec69d49044"
+    },
+    {
+      "path": "unlock/mtk-su-r23/arm/mtk-su",
+      "url": "https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/",
+      "purpose": "Root utility for personal use; no execution; staged ARM binary added separately where needed",
+      "bytes": 60840,
+      "sha256": "b69e0ee37ba9cef064758ba36a9e0c0246c12f318b39da8a0abcfa8db98dcac4"
+    },
+    {
+      "path": "unlock/mtk-su-r23/arm64/mtk-su",
+      "url": "https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/",
+      "purpose": "Root utility for personal use; no execution; staged ARM binary added separately where needed",
+      "bytes": 65144,
+      "sha256": "328632e853ff6427af9f35cb83a91d9e960f35d01188ee66d46ae9c7ce7c7827"
+    },
+    {
+      "path": "unlock/mtk-su-r23/readme.txt",
+      "url": "https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/",
+      "purpose": "Root utility for personal use; no execution; staged ARM binary added separately where needed",
+      "bytes": 526,
+      "sha256": "baca62d226ca3ca80bb0ce77d0f50945c0e84661cda8204cbd1a784539d587e3"
+    },
+    {
+      "path": "unlock/mtk-su_r23.zip",
+      "url": "https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/",
+      "purpose": "Root utility for personal use; no execution; staged ARM binary added separately where needed",
+      "bytes": 82120,
+      "sha256": "5e2c00e01f64f3a60a6b43660bbdc21f7e1c5d355f99f0ac80ff134d9b37e925"
+    }
+  ],
+  "reason": "Live firmware/root and bootrom recovery checks pending; full native Omarchy image not available",
+  "checks": {
+    "original_unlock_zip_crc": "passed",
+    "root_utility_zip_crc": "passed",
+    "stock_update_zip_crc": "passed",
+    "linux_gzip_crc": "passed",
+    "android_boot_headers": {
+      "unlock/amonet-giza-v1.3/bin/recovery.img": {
+        "bytes": 16777216,
+        "kernel_bytes": 7121358,
+        "ramdisk_bytes": 2089088,
+        "page_bytes": 2048,
+        "hardware_tested": false
+      },
+      "unlock/amonet-giza-v1.3/bin/twrp.img": {
+        "bytes": 13019136,
+        "kernel_bytes": 7120373,
+        "ramdisk_bytes": 5895661,
+        "page_bytes": 2048,
+        "hardware_tested": false
+      },
+      "linux/boot.img": {
+        "bytes": 8341504,
+        "kernel_bytes": 6794165,
+        "ramdisk_bytes": 1542726,
+        "page_bytes": 2048,
+        "hardware_tested": false
+      }
+    },
+    "script_referenced_payloads": [
+      "bin/boot-recovery.bin",
+      "bin/boot.hdr",
+      "bin/boot.payload",
+      "bin/boot0short.img",
+      "bin/busybox",
+      "bin/gpt-giza.bin",
+      "bin/lk.bin",
+      "bin/minisu.img",
+      "bin/mtk-su",
+      "bin/preloader.bin",
+      "bin/preloader.hdr0",
+      "bin/preloader.hdr1",
+      "bin/recovery.img",
+      "bin/twrp.img",
+      "bin/tz.img",
+      "brom-payload/build/payload.bin"
+    ],
+    "shell_syntax": "passed",
+    "python_syntax": "passed",
+    "dos2unix_arch_signature": "verified with installed Arch keyring",
+    "device_actions_during_preparation": "none",
+    "hardware_validation": "pending"
+  }
+}

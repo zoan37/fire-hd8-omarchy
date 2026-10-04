@@ -1,0 +1,277 @@
+Fire HD 8 (2016) / giza / KFGIWI — Omarchy investigation
+Prepared 2026-10-03
+
+Status: tablet connected and ADB authorized. Read-only inspection completed;
+no device unlock, root, reboot, flash, or wipe has been attempted.
+
+Actual tablet findings (2026-10-03):
+Model KFGIWI, product/board giza; Fire OS 5.3.6.4 (626533320), Android 5.1.1.
+Kernel Linux 3.18.19-01677-g4f38db79049; approximately 1.34 GiB usable RAM.
+Touchscreen is identified by the running OS as goodix-ts.
+TEE version 0x0102 = 258; LK version 0x0001 = 1; PL version 0x0006 = 6.
+PL exceeds step-1.sh's max_pl=2, so that script would choose the deliberate
+preloader-damage/downgrade path. Do not start it without preparing recovery.
+No su binary found at /system/xbin/su or /system/bin/su. No root attempted.
+Battery was 2%, USB charging, health reported good. Charge to >=60% before
+attempting firmware changes. User explicitly confirmed all tablet data may
+be erased; no data backup is requested. Unlock/erase is within task scope,
+but the exact route, recovery artifacts and charge still need validation.
+About 3.1 GiB of shared data is used; that does not reveal what should be kept.
+
+At 21:16:44 UTC the battery was still 2%, status Charging, health Good,
+temperature 27 C. The available sysfs reads did not yield usable current,
+full-charge capacity or cycle count. These readings do not establish the
+battery's remaining capacity or its ability to hold charge unplugged.
+
+The port repository offers prebuilt giza kernel and boot image artifacts:
+https://github.com/hexdump0815/pmaports-amazon/releases/tag/linux-amazon-giza-3.18.19-r4
+The author labels that release "still untested"; it is not a ready-to-flash
+verified image. The amonet source repository has no GitHub release artifacts;
+its cloned source tree lacks the bin directory required by its shell scripts.
+The XDA unlock thread returned HTTP 403 during research, leaving the original
+release instructions and attachments unavailable through that access route.
+
+Sources checked out locally (research sources, not validated install tools):
+
+1. https://github.com/hexdump0815/pmaports-amazon
+   Commit ddd2b2f63d6135239f866460345342ae5a1d8002 (2022-06-26).
+   device-amazon-giza defines an aarch64 Android boot image with 2048-byte
+   pages. Its deviceinfo_year says 2018 despite identifying the 2016 tablet;
+   treat that field as inconsistent metadata, not hardware confirmation.
+   linux-amazon-giza builds vendor kernel 3.18.19 using GCC 6, pinned to
+   Fire_HD8_6th_Gen-5.3.6.4-20201006 in the kernel source repository.
+   The kernel config has CONFIG_FB=y and CONFIG_DRM disabled. This is a
+   substantial obstacle to a native modern Hyprland session. Enabling DRM
+   alone does not create the missing display driver integration.
+   Audio is modular; an included patch describes hangs when audio is
+   accessed. Actual behavior on this tablet has not been tested.
+   Wi-Fi/USB gadget/input driver configuration exists, but config entries
+   do not prove those features work on hardware.
+
+2. https://github.com/R0rt1z2/amonet/tree/mt8163-giza
+   Commit dfe7f719bae9227cf8379ce3e7054aef2825962d (2022-04-14).
+   Its README explicitly identifies Fire HD 8 (2016), giza, KFGIWI.
+   It contains MediaTek bootrom and LittleKernel exploit source.
+   step-1.sh checks these version ceilings: tee 258, lk 1, pl 2.
+   The software route requires root; version-dependent paths deliberately
+   damage the preloader to enter bootrom and may require hardware recovery.
+   The scripts modify GPT, bootloader/security firmware, and boot/recovery
+   partitions. The fastboot step erases userdata. Do not execute these
+   source checkouts blindly; artifacts, backup/recovery and the exact
+   tablet state must first be reviewed. Back up wanted tablet data before
+   choosing an unlock route.
+
+3. https://omarchy.org/news/2026/09/introducing-omarchy-m/
+   ARM64 packaging work exists, but this is not Fire tablet support.
+   Current Omarchy packages/userspace compatibility with a 3.18 vendor
+   kernel remains unverified. Porting may require a newer kernel or an
+   intermediate userspace. postmarketOS would be a hardware bring-up step,
+   not completion of the requested Omarchy installation.
+
+Next hardware step:
+Connect a data-capable micro-USB cable and enable ADB/USB debugging.
+In Fire OS, tap Serial Number seven times under Device Options to reveal
+Developer Options if needed, then accept this computer's debugging prompt.
+Run: python /home/zoan/Documents/GitHub/fire-hd8-omarchy/inspect_tablet.py
+The helper uses only selected getprop, uname, cat, ls, and dumpsys reads.
+It refuses devices other than KFGIWI/giza and does not request root.
+Its report is diagnostics, not a backup of the tablet's data or firmware.
+
+Milestones:
+1. Confirm actual model, firmware, bootloader versions and battery state.
+2. Choose and validate backup/recovery and a model-specific unlock route.
+3. Boot a minimal Linux image with screen, touchscreen and USB access;
+   prefer an SD-card root filesystem where the verified boot route allows.
+4. Verify networking and investigate display/GPU support for Hyprland.
+5. Validate an Arch Linux ARM base and stage Omarchy on that working base.
+6. Test touch, memory use, Wi-Fi, sound, charging and suspend on hardware.
+
+Native-install scope confirmed by user:
+The requested outcome is booting directly into full Omarchy, replacing Fire
+OS. Termux/proot and remote desktop do not satisfy this request. A minimal
+Linux or postmarketOS boot would only be an intermediate bring-up milestone.
+
+Newer Fire HD 8 research (2026-10-03):
+The 4 GB / 64 GB 2024 model is a separate target from the connected 2016
+giza. Do not apply giza tools or firmware to a newer Fire HD 8.
+The raspite vendor kernel source mirror is Linux 5.4.86 and its defconfig
+includes MediaTek DRM and raspite DSI panels. This is a more useful starting
+point for native graphics than giza's framebuffer-only configuration, but
+does not establish working Linux KMS, Mesa acceleration or Hyprland.
+https://github.com/488315-archive/android_kernel_amazon_raspite
+https://github.com/vendor-mtk-sources/Amazon-Fire_HD8_12th_Gen
+Amazon publishes release-specific GPL source archives:
+https://digprjsurvey.amazon.com/csad/help/node/200203720
+
+Recent related-device developments:
+https://github.com/R0rt1z2/GhostLock/issues/3
+Opened September 12, 2026. The developer reports physical-hardware root on
+Fire HD 10 2023 tungsten KFTUWI, MT8169 (also identified as MT8186 in DT),
+Fire OS 8.3.3.7 / RS8337.3186N / incremental 0029461607044,
+kernel 5.4.86-g3397a7c4f706, successful on attempt 3 of 8.
+This is a developer report, not independently reproduced here.
+The linked source exists and was inspected read-only:
+https://github.com/sshell/GhostLock/tree/5.4-tungsten
+Branch revision 966f9f3706e8900e39997d1fab6838d384e35fe4.
+Only sunstone, karat and tungsten targets were found; no raspite target.
+Its offsets are specific to the exact tungsten build. This provides a
+plausible porting lead for the HD 8's related platform and kernel, not an
+HD 8 exploit or evidence that its bootloader can be unlocked.
+Root is temporary until reboot and dm-verity remains enforced.
+
+https://github.com/R0rt1z2/amonet/tree/mt8188-sunstone
+The author publishes a separate Fire Max 11 2023 bootloader exploit.
+unlock.sh requires GhostLock root and an external bin/unlock payload,
+then invokes that payload and expects reboot to TWRP. Its README explicitly
+targets sunstone, not the HD 8. Do not apply its binary to another model.
+Related-device root and bootloader code are distinct stages; root access
+alone does not permit flashing and booting unsigned Linux on the HD 8.
+
+https://github.com/bkerler/mtkclient
+Inspected revision cd25cf9c1ff6d36e82697ac2c798e69e9cfb78c3.
+No explicit MT8169/raspite configuration or verified HD 8 result was found.
+Generic MediaTek exploit support is not proof of this tablet's support.
+
+https://github.com/BlackFireAlex/omarchy-android
+Inspected revision f5617b005c2229f01dec98eff08d23162c8812c0.
+This project uses Android, proot, Termux:X11, Weston and patched Hyprland.
+It does not replace Fire OS and is outside the user's native-install goal.
+No installer, exploit, bootloader script or firmware write was executed
+during this research. Full native Omarchy remains unverified on both HD 8s.
+
+Mobile examples researched after user's iPhone comparison:
+https://github.com/modpunk/Omarchy-iPhone6s
+Author reports Arch Linux ARM, Hyprland and Omarchy Phone shell on a physical
+iPhone 6s (N71/Samsung A9). It uses tethered checkm8/pongoOS/m1n1 boot into
+RAM on HoolockLinux, simpledrm, software rendering via Mesa llvmpipe and a
+Hyprland/aquamarine glFinish shim. No storage writes; reboot restores iOS.
+Touch is not usable, charging unreliable, no Wi-Fi/storage/modem drivers.
+This is evidence for a native experimental ARM desktop, not a persistent
+complete replacement OS or verified evidence for the claimed iPhone 8.
+The useful general strategy is early software rendering after a working
+DRM display path. Giza's kernel lacks that display path; llvmpipe alone
+does not solve its framebuffer-only integration or old-kernel compatibility.
+Apple boot exploits and hardware drivers do not transfer to MediaTek giza.
+
+https://github.com/danieljohnmorris/omarchy-phone
+Developer documents a native OnePlus 6T installation replacing Android,
+combining Arch Linux ARM, postmarketOS's SDM845 kernel and Omarchy shell
+patches. This is a potential userspace/build reference once Fire-specific
+boot and display problems are resolved; its firmware/images are not for Fire.
+https://danieljohnmorris.com/writing/omarchy-on-a-oneplus-6t/
+The article mentions Chris Barnhart's early-September old-iPhone photo,
+but does not establish its boot method. Do not assume that photo is a VM,
+remote desktop, or complete native install without the original method.
+
+Latest user-reported battery: 17%; continue charging before firmware writes.
+
+Host-side preparation completed October 3, 2026:
+Chrome DevTools MCP was reachable through its official CLI, despite no native
+browser tool appearing in this Codex session. A separate temporary browser was
+started for this task. This does not verify the ChatGPT Chrome extension bridge.
+No new Herdr session was required. Herdr pane control was unavailable because
+this process was outside Herdr; no Claude agent was launched.
+
+Original author's amonet-giza v1.3 package downloaded through XDA Chrome:
+https://xdaforums.com/attachments/amonet-giza-v1-3-zip.5551753/
+SHA256 6cf9b4d5fa99c6044daaf2d1bb99710e0a54e20ef20e4b1fe6af81ec69d49044
+30,829,874 bytes; archive CRC and exact extracted bytes verified. It includes
+bootrom payload, bootloader parts, stock recovery and TWRP. Original scripts
+unchanged; bin/mtk-su added separately, as instructed by the package author.
+Pinned source adds a five-second reboot delay absent from the official ZIP.
+Both versions discard max_size in flash_binary, requiring live image/partition
+checks before flashing. No unlock script was executed.
+
+Original mtk-su release 23 downloaded for the user's personal preparation:
+https://xdaforums.com/attachments/mtk-su_r23-zip.5085853/
+SHA256 5e2c00e01f64f3a60a6b43660bbdc21f7e1c5d355f99f0ac80ff134d9b37e925
+82,120 bytes; ZIP CRC checked. Both ARM and ARM64 variants retained. ARM staged
+in the unlock directory: the author's readme says it supports 32-bit or 64-bit
+kernel/userspace. The actual tablet ABI still needs live validation. Author
+prohibits bundling or automatic downloads in distributed apps; this utility
+has not been added to the preparation downloader.
+
+Stock firmware from Amazon S3 matches recorded Fire OS 5.3.6.4 build626533320:
+https://fireos-tablet-src.s3.amazonaws.com/93olgKwMW8ecGINzUwwqQmLz43/update-kindle-49.6.2.6_user_626533320.bin
+737,907,632 bytes; SHA256 matched community fireos-archive index:
+0ea9dcb2474a8a068cca98dc92a438fc233ff778d0ed1b4cd345f4fccef872ae
+ZIP CRCs, giza updater assertion and model/build metadata checked. Amazon
+signature not independently validated. This is not an unlock downgrade image.
+The XDA recovery post names an older downgrade 5.3.1.0, but its filename is
+indexed as 5.3.1.1 elsewhere. No old downgrade downloaded or flashed.
+
+All seven experimental Linux r4 assets retained; gzip integrity and Android
+boot-header sizes checked. Stock recovery/TWRP headers checked too. No image
+has been boot-tested here. Native Omarchy remains unresolved: available giza
+kernel has framebuffer support and disables DRM. See README.txt, manifest.json
+and SHA256SUMS. Local verification: python verify_files.py.
+Local pyserial 3.5 and Arch-signed dos2unix prepared without system changes.
+No tablet action during preparation. Next step: reconnect for read-only model,
+battery, firmware, bootloader and actual userspace ABI checks, then assess root
+and bootrom recovery before proceeding to any partition write.
+
+Execution authorized by user: "ok at 49%, connected good enough, let's go!"
+October 3, 2026, evening local time.
+Initial actual battery 48%, USB charging, health good, 25 C; later 49%, 26 C.
+Fire OS/kernel/build/bootloader versions match the earlier read-only report.
+Actual /system/bin/sh is ELF64, even though ro.product.cpu.abilist says ARM32;
+ARM mtk-su r23 ran successfully and produced uid=0(root).
+
+A device-specific temporary udev rule was installed through pkexec after local
+administrator authentication. It grants uid1000 access only to MediaTek USB
+bootrom/preloader 0e8d:0003/2000 and their tty nodes. It is in /run/udev/rules.d,
+disappears on laptop reboot and can be removed with setup-bootrom-access.sh
+--remove as administrator. ModemManager was inactive; no service change made.
+
+backup_tablet.py verified 16 original partition backups, including both GPTs,
+boot0/boot1, LK/TZ, boot/recovery, MISC and calibration/security partitions.
+Directory backups/20261003T233552Z is private (0700; files0600). Original GPTs
+have matching CRCs/partition tables. Proposed amonet layout was checked for
+bounds and overlaps and all reviewed images fit. Userdata shrinks about220MiB.
+
+Reviewed working unlock copy: working/amonet-giza-reviewed. Original archives
+retained unchanged. Newer source main.py adds the five-second reboot wait;
+flash_binary now honors max_size; preloader header bounds use sectors*512;
+serial port discovery checks both vendor and product rather than only product;
+get_root uses a single executable script for mtk-su r23 -c and stops on failure.
+Temporary-root mounting succeeded. Bootrom module import checked with pyserial.
+
+step-1.sh took the newer-preloader brick path, writing LK/TZ and rebooting.
+Bootrom USB appeared automatically; payload loaded successfully. Minimal mode
+validated/repartitioned GPT, zeroed RPMB downgrade state, injected boot/recovery
+payloads, restored preloader headers and rebooted into hacked fastboot.
+Fastboot product=GIZA, unlocked=yes, recovery_x size0x1000000. TWRP image flashed
+successfully to recovery_x, userdata erased, MISC recovery flag flashed, reboot.
+TWRP3.3.1-0 booted: ro.product.device=giza, model=omni_giza, root ADB works,
+recovery kernel3.18.19-g4f38db79049 aarch64. Battery49%, Charging. Framebuffer
+mtkfb800x2560virtual32bpp, no DRM node. twrp wipe data formatted data and cache;
+/data mounted successfully with about12GiB available.
+
+Built RAM diagnostic Linux probe from release r4, keeping its kernel unchanged.
+Release initramfs.gz is an outer gzip wrapping an already-gzipped CPIO ramdisk.
+Probe replaces init with RAM-only proc/sys/dev setup, framebuffer splash and
+USB networking/debug shell, no storage mounts, and 120-second automatic reboot.
+Its musl ARM64 busybox ran successfully in a test chroot under TWRP (userspace
+compatibility ONLY; still recovery's existing kernel, not a native Linux boot).
+
+Important finding: adb reboot bootloader from TWRP entered restricted fastboot,
+which still reports unlocked=yes but rejects flash MISC as locked hardware.
+Therefore getvar alone is insufficient to establish writable hacked fastboot.
+The Linux boot command was never reached. The rejected flag flash changed no
+MISC contents. fastboot reboot recovery returned OKAY, but the device rebooted
+to fresh Fire OS, observed USB1949:0231 and no ADB. Recovery is still installed.
+Need physical entry to TWRP (or re-enable ADB in fresh Fire OS) to continue.
+Next attempt should write the payload-supported boot-amonet flag in MISC from
+root recovery and use a NORMAL reboot, rather than adb reboot bootloader, then
+check hacked fastboot's actual write ability. Set next-reset recovery flag
+successfully BEFORE any RAM-only Linux boot attempt. Full Omarchy not installed.
+User was asked asynchronously which screen is showing; no response yet.
+
+User confirms tablet shows Fire OS "optimizing system storage and applications",
+with an approximately 10-minute estimate. USB remains1949:0231; no authorized
+ADB connection. No further device mutation. Let optimization finish before
+physical recovery entry or re-enabling debugging. TWRP remains installed.
+
+Recovery follow-up: extended optimizing screen persists, ADB still absent. Request physical forced power off and Power + Volume Down recovery entry. Amazon reset guide documents 40-second Power hold and Volume Down at logo. Aim is installed TWRP, not another factory reset. No new partition writes performed.
+
+2026-10-04 native Linux milestone: physical Power + Volume Down returned TWRP. boot-amonet MISC flag + normal reboot enters actually writable hacked fastboot. fastboot boot is unsupported (unknown command). Temporary boot_x Linux probe instead succeeded: aarch64 Linux 3.18.19 #5-postmarketOS, user sees postmarketOS, USB RNDIS/telnet root shell works, fb0 800x1280 32bpp, Goodix touchscreen input detected, battery 54 charging. No DRM device; CONFIG_DRM unset. Probe armed audited MISC boot-recovery flag and automatic reboot returned TWRP. Original full boot_x restored and readback verified against initial backup SHA256. Omarchy is not installed. Detailed logs in reports/native-linux-first-boot.txt and reports/native-linux-hardware-details.txt.
