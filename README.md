@@ -24,6 +24,20 @@ Omarchy installer** and does not support newer Fire HD 8 models.
 The next experiment uses Xorg's framebuffer driver, Weston, and patched ARM64
 Hyprland userspace. That route remains unverified on this device.
 
+## Latest checkpoint
+
+The ARM64 desktop bundle and seven additional display packages were downloaded
+and verified. A minimal Arch ARM Bash/glibc environment ran successfully under
+the recovery kernel. The full root filesystem transfer passed its SHA256 check,
+but extraction encountered an ext4 block-bitmap/free-block accounting error.
+The journal aborted and the data partition became read-only. Recovery's unmount
+and restart paths subsequently stalled; a physical restart into TWRP is needed
+before an offline filesystem check can proceed.
+
+The desktop boot image has **not** been flashed or tested. The original boot_x
+image remains restored. No disk I/O failures were identified in the inspected
+kernel log; the filesystem error alone does not establish a hardware fault.
+
 ## Files
 
 - `inspect_tablet.py`: read-only checks for the original Fire OS environment.
@@ -33,6 +47,11 @@ Hyprland userspace. That route remains unverified on this device.
   builds the variant actually booted; its init only writes the audited
   next-boot recovery flag and returns to recovery after 120 seconds.
 - `setup-bootrom-access.sh`: temporary host USB permissions helper.
+- `prepare_desktop_packages.py`: dependency selection, package hash checks,
+  and verification against the official Arch Linux ARM signing key.
+- `build_desktop_overlay.py`, `stage_desktop.py`: native startup configuration
+  and guarded offline package staging; neither flashes a boot partition.
+- `port/giza/README.md`: experimental desktop architecture and prerequisites.
 - `patches/`: reviewed changes to the original unlock distribution.
 - `sources.lock.json`: upstream repositories and exact inspected revisions.
 - `prepared/manifest.json`, `prepared/SHA256SUMS`: downloaded artifact inventory.

@@ -1,0 +1,27 @@
+[<ffffffc000085898>] __switch_to+0x74/0x8c
+[<ffffffc0001a1a40>] iterate_supers+0x70/0x114
+[<ffffffc0001cd1e8>] sys_sync+0x38/0xa4
+[<ffffffc00008442c>] el0_svc_naked+0x20/0x28
+[<ffffffffffffffff>] 0xffffffffffffffff
+[<ffffffc000085898>] __switch_to+0x74/0x8c
+[<ffffffc0001a1a40>] iterate_supers+0x70/0x114
+[<ffffffc0001cd1e8>] sys_sync+0x38/0xa4
+[<ffffffc00008442c>] el0_svc_naked+0x20/0x28
+[<ffffffffffffffff>] 0xffffffffffffffff
+1+0 records in
+1+0 records out
+16 bytes (16B) copied, 0.001474 seconds, 10.6KB/s
+00000000  62 6f 6f 74 2d 72 65 63  6f 76 65 72 79 00 00 00  |boot-recovery...|
+00000010
+4499456
+25826304
+58
+rootfs on / type rootfs (rw,seclabel)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600)
+proc on /proc type proc (rw,relatime)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+tmpfs on /tmp type tmpfs (rw,seclabel,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/block/mmcblk0p20 on /cache type ext4 (rw,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered)

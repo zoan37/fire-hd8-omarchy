@@ -1,0 +1,6 @@
+e2fsck 1.42.9 (28-Dec-2013)
+/dev/block/mmcblk0p24 is in use.
+e2fsck: Cannot continue, aborting.
+
+
+GIZA_FSCK_EXIT=8

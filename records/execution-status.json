@@ -1,8 +1,8 @@
 {
-  "updated_at_utc": "2026-10-04T00:32:52.629674+00:00",
+  "updated_at_utc": "2026-10-04T01:04:27.622323+00:00",
   "target": "Fire HD 8 2016 / giza / KFGIWI",
   "original_battery_percent": 48,
-  "latest_recovery_battery_percent": 54,
+  "latest_recovery_battery_percent": 58,
   "temporary_root": "succeeded with ARM mtk-su r23",
   "original_partition_backups": "backups/20261003T233552Z",
   "backup_count": 16,
@@ -13,12 +13,12 @@
   "data": "erased via fastboot, then data and cache formatted via TWRP; data mount verified",
   "normal_adb_reboot_bootloader": "enters a restricted fastboot mode that reports unlocked yes but refuses MISC writes",
   "fastboot_reboot_recovery": "returned to Fire OS despite host reporting success",
-  "current_observed_usb": "TWRP root ADB; timed return succeeded",
+  "current_observed_usb": "TWRP root ADB; recovery data filesystem operations and reboot are stalled",
   "linux_probe": "BOOT SUCCEEDED: native aarch64 Linux 3.18.19 #5-postmarketOS, framebuffer splash visible, USB root shell reachable; original boot_x restored and fully verified",
-  "native_omarchy": "Not installed; display is fbdev only, no DRM; graphical desktop work remains",
-  "next_required_user_action": "Leave TWRP open and USB connected",
+  "native_omarchy": "Desktop userspace transferred and hash verified; extraction incomplete after ext4 error. Desktop boot image not flashed or tested.",
+  "next_required_user_action": "Hold Power about 40 seconds, then Power + Volume Down to return to TWRP; leave USB connected",
   "temporary_host_rule": "/run/udev/rules.d/99-fire-hd8-codex-1000.rules",
-  "user_observed_screen": "Fire: optimizing system storage and applications; estimates approximately 10 minutes",
+  "user_observed_screen": "Last user report: postmarketOS during successful native Linux diagnostic boot; current screen not yet confirmed",
   "recovery_followup": {
     "observed_at": "2026-10-04T00:20:30.126934+00:00",
     "screen": "User reports Fire optimizing system storage and applications still displayed after extended wait",
@@ -27,5 +27,14 @@
     "next_action": "Physical power off, then Power and Volume Down to enter installed TWRP; inspect screen before further device changes"
   },
   "boot_restore_file": "backups/20261003T233552Z/boot_x-before-linux.bin",
-  "original_boot_x_restoration": "Entire 16658432-byte partition restored; SHA256 matches original verified backup"
+  "original_boot_x_restoration": "Entire 16658432-byte partition restored; SHA256 matches original verified backup",
+  "desktop_filesystem": {
+    "error": "ext4_mb_generate_buddy: group 98 bitmap and descriptor free-cluster counts inconsistent (15742 vs 15998)",
+    "journal": "aborted; data remounted read-only",
+    "offline_check": "not completed: e2fsck refused while device still in use",
+    "filesystem_bytes": 13222019072,
+    "partition_bytes": 13223067648,
+    "observed_disk_io_errors": "none in inspected filtered kernel log",
+    "next_step": "Physical recovery restart, unmount data and sdcard, then offline e2fsck"
+  }
 }

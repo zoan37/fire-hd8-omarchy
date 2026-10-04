@@ -1,0 +1,9 @@
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/data: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/form: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/net: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/text: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/object: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/stock/table: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/status: Read-only file system
+tar: can't make dir ./usr/share/icons/hicolor/48x48/actions: Read-only file system
+tar: can't remove old file ./usr/share/icons/hicolor/index.theme: Read-only file system

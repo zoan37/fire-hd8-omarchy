@@ -1,0 +1,1236 @@
+<4>[  947.774071] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  948.774053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  949.884051] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  950.884036] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  951.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  952.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  953.884125] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  954.884046] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  955.449715] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[  955.459924] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7079)
+<5>[  955.459954] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5333,-5000,-1187,-1077,44,44,3894,42,120,3878,113,3958,2780,46
+<5>[  955.460630] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[  955.460650] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3957),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[  955.460700] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(954), cv(-1)
+<6>[  955.460715] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[  955.466071] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[  955.467188] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[  955.479387] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[  955.884037] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  956.884079] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  957.884071] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  958.884057] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  959.884104] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  960.884031] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[  961.314056] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[  961.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  962.884063] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  963.884451] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  964.884073] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  965.449787] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[  965.459976] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6991)
+<5>[  965.460006] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5250,-5000,-1201,-1090,44,44,3893,42,119,3878,113,3957,2780,46
+<5>[  965.460681] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[  965.460700] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3957),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[  965.460753] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(964), cv(-1)
+<6>[  965.460768] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[  965.464406] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[  965.466160] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[  965.477259] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[  965.884091] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  966.884027] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  967.884062] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  968.204399] <0> (1)[0:swapper/1]CPU1: Booted secondary processor
+<6>[  968.204428] <0> (1)[0:swapper/1][name:cpuinfo&]Detected VIPT I-cache on CPU1
+<6>[  968.204480] <0> (1)[0:swapper/1][name:topology&]CPU1: update cpu_capacity 1024
+<4>[  968.404475] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[  968.404505] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[  968.404556] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[  968.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  969.884112] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  970.404841] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[  970.884070] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  971.884054] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  972.884067] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  973.404348] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[  973.404377] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[  973.404429] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[  973.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  974.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  975.449796] <0> (2)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[  975.460002] <0> (2)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6017)
+<5>[  975.460035] <0> (2)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4453,-5000,-1213,-1103,44,44,3884,43,116,3878,113,3946,2780,46
+<5>[  975.460713] <0> (2)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[  975.460734] <0> (2)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3951),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[  975.460785] <0> (2)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(974), cv(-1)
+<6>[  975.460800] <0> (2)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[  975.462809] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[  975.463352] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[  975.469040] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[  975.884051] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  976.004970] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[  976.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  977.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  978.884202] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  979.884187] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  980.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  981.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  982.884004] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  983.884044] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  984.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  985.449813] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[  985.460037] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[  985.460068] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -6034,-5000,-1229,-1116,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[  985.460742] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[  985.460762] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3952),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[  985.460812] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(984), cv(-1)
+<6>[  985.460827] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[  985.463172] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[  985.464016] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[  985.471272] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[  985.884070] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  986.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  987.884047] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  988.884046] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  989.884024] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  990.884051] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[  991.324011] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[  991.884009] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  992.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  993.004907] <0> (0)[69:hps_main][name:smp&]CPU1: shutdown
+<4>[  993.304363] <0> (1)[0:swapper/1]CPU1: Booted secondary processor
+<6>[  993.304393] <0> (1)[0:swapper/1][name:cpuinfo&]Detected VIPT I-cache on CPU1
+<6>[  993.304447] <0> (1)[0:swapper/1][name:topology&]CPU1: update cpu_capacity 1024
+<4>[  993.884051] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  994.884059] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[  995.449829] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[  995.460023] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[  995.460051] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1243,-1129,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[  995.460726] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[  995.460746] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[  995.460799] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(994), cv(-1)
+<6>[  995.460814] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[  995.463010] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[  995.463722] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[  995.470151] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[  995.884037] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  996.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  997.884043] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  998.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[  999.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1000.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1001.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1002.884099] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1003.884014] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1004.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1005.449846] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1005.460037] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1005.460065] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1257,-1142,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1005.460741] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1005.460760] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3959),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1005.460814] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1004), cv(-1)
+<6>[ 1005.460829] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1005.462933] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1005.463573] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1005.469667] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1005.884146] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1006.884043] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1007.884084] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1008.884074] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1009.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1010.884092] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1011.884063] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1012.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1013.884069] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1014.884044] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1015.449859] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1015.460055] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6637)
+<5>[ 1015.460085] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5210,-5000,-1271,-1155,44,44,3890,43,118,3878,113,3953,2780,46
+<5>[ 1015.460762] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1015.460785] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3958),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1015.460839] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1014), cv(-1)
+<6>[ 1015.460855] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1015.462975] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1015.463548] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1015.469020] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1015.884114] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1016.884068] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1017.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1018.884072] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1019.884057] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1020.884093] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1021.334114] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1021.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1022.884057] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1023.884061] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1024.884088] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1025.449875] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1025.460116] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6460)
+<5>[ 1025.460149] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5169,-5000,-1285,-1168,44,44,3888,43,118,3878,113,3951,2780,46
+<5>[ 1025.460826] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1025.460848] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3958),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1025.460899] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1024), cv(-1)
+<6>[ 1025.460915] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1025.462868] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1025.463431] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1025.468775] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1025.884150] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1026.884049] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1027.884054] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1028.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1029.884053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1030.884058] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1031.884102] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1032.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1033.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1034.884080] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1035.449893] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1035.460085] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6814)
+<5>[ 1035.460114] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5677,-5000,-1300,-1181,44,44,3891,42,119,3878,113,3955,2780,46
+<5>[ 1035.460789] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1035.460808] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3958),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1035.460862] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1034), cv(-1)
+<6>[ 1035.460878] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1035.463211] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1035.463775] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1035.470201] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1035.884139] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1036.884094] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1037.884088] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1038.884024] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1039.884061] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1040.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1041.884026] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1042.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1043.884044] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1044.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1045.449911] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1045.460104] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6814)
+<5>[ 1045.460133] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5378,-5000,-1314,-1194,44,44,3891,42,119,3878,113,3955,2780,46
+<5>[ 1045.460809] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1045.460829] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3958),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1045.460881] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1044), cv(-1)
+<6>[ 1045.460896] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1045.463278] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1045.464118] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1045.469598] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1045.884009] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1046.884031] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1047.884030] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1048.884091] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1049.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1050.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1051.344006] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1051.884003] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1052.884100] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1053.884015] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1054.884100] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1055.449931] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1055.460150] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1055.460179] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1328,-1207,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1055.460853] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1055.460872] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3958),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1055.460922] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1054), cv(-1)
+<6>[ 1055.460937] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1055.463545] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1055.464490] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1055.472247] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1055.884008] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1056.884082] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1057.884052] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1058.884059] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1059.884049] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1060.884070] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1061.884062] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1062.884057] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1063.884034] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1064.504310] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1064.504339] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1064.504389] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1064.884154] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1065.449996] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1065.460321] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -3025,-4336,-1336,-1219,44,44,3875,44,113,3878,113,3927,2780,46
+<5>[ 1065.461004] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1065.461024] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3957),bat_vol=(3925),AvgI=(0),I=(0),VChr=(4910),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1065.461074] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1064), cv(-1)
+<6>[ 1065.461089] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1065.463198] <0> (2)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1065.463741] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1065.470375] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1065.884054] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1066.504760] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1066.884165] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1067.884174] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1068.884030] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1069.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1070.884025] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1071.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1072.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1073.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1074.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1075.450009] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1075.460243] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1075.460272] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -6991,-5000,-1355,-1232,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1075.460947] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1075.460967] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3956),bat_vol=(3957),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1075.461021] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1074), cv(-1)
+<6>[ 1075.461036] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1075.463332] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1075.464088] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1075.470195] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1075.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1076.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1077.884030] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1078.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1079.884089] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1080.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1081.354040] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1081.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1082.884076] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1083.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1084.884106] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1085.450065] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1085.460357] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1085.460385] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1369,-1245,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1085.461061] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1085.461081] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3956),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1085.461135] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1084), cv(-1)
+<6>[ 1085.461150] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1085.463466] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1085.464112] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1085.469393] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1085.884109] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1086.884008] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1087.884059] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1088.884058] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1089.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1090.884088] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1091.884099] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1092.884102] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1093.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1094.884041] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1095.450075] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1095.460274] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1095.460302] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1383,-1258,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1095.460977] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1095.460997] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3956),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1095.461049] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1094), cv(-1)
+<6>[ 1095.461064] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1095.462969] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1095.463515] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1095.470772] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1095.884030] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1096.884010] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1097.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1098.884147] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1099.884104] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1100.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1101.884099] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1102.884081] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1103.884079] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1104.884130] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1105.450096] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1105.460323] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6460)
+<5>[ 1105.460351] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5042,-5000,-1397,-1271,44,44,3888,43,118,3878,113,3951,2780,46
+<5>[ 1105.461024] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1105.461044] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3956),bat_vol=(3951),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1105.461093] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1104), cv(-1)
+<6>[ 1105.461108] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1105.463360] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1105.463921] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1105.470830] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1105.884046] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1106.884088] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1107.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1108.884122] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1109.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1110.884028] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1111.364038] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1111.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1112.884020] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1113.884050] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1114.884153] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1115.450112] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1115.460482] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1115.460516] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5593,-5000,-1412,-1284,44,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1115.461212] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1115.461343] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3955),bat_vol=(3953),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1115.461417] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1114), cv(-1)
+<6>[ 1115.461433] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1115.464068] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1115.464746] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1115.471500] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1115.884061] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1116.884057] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1117.884090] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1118.884041] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1119.884120] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1120.884044] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1121.884060] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1122.884070] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1123.884094] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1124.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1125.450130] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1125.460665] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6725)
+<5>[ 1125.460722] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5294,-5000,-1426,-1297,43,44,3891,42,119,3878,113,3954,2780,46
+<5>[ 1125.461492] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1125.461542] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3955),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1125.461595] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1124), cv(-1)
+<6>[ 1125.461631] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1125.464237] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1125.464897] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1125.471434] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1125.884091] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1126.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1127.884039] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1128.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1129.884164] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1130.884048] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1131.884058] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1132.404318] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1132.404348] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1132.404398] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1132.884095] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1133.884031] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1134.404746] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1134.884100] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1135.450171] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1135.460403] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6814)
+<5>[ 1135.460432] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5378,-5000,-1440,-1310,43,44,3891,42,119,3878,113,3955,2780,46
+<5>[ 1135.461108] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1135.461128] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3955),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1135.461177] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1134), cv(-1)
+<6>[ 1135.461192] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1135.463516] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1135.464327] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1135.471482] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1135.884109] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1136.884128] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1137.884106] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1138.884053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1139.884055] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1140.884108] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1141.374031] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1141.884101] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1142.884059] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1143.884080] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1144.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1145.450229] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1145.460483] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6814)
+<5>[ 1145.460513] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5378,-5000,-1454,-1323,43,44,3891,42,119,3878,113,3955,2780,46
+<5>[ 1145.461188] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1145.461207] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3955),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1145.461257] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1144), cv(-1)
+<6>[ 1145.461272] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1145.464062] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1145.464861] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1145.470851] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1145.884096] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1146.884154] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1147.884069] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1148.884179] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1149.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1150.884036] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1151.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1152.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1153.884045] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1154.884080] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1155.450252] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1155.460706] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -2941,-4247,-1462,-1334,43,44,3875,44,113,3878,113,3926,2780,46
+<5>[ 1155.461395] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1155.461434] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3930),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1155.461486] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1154), cv(-1)
+<6>[ 1155.461501] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1155.463886] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1155.464493] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1155.469733] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1155.884069] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1156.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1157.884053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1158.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1159.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1160.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1161.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1162.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1163.884043] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1164.884086] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1165.450269] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1165.460749] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6814)
+<5>[ 1165.460783] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -7079,-5000,-1481,-1347,43,44,3891,42,119,3878,113,3955,2780,46
+<5>[ 1165.461459] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1165.461478] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3954),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1165.461528] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1164), cv(-1)
+<6>[ 1165.461544] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1165.464078] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1165.464767] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1165.471845] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1165.884056] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1166.884074] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1167.884107] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1168.704650] <0> (0)[69:hps_main][name:smp&]CPU1: shutdown
+<4>[ 1168.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1169.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1170.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1171.383986] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1171.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1172.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1173.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1174.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1175.450274] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1175.460468] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7433)
+<5>[ 1175.460495] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5966,-5000,-1497,-1360,43,44,3897,42,121,3879,113,3962,2780,46
+<5>[ 1175.461170] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1175.461190] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1175.461239] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1174), cv(-1)
+<6>[ 1175.461254] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1175.463036] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1175.463552] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1175.469041] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1175.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1176.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1177.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1178.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1179.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1180.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1181.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1182.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1183.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1184.883993] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1184.904275] <0> (1)[0:swapper/1]CPU1: Booted secondary processor
+<6>[ 1184.904304] <0> (1)[0:swapper/1][name:cpuinfo&]Detected VIPT I-cache on CPU1
+<6>[ 1184.904357] <0> (1)[0:swapper/1][name:topology&]CPU1: update cpu_capacity 1024
+<5>[ 1185.450300] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1185.460517] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -5309)
+<5>[ 1185.460545] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -3471,-5000,-1506,-1373,43,44,3878,44,113,3879,113,3939,2780,46
+<5>[ 1185.461220] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1185.461240] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3940),AvgI=(0),I=(0),VChr=(4910),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1185.461293] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1184), cv(-1)
+<6>[ 1185.461308] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1185.463121] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1185.463637] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1185.468650] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1185.883998] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1186.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1186.904638] <0> (0)[69:hps_main][name:smp&]CPU1: shutdown
+<4>[ 1187.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1188.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1189.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1190.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1191.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1192.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1193.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1194.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1195.450305] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1195.460493] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7345)
+<5>[ 1195.460520] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -7433,-5000,-1526,-1386,43,44,3897,42,121,3879,113,3962,2780,46
+<5>[ 1195.461194] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1195.461214] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3963),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1195.461263] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1194), cv(-1)
+<6>[ 1195.461279] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1195.463060] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1195.463615] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1195.469075] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1195.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1196.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1197.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1198.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1199.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1200.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1201.393983] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1201.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1202.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1203.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1204.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1205.450321] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1205.460518] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7433)
+<5>[ 1205.460545] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1541,-1399,43,44,3898,42,121,3879,113,3963,2780,46
+<5>[ 1205.461221] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,44,44,100,1
+<5>[ 1205.461240] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3964),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1205.461289] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1204), cv(-1)
+<6>[ 1205.461304] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1205.463109] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1205.463624] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1205.469079] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1205.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1206.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1207.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1208.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1209.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1210.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1211.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1212.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1213.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1214.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1215.450335] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1215.460546] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7433)
+<5>[ 1215.460572] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5371,-5000,-1555,-1412,43,44,3898,42,121,3878,113,3963,2780,46
+<5>[ 1215.461251] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,44,44,100,1
+<5>[ 1215.461271] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3964),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(56),SOC=(56),ZCV=(2780)
+<5>[ 1215.461322] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1214), cv(-1)
+<6>[ 1215.461337] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1215.463117] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1215.463634] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1215.469076] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1215.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1216.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1217.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1218.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1219.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1220.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1221.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1222.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1223.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1224.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1225.450351] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1225.460539] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -7610)
+<5>[ 1225.460566] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1570,-1425,43,43,3899,42,121,3890,118,3964,2780,46
+<5>[ 1225.461242] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1225.461262] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3964),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1225.461311] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1224), cv(-1)
+<6>[ 1225.461326] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1225.463107] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1225.463625] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1225.469088] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1225.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1226.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1227.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1228.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1229.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1230.883996] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1231.403989] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1231.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1232.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1233.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1234.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1235.450368] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1235.460612] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6355)
+<5>[ 1235.460639] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1585,-1438,43,43,3900,42,122,3890,118,3965,2780,46
+<5>[ 1235.461317] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1235.461337] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1235.461387] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1234), cv(-1)
+<6>[ 1235.461402] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1235.463183] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1235.463699] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1235.469137] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1235.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1236.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1237.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1238.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1239.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1240.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1241.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1242.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1243.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1244.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1245.450384] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1245.460607] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6355)
+<5>[ 1245.460634] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5327,-5000,-1599,-1451,43,43,3900,42,122,3890,118,3965,2780,46
+<5>[ 1245.461310] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1245.461330] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1245.461382] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1244), cv(-1)
+<6>[ 1245.461397] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1245.463179] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1245.463697] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1245.469140] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1245.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1246.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1247.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1248.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1249.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1250.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1251.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1252.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1253.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1254.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1255.450400] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1255.460623] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6271)
+<5>[ 1255.460651] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5245,-5000,-1613,-1464,43,43,3899,42,121,3890,118,3964,2780,46
+<5>[ 1255.461326] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1255.461347] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1255.461399] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1254), cv(-1)
+<6>[ 1255.461414] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1255.463198] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1255.463715] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1255.469170] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1255.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1256.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1257.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1258.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1259.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1260.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1261.413980] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1261.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1262.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1263.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1264.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1265.450416] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1265.460628] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6271)
+<5>[ 1265.460655] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5371,-5000,-1627,-1477,43,43,3899,42,121,3890,118,3964,2780,46
+<5>[ 1265.461332] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1265.461352] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1265.461403] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1264), cv(-1)
+<6>[ 1265.461419] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1265.463201] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1265.463718] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1265.469228] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1265.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1266.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1267.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1268.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1269.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1270.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1271.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1272.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1273.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1274.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1275.450455] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1275.460643] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6355)
+<5>[ 1275.460670] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1642,-1490,43,43,3900,42,122,3890,118,3965,2780,46
+<5>[ 1275.461347] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1275.461367] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3955),bat_vol=(3968),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1275.461417] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1274), cv(-1)
+<6>[ 1275.461432] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1275.463213] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1275.463729] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1275.469189] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1275.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1276.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1277.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1278.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1279.204313] <0> (1)[0:swapper/1]CPU1: Booted secondary processor
+<6>[ 1279.204342] <0> (1)[0:swapper/1][name:cpuinfo&]Detected VIPT I-cache on CPU1
+<6>[ 1279.204394] <0> (1)[0:swapper/1][name:topology&]CPU1: update cpu_capacity 1024
+<4>[ 1279.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1280.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1281.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1282.884024] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1283.884004] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1284.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1285.450484] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1285.460686] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -3934,-4915,-1652,-1503,43,43,3887,43,117,3890,118,3948,2780,46
+<5>[ 1285.461366] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1285.461386] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3939),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1285.461438] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1284), cv(-1)
+<6>[ 1285.461454] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1285.463235] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1285.463735] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1285.469043] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1285.883996] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1286.883996] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1287.883995] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1288.883996] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1289.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1290.884000] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1291.424004] <0> (1)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1291.883999] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1292.883995] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1293.883998] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1294.883995] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1295.450500] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1295.460707] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5128,-4830,-1666,-1516,43,43,3887,43,117,3890,118,3947,2780,46
+<5>[ 1295.461386] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1295.461406] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3954),bat_vol=(3938),AvgI=(0),I=(0),VChr=(4910),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1295.461458] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1294), cv(-1)
+<6>[ 1295.461473] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1295.463254] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1295.463754] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1295.469119] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1295.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1296.883999] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1297.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1298.883996] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1299.883999] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1300.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1301.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1302.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1303.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1304.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1305.450514] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1305.460715] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5042,-4745,-1680,-1529,43,43,3887,43,117,3890,118,3946,2780,46
+<5>[ 1305.461393] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1305.461413] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3939),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1305.461464] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1304), cv(-1)
+<6>[ 1305.461479] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1305.463354] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1305.463855] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1305.469182] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1305.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1306.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1307.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1308.884041] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1309.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1310.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1311.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1312.884020] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1313.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1314.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1315.450530] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1315.460808] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4102,-3813,-1691,-1539,43,43,3888,43,118,3890,118,3935,2780,46
+<5>[ 1315.461490] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1315.461511] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3953),bat_vol=(3939),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1315.461561] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1314), cv(-1)
+<6>[ 1315.461576] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1315.463350] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1315.463858] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1315.468946] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1315.884000] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1316.884004] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1317.884028] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1318.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1319.884002] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1320.884002] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1321.433998] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1321.884004] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1322.884002] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1323.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1324.883993] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1325.450543] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1325.460744] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4576,-4406,-1703,-1551,43,43,3887,43,117,3890,118,3942,2780,46
+<5>[ 1325.461425] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1325.461445] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3952),bat_vol=(3938),AvgI=(0),I=(0),VChr=(4920),AvgT=(28),T=(28),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1325.461497] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1324), cv(-1)
+<6>[ 1325.461512] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1325.463281] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1325.463793] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1325.468652] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1325.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1326.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1327.884008] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1328.884005] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1329.884007] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1330.545139] <0> (1)[31:update_secureti][name:tz_module&]enter  TEE_update_gb_time_infile
+<4>[ 1330.884020] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1331.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1332.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1333.884014] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1334.884010] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1335.450562] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1335.461231] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4444,-4152,-1715,-1562,43,43,3887,43,117,3890,118,3939,2780,46
+<5>[ 1335.461924] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 28,4740,4694,43,43,100,1
+<5>[ 1335.461945] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3952),bat_vol=(3941),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1335.461996] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1334), cv(-1)
+<6>[ 1335.462011] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1335.463899] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1335.464430] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1335.470121] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1335.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1336.884043] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1337.884051] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1338.884053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1338.944364] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1338.944393] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1338.944448] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1339.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1340.884027] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1340.944753] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1341.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1342.444358] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1342.444387] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1342.444438] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1342.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1343.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1344.884015] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1345.450578] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1345.460791] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -2991,-2711,-1723,-1569,43,43,3888,43,118,3890,118,3922,2780,46
+<5>[ 1345.461480] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1345.461501] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3951),bat_vol=(3930),AvgI=(0),I=(0),VChr=(4910),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1345.461554] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1344), cv(-1)
+<6>[ 1345.461570] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1345.463317] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1345.463818] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1345.468569] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1345.884021] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1346.884042] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1347.884026] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1348.884031] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1349.344828] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1349.884049] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1350.056347] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1350.056375] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1350.056427] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1350.554359] <0> (3)[0:swapper/3]CPU3: Booted secondary processor
+<6>[ 1350.554387] <0> (3)[0:swapper/3][name:cpuinfo&]Detected VIPT I-cache on CPU3
+<6>[ 1350.554439] <0> (3)[0:swapper/3][name:topology&]CPU3: update cpu_capacity 1024
+<4>[ 1350.884021] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1351.444031] <0> (1)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1351.884014] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1352.554808] <0> (2)[69:hps_main][name:smp&]CPU3: shutdown
+<4>[ 1352.884014] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1353.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1354.554750] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1354.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1355.450599] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1355.465872] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -3050,-2881,-1731,-1577,43,43,3888,43,118,3890,118,3924,2780,46
+<5>[ 1355.466771] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1355.466794] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3950),bat_vol=(3924),AvgI=(0),I=(0),VChr=(4910),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1355.466845] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1354), cv(-1)
+<6>[ 1355.466861] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1355.473851] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1355.474388] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1355.479619] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1355.554345] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1355.554374] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1355.554427] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1355.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1356.884015] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1357.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1358.884027] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1359.054761] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1359.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1360.554330] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1360.554358] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1360.554410] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1360.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1361.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1362.554771] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1362.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1363.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1364.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1365.450620] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1365.460984] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4745,-4576,-1744,-1589,43,43,3887,43,117,3890,118,3944,2780,46
+<5>[ 1365.461669] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1365.461689] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3950),bat_vol=(3938),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1365.461739] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1364), cv(-1)
+<6>[ 1365.461754] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1365.463567] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1365.464109] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1365.476392] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1365.754311] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1365.754340] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1365.754395] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1365.884104] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1366.884006] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1367.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1367.954768] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1368.884032] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1369.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1370.884026] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1371.884047] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1372.884048] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1373.454339] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1373.454368] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1373.454420] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1373.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1374.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1375.450642] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1375.454758] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<5>[ 1375.461018] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4188,-3898,-1755,-1599,43,43,3887,43,117,3890,118,3936,2780,46
+<5>[ 1375.461705] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1375.461725] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3950),bat_vol=(3939),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1375.461779] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1374), cv(-1)
+<6>[ 1375.461794] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1375.463696] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1375.464223] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1375.469290] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1375.884030] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1376.884022] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1377.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1378.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1379.154340] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1379.154369] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1379.154421] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1379.884010] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1380.884050] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1381.154755] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<3>[ 1381.454031] <0> (1)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1381.884032] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1382.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1383.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1384.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1385.054332] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1385.054361] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1385.054414] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<5>[ 1385.450663] <0> (2)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1385.461052] <0> (2)[145:bat_thread_kthr][name:battery_meter&][oam_run] -3333,-3050,-1764,-1607,43,43,3888,43,118,3890,118,3926,2780,46
+<5>[ 1385.461743] <0> (2)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1385.461764] <0> (2)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3949),bat_vol=(3925),AvgI=(0),I=(0),VChr=(4910),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1385.461816] <0> (2)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1384), cv(-1)
+<6>[ 1385.461831] <0> (2)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1385.464260] <0> (2)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1385.465005] <0> (2)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1385.470483] <0> (2)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1385.884049] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1386.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1387.054754] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1387.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1388.254330] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1388.254359] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1388.254411] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1388.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1389.884014] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1390.254745] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1390.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1391.884020] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1392.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1393.884049] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1394.884026] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1395.450685] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1395.460882] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4915,-4745,-1777,-1620,43,43,3887,43,117,3890,118,3946,2780,46
+<5>[ 1395.461561] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1395.461581] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3949),bat_vol=(3946),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1395.461632] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1394), cv(-1)
+<6>[ 1395.461648] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1395.463615] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1395.464123] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1395.469191] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1395.884041] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1396.884040] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1397.254489] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1397.254518] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1397.254570] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1397.884036] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1398.884024] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1399.254743] <0> (1)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1399.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1400.884010] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1401.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1402.884024] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1403.884048] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1404.884032] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1405.450700] <0> (1)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1405.460904] <0> (1)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4957,-4661,-1790,-1632,43,43,3887,43,117,3890,118,3945,2780,46
+<5>[ 1405.461584] <0> (1)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1405.461603] <0> (1)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3948),bat_vol=(3940),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1405.461653] <0> (1)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1404), cv(-1)
+<6>[ 1405.461669] <0> (1)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1405.475909] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1405.476436] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1405.482342] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1405.884034] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1406.884035] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1407.554332] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1407.554362] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1407.554413] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1407.884009] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1408.884008] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1409.554754] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1409.884010] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1410.884033] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1411.464011] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1411.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1412.884003] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1413.884012] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1414.884020] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1415.450717] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1415.460958] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -4786,-4491,-1803,-1644,43,43,3887,43,117,3890,118,3943,2780,46
+<5>[ 1415.461641] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1415.461661] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3948),bat_vol=(3940),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1415.461711] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1414), cv(-1)
+<6>[ 1415.461726] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1415.475631] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1415.476149] <0> (1)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1415.481189] <0> (1)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1415.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1416.884013] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1417.884034] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1418.254334] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1418.254363] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1418.254415] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1418.884060] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1419.884023] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1420.254734] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1420.884021] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1421.884011] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1422.884019] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1423.884029] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1424.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1425.450735] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1425.460997] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5042,-4745,-1817,-1657,43,43,3887,43,117,3890,118,3946,2780,46
+<5>[ 1425.461679] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1425.461700] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3947),bat_vol=(3940),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1425.461751] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1424), cv(-1)
+<6>[ 1425.461766] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1425.465207] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1425.465726] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1425.473298] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1425.884017] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1426.884053] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1427.884016] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1428.354334] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1428.354363] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1428.354414] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1428.884038] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1429.884367] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1430.354762] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<4>[ 1430.884027] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1431.554343] <0> (2)[0:swapper/2]CPU2: Booted secondary processor
+<6>[ 1431.554373] <0> (2)[0:swapper/2][name:cpuinfo&]Detected VIPT I-cache on CPU2
+<6>[ 1431.554426] <0> (2)[0:swapper/2][name:topology&]CPU2: update cpu_capacity 1024
+<4>[ 1431.884018] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<2>[ 1431.921753] <0> (0)[355:tar]EXT4-fs error (device mmcblk0p24): ext4_mb_generate_buddy:757: group 98, block bitmap and bg descriptor inconsistent: 15742 vs 15998 free clusters
+<3>[ 1431.921787] <0> (0)[355:tar]Aborting journal on device mmcblk0p24-8.
+<2>[ 1431.921941] <0> (0)[355:tar]EXT4-fs (mmcblk0p24): Remounting filesystem read-only
+<2>[ 1431.921990] <0> (0)[355:tar]EXT4-fs error (device mmcblk0p24) in ext4_reserve_inode_write:4937: Journal has aborted
+<2>[ 1431.922140] <0> (0)[355:tar]EXT4-fs error (device mmcblk0p24) in ext4_evict_inode:244: Journal has aborted
+<11>[ 1431.925463] <0> (1)[1:init]init: untracked pid 356 killed by signal 13
+<4>[ 1432.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1433.554692] <0> (0)[69:hps_main][name:smp&]CPU2: shutdown
+<5>[ 1433.555793] <0> (0)[69:hps_main][name:smp&]CPU1: shutdown
+<4>[ 1433.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1434.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1435.450739] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1435.460927] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6101)
+<5>[ 1435.460954] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -6410,-5000,-1834,-1670,43,43,3897,42,121,3890,118,3962,2780,46
+<5>[ 1435.461630] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1435.461649] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3948),bat_vol=(3962),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1435.461699] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1434), cv(-1)
+<6>[ 1435.461714] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1435.463496] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1435.464015] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1435.469369] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1435.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1436.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1437.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1438.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1439.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1440.883987] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1441.473982] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1441.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1442.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1443.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1444.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1445.450754] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1445.460941] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6186)
+<5>[ 1445.460969] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1849,-1683,43,43,3898,42,121,3890,118,3963,2780,46
+<5>[ 1445.461646] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1445.461667] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3948),bat_vol=(3963),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1445.461716] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1444), cv(-1)
+<6>[ 1445.461731] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1445.463515] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1445.464034] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1445.469393] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1445.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1446.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1447.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1448.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1449.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1450.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1451.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1452.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1453.883997] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1454.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1455.450768] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1455.460954] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6186)
+<5>[ 1455.460981] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5371,-5000,-1863,-1696,43,43,3898,42,121,3890,118,3963,2780,46
+<5>[ 1455.461659] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1455.461678] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3949),bat_vol=(3964),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1455.461729] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1454), cv(-1)
+<6>[ 1455.461744] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1455.463527] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1455.464049] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1455.469403] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1455.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1456.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1457.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1458.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1459.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1460.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1461.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1462.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1463.883991] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1464.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1465.450783] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1465.460973] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6271)
+<5>[ 1465.461001] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1878,-1709,43,43,3899,42,121,3890,118,3964,2780,46
+<5>[ 1465.461677] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1465.461697] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3949),bat_vol=(3965),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1465.461746] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1464), cv(-1)
+<6>[ 1465.461761] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1465.463542] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1465.464071] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1465.469506] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1465.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1466.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1467.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1468.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1469.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1470.554342] <0> (1)[0:swapper/1]CPU1: Booted secondary processor
+<6>[ 1470.554371] <0> (1)[0:swapper/1][name:cpuinfo&]Detected VIPT I-cache on CPU1
+<6>[ 1470.554424] <0> (1)[0:swapper/1][name:topology&]CPU1: update cpu_capacity 1024
+<4>[ 1470.884025] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1471.483994] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1471.883990] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1472.554641] <0> (0)[69:hps_main][name:smp&]CPU1: shutdown
+<4>[ 1472.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1473.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1474.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1475.450798] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1475.460985] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6271)
+<5>[ 1475.461012] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5371,-5000,-1892,-1722,43,43,3899,42,121,3890,118,3964,2780,46
+<5>[ 1475.461690] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1475.461710] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3950),bat_vol=(3968),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1475.461760] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1474), cv(-1)
+<6>[ 1475.461776] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1475.463557] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1475.464086] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1475.469476] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1475.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1476.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1477.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1478.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1479.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1480.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1481.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1482.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1483.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1484.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1485.450813] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1485.461000] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6355)
+<5>[ 1485.461027] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5454,-5000,-1907,-1735,42,43,3900,42,122,3890,118,3965,2780,46
+<5>[ 1485.461704] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1485.461723] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3950),bat_vol=(3966),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1485.461774] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1484), cv(-1)
+<6>[ 1485.461789] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1485.463570] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1485.464091] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1485.469513] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1485.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1486.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1487.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1488.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1489.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1490.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1491.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1492.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1493.883989] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1494.883992] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1495.450828] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1495.461016] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6355)
+<5>[ 1495.461043] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5327,-5000,-1921,-1748,42,43,3900,42,122,3890,118,3965,2780,46
+<5>[ 1495.461719] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1495.461739] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3951),bat_vol=(3966),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1495.461790] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1494), cv(-1)
+<6>[ 1495.461805] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1495.463592] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1495.464115] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1495.469473] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1495.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1496.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1497.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1498.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1499.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1500.883985] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<3>[ 1501.493983] <0> (0)[78:hang_detect][name:aed&][Hang_Detect] hang_detect disabled.
+<4>[ 1501.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1502.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1503.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1504.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<5>[ 1505.450842] <0> (0)[145:bat_thread_kthr][name:battery_common&][BAT_thread]Cable in, CHR_Type_num=1
+<5>[ 1505.461031] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] use max charging current: (-5000, -6440)
+<5>[ 1505.461059] <0> (0)[145:bat_thread_kthr][name:battery_meter&][oam_run] -5409,-5000,-1936,-1761,42,43,3901,42,122,3890,118,3966,2780,46
+<5>[ 1505.461735] <0> (0)[145:bat_thread_kthr][name:battery_meter&][battery_meter_trans_battery_percentage] 29,4740,4694,43,43,100,1
+<5>[ 1505.461755] <0> (0)[145:bat_thread_kthr][name:battery_common&]AvgVbat=(3951),bat_vol=(3966),AvgI=(0),I=(0),VChr=(4920),AvgT=(29),T=(29),pre_SOC=(57),SOC=(57),ZCV=(2780)
+<5>[ 1505.461805] <0> (0)[145:bat_thread_kthr][name:battery_common&]total_time_plug_in(1504), cv(-1)
+<6>[ 1505.461820] <0> (0)[145:bat_thread_kthr][name:switch_charging&][select_jeita_cv] CV(4350000) custom CV(-1)
+<5>[ 1505.463632] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iprechg(0x3); 384mA
+<5>[ 1505.464162] <0> (0)[145:bat_thread_kthr][name:charging_hw_bq24297&]Kernel:bq24297_set_iterm(0x0); 128mA
+<5>[ 1505.469514] <0> (0)[145:bat_thread_kthr][name:battery_common&]battery status: charging
+<4>[ 1505.883988] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1506.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1507.883982] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1508.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1509.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1510.883986] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1511.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1512.883984] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
+<4>[ 1513.883983] <0> (0)[83:kworker/0:1][name:mtk_wcn_stub_alps&][cmb_stub] thermal_ctrl_cb null
