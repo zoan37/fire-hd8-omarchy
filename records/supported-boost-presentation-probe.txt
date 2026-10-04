@@ -1,0 +1,8 @@
+echo "10000 16" >/sys/devices/platform/dynamic_boost/dynamic_boost; sleep 0.1; cat /sys/devices/platform/dynamic_boost/dynamic_boost /sys/devices/system/cpu/online; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-boost-damage.log 2>&1; grep -c "Ball now" /var/tmp/giza-boost-damage.log; cat /sys/devices/system/cpu/online /proc/hps/num_base_perf_serv; giza_rc=$?; printf '\nGIZA_COMMAND_2f712bbe01d647ebb35ca649439a344a=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo "10000 16" >/sys/devices/platform/dynamic_boost/dynamic_boost; sleep 0.1; cat /sys/devices/platform/dynamic_boost/dynamic_boost /sys/devices/system/cpu/online; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-boost-damage.log 2>&1; grep -c "Ball now" /var/tmp/giza-boost-damage.log; cat /sys/devices/system/cpu/online /proc/hps/num_base_perf_serv; giza_rc=$?; printf '\nGIZA_COMMAND_2f712bbe01d647ebb35ca649439a344a=%s\n' "$giza_rc"
+Mode: 16
+0-3
+32
+0-3
+4

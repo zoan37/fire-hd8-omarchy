@@ -60,8 +60,12 @@ for (( attempt=0; attempt<100; attempt++ )); do
   sleep 0.1
 done
 if [[ -S /tmp/.X11-unix/X0 ]]; then
-  runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy \
-    /usr/local/bin/giza-desktop >>/var/log/giza/desktop.log 2>&1 &
+  (
+    giza-render-boost on || echo "CPU core boost unavailable; continuing"
+    trap 'giza-render-boost off || true' EXIT
+    runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy \
+      /usr/local/bin/giza-desktop
+  ) >>/var/log/giza/desktop.log 2>&1 &
 else
   echo "Xorg did not create its socket; inspect /var/log/giza/xorg.log"
 fi

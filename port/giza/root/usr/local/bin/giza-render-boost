@@ -1,0 +1,31 @@
+#!/bin/bash
+# Use the vendor's reference-counted core request; retain normal DVFS/thermal limits.
+set -euo pipefail
+control=/sys/devices/platform/dynamic_boost/dynamic_boost
+marker=/run/giza-render-boost
+command=${1:-status}
+if [[ "$command" == status ]]; then
+  [[ ! -e "$marker" ]] || echo "Desktop four-core request is held"
+  cat "$control" /sys/devices/system/cpu/online
+  exit
+fi
+[[ "$command" == on || "$command" == off ]] || { echo "Usage: giza-render-boost [on|off|status]" >&2; exit 2; }
+[[ "$EUID" == 0 ]] || { echo "Run on/off as root" >&2; exit 1; }
+[[ -w "$control" ]] || { echo "Vendor dynamic boost unavailable" >&2; exit 1; }
+umask 077
+exec 9>/run/giza-render-boost.lock
+flock -x 9
+case "$command" in
+  on)
+    if [[ ! -e "$marker" ]]; then
+      printf '%s\n' '-1 16' >"$control"
+      touch "$marker"
+    fi
+    ;;
+  off)
+    if [[ -e "$marker" ]]; then
+      printf '%s\n' '-2 16' >"$control"
+      rm "$marker"
+    fi
+    ;;
+esac

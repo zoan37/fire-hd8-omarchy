@@ -1,4 +1,5 @@
 #!/bin/bash
+export WVKBD_IMMEDIATE_DRAW=1
 if pgrep -x wvkbd-mobintl >/dev/null; then
   pkill -RTMIN -x wvkbd-mobintl
 else

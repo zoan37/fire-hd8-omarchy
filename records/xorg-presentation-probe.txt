@@ -1,0 +1,4 @@
+python3 /var/tmp/giza-xorg-probe.py; giza_rc=$?; printf '\nGIZA_COMMAND_844c5b11df544bfa8bc0fd276cafc09b=%s\n' "$giza_rc"
+
+[root@fire-giza /]# python3 /var/tmp/giza-xorg-probe.py; giza_rc=$?; printf '\nGIZA_COMMAND_844c5b11df544bfa8bc0fd276cafc09b=%s\n' "$giza_rc"
+{"stride": 3200, "samples": [{"x_sync_ms": 0.14, "fb_pixel_ms": 0.16, "matched": true}, {"x_sync_ms": 0.32, "fb_pixel_ms": 0.34, "matched": true}, {"x_sync_ms": 0.26, "fb_pixel_ms": 0.28, "matched": true}, {"x_sync_ms": 0.25, "fb_pixel_ms": 0.26, "matched": true}, {"x_sync_ms": 0.25, "fb_pixel_ms": 0.27, "matched": true}, {"x_sync_ms": 0.26, "fb_pixel_ms": 0.28, "matched": true}]}

@@ -39,10 +39,19 @@ pinned source revision. Simulated pointer clicks also verified typing into the t
 button. A user plugin adds a
 **Keys** button to Omarchy's bar. A terminal and keyboard start with the desktop.
 
-Typing currently has roughly one second of visible lag reported by the user.
-A timing trace shows physical touch reaching the keyboard event handler within
-about 1–4 ms; the remaining delay needs presentation-path investigation.
-VFR now avoids continuous repainting while idle.
+The user reports typing feels a bit faster after tuning, and pressed-key
+highlights work again. The software renderer now uses four workers and a
+reversible vendor four-core request. A four-second animation probe improved
+from 32–33 frames to 59 frames; direct rendering through Weston reached 236.
+A keyboard patch submits feedback without waiting for an extra frame. Synthetic
+80-ms taps changed the framebuffer highlight after about 249–272 ms. These are
+framebuffer-memory measurements, not physical panel timing.
+
+VFR was reverted because it could leave the final keyboard update waiting.
+Continuous frame pacing and the core request can increase battery use. The
+normal frequency governor and thermal limits remain in place. Physical touch
+reaches the keyboard handler in about 1–4 ms; software presentation remains
+the main limitation.
 
 USB networking and the diagnostic root shell work. Wi-Fi, audio, suspend,
 rotation, and broader application compatibility remain unverified. Current

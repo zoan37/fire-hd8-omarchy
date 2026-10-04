@@ -1,0 +1,8 @@
+echo "10000 16" >/sys/devices/platform/dynamic_boost/dynamic_boost; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-opacity-damage.log 2>&1 & sleep 0.5; python3 /var/tmp/giza-cpu-probe.py; sleep 1.5; grep -c "Ball now" /var/tmp/giza-opacity-damage.log; cat /sys/devices/system/cpu/online; giza_rc=$?; printf '\nGIZA_COMMAND_43c0ad6a8ba04c0daee60a1bd1371668=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo "10000 16" >/sys/devices/platform/dynamic_boost/dynamic_boost; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-opacity-damage.log 2>&1 & sleep 0.5; python3 /var/tmp/giza-cpu-probe.py; sleep 1.5; grep -c "Ball now" /var/tmp/giza-opacity-damage.log; cat /sys/devices/system/cpu/online; giza_rc=$?; printf '\nGIZA_COMMAND_43c0ad6a8ba04c0daee60a1bd1371668=%s\n' "$giza_rc"
+[1] 2937
+{"seconds": 2.0100255390000257, "cpu_seconds_per_second": {"Xorg": 0.04975061165130735, "Weston": 0.03980048932104588, "Hyprland": 1.6865457349793187, "Omarchy-shell": 0.004975061165130735}, "hypr_threads": {"279": 0.03980048932104588, "305": 0.0, "306": 0.8208850922465711, "307": 0.8258601534117018, "308": 0.0, "309": 0.0, "310": 0.0, "311": 0.0, "312": 0.0, "313": 0.0, "314": 0.0, "320": 0.0}}
+[1]+  Exit 124                   runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 > /var/tmp/giza-opacity-damage.log 2>&1
+33
+0-3

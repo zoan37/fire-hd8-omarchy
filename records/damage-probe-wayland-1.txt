@@ -1,0 +1,12 @@
+runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-damage-wayland-1.log 2>&1; wc -l /var/tmp/giza-damage-wayland-1.log; tail -n 8 /var/tmp/giza-damage-wayland-1.log; giza_rc=$?; printf '\nGIZA_COMMAND_659d64267e8b4542a013be417566c04f=%s\n' "$giza_rc"
+
+[root@fire-giza /]# runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s weston-simple-damage --verbose --width=160 --height=160 >/var/tmp/giza-damage-wayland-1.log 2>&1; wc -l /var/tmp/giza-damage-wayland-1.log; tail -n 8 /var/tmp/giza-damage-wayland-1.log; giza_rc=$?; printf '\nGIZA_COMMAND_659d64267e8b4542a013be417566c04f=%s\n' "$giza_rc"
+88 /var/tmp/giza-damage-wayland-1.log
+Ball now located at (59.647038, 121.775406)
+Circle painted at (59.647038, 121.775406), radius 10
+Buffer damage rectangle: (49, 111) @ 21x21
+Ball now located at (76.437569, 112.461632)
+Circle painted at (76.437569, 112.461632), radius 10
+Buffer damage rectangle: (66, 102) @ 21x21
+Ball now located at (93.082092, 103.228844)
+Circle painted at (93

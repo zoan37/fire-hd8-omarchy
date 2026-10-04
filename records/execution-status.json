@@ -1,5 +1,5 @@
 {
-  "updated_at_utc": "2026-10-04T02:08:27.679209+00:00",
+  "updated_at_utc": "2026-10-04T02:36:44.529120+00:00",
   "target": "Fire HD 8 2016 / giza / KFGIWI",
   "original_battery_percent": 48,
   "latest_recovery_battery_percent": 58,
@@ -16,7 +16,7 @@
   "current_observed_usb": "Native Linux USB RNDIS; root diagnostic shell works",
   "linux_probe": "BOOT SUCCEEDED: native aarch64 Linux 3.18.19 #5-postmarketOS, framebuffer splash visible, USB root shell reachable; original boot_x restored and fully verified",
   "native_omarchy": "Native Arch ARM boot; Hyprland + real Omarchy Quickshell bar/background + foot + wvkbd rendered. Automatic desktop startup passed after reboot.",
-  "next_required_user_action": "User can unplug and try the live desktop; keep powered on because the recovery boot flag remains armed",
+  "next_required_user_action": "Continue trying the live desktop; keep powered on because the recovery boot flag remains armed",
   "temporary_host_rule": "/run/udev/rules.d/99-fire-hd8-codex-1000.rules",
   "user_observed_screen": "Real Omarchy desktop, terminal and on-screen keyboard; physical typing confirmed by user",
   "recovery_followup": {
@@ -45,12 +45,12 @@
     "correction": "Preserve busybox/busybox-extras basenames inside giza directory; add recovery smoke check; corrected overlay and initramfs built locally",
     "automatic_return": "Not reliable on first desktop attempt because the same helper naming bug affects reboot dispatch"
   },
-  "latest_linux_battery_percent": 58,
+  "latest_linux_battery_percent": 57,
   "desktop_latest": {
     "automatic_startup": "passed after reboot",
     "display": "800x1280@30 Hz; scale 1.25; XRGB8888; software Mesa",
     "configuration": "hyprctl reload succeeded; configerrors empty",
-    "keyboard": "Pinned wvkbd source built natively; simulated pointer clicks verified Keys button toggling and typing q into foot, then deleting it with Backspace",
+    "keyboard": "Pinned wvkbd built natively with immediate-feedback patch; physical typing and restored quick-tap highlights confirmed by user",
     "touch": "Physical finger tapping and typing confirmed by user",
     "limitations": [
       "Xwayland disabled because initialization blocked compositor",
@@ -60,7 +60,7 @@
     ],
     "next_boot": "recovery flag armed; current timed return suppressed with /run/giza-keep-running",
     "idle": "stay-awake indicator set during development",
-    "performance": "User reports roughly one-second visible typing latency. Raw touch to keyboard button delivery is around 1\u20134 ms in timing trace. VFR enabled reduced idle CPU work. Manual four-core floor was reset by kernel input power policy; it is not persisted.",
-    "next_step": "Compare software compositor capture timing with physical panel updates to locate presentation lag"
+    "performance": "User reports typing a bit faster. Four llvmpipe workers and supported reversible four-core request enabled. Animation probe improved from 32\u201333 to 59 frames in four seconds. VFR reverted after stale final keyboard update; immediate keyboard submission measured 249\u2013272 ms from synthetic 80-ms tap to changed framebuffer pixel. Physical panel latency and battery runtime unmeasured.",
+    "next_step": "Continue normal usage; investigate graphics acceleration/peripherals separately"
   }
 }

@@ -1,0 +1,13 @@
+python3 -c 'from pathlib import Path; p=Path('"'"'/home/omarchy/.config/hypr/looknfeel.lua'"'"'); s=p.read_text(); p.write_text(s.replace('"'"'\n-- Avoid blending the wallpaper through software-rendered terminals.\no.window({tag="terminal"}, {opacity="1 1"})\n'"'"','"'"'\n'"'"'))'; export XDG_RUNT
+IME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; giza-render-boost off; sleep .3; giza-render-boost status; giza-render-boost on; giza-render-boost status; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 > /var/tmp/giza-final-frames.log 2>&1; grep -c "Ball now" /var/tmp/giza-final-frames.log; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_5e2324e1d2464f40b937a3a8bf62d713=%s\n' "$giza_rc"
+[root@fire-giza /]# python3 -c 'from pathlib import Path; p=Path('"'"'/home/omarchy/.config/hypr/looknfeel.lua'"'"'); s=p.read_text(); p.write_text(s.replace('"'"'\n-- Avoid blending the wallpaper through software-rendered terminals.\no.window({tag="terminal"}, {opacity="1 1"})\n'"'"','"'"'\n'"'"'))'; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; giza-render-boost off; sleep .3; giza-render-boost status; giza-render-boost on; giza-render-boost status; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 > /var/tmp/giza-final-frames.log 2>&1; grep -c "Ball now" /var/tmp/giza-final-frames.log; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_5e2324e1d2464f40b937a3a8bf62d713=%s\n' "$giza_rc"
+ok
+
+
+Mode: 19
+0-3
+Desktop four-core request is held
+Mode: 16
+0-3
+59
+57

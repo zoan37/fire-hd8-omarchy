@@ -1,0 +1,25 @@
+export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; ps -L -p 3261 -o pid,tid,comm; cat /sys/devices/system/cpu/online; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 > /var/tmp/giza-four-workers.log 2>&1; grep -c "Ball now" /var/tmp/giza-four-workers.log; cat /sys/devices/platform/dynamic_boost/dynamic_boost; giza_rc=$?; printf '\nGIZA_COMMAND_5ebfe5fe229d4421bc0b44f3b9e89b54=%s\n' "$giza_rc"
+
+[root@fire-giza /]# export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; ps -L -p 3261 -o pid,tid,comm; cat /sys/devices/system/cpu/online; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 timeout 4s stdbuf -oL weston-simple-damage --verbose --width=160 --height=160 > /var/tmp/giza-four-workers.log 2>&1; grep -c "Ball now" /var/tmp/giza-four-workers.log; cat /sys/devices/platform/dynamic_boost/dynamic_boost; giza_rc=$?; printf '\nGIZA_COMMAND_5ebfe5fe229d4421bc0b44f3b9e89b54=%s\n' "$giza_rc"
+
+
+  PID   TID COMMAND
+ 3261  3261 Hyprland
+ 3261  3273 Hyprland
+ 3261  3274 llvmpipe-0
+ 3261  3275 llvmpipe-1
+ 3261  3276 llvmpipe-2
+ 3261  3277 llvmpipe-3
+ 3261  3278 Hyprland
+ 3261  3279 Hyprland
+ 3261  3280 Hyprland
+ 3261  3281 Hyprland
+ 3261  3282 Hyprlan:disk$0
+ 3261  3283 pool-spawner
+ 3261  3284 gmain
+ 3261  3285 dconf worker
+ 3261  3286 gdbus
+ 3261  3292 [pango] fontcon
+0-3
+46
+Mode: 16

@@ -1,0 +1,55 @@
+diff --git i/drw.c w/drw.c
+index 89ec8d8..45d7f4b 100644
+--- i/drw.c
++++ w/drw.c
+@@ -22,6 +22,18 @@ void drwsurf_handle_frame_cb(void* data, struct wl_callback* callback,
+     wl_callback_destroy(ds->frame_cb);
+     ds->frame_cb = NULL;
+ 
++    drwsurf_flush_pending(ds);
++}
++
++void drwsurf_flush_pending(struct drwsurf *ds)
++{
++    if (!ds->surf || !ds->attached || !ds->damage || cairo_region_is_empty(ds->damage))
++        return;
++    if (ds->frame_cb) {
++        wl_callback_destroy(ds->frame_cb);
++        ds->frame_cb = NULL;
++    }
++
+     cairo_rectangle_int_t r = {0};
+     for (int i = 0; i < cairo_region_num_rectangles(ds->damage); i++) {
+         cairo_region_get_rectangle(ds->damage, i, &r);
+diff --git i/drw.h w/drw.h
+index 060cb00..02807b9 100644
+--- i/drw.h
++++ w/drw.h
+@@ -35,6 +35,7 @@ struct kbd;
+ 
+ void drwsurf_resize(struct drwsurf *ds, uint32_t w, uint32_t h, double s);
+ void drwsurf_attach(struct drwsurf *ds);
++void drwsurf_flush_pending(struct drwsurf *ds);
+ 
+ typedef union {
+ 	uint8_t bgra[4];
+diff --git i/main.c w/main.c
+index 9e2aa7f..43c0009 100644
+--- i/main.c
++++ w/main.c
+@@ -1293,7 +1293,15 @@ main(int argc, char **argv)
+         die("Failed to get signalfd: %d\n", errno);
+     }
+ 
++    const bool immediate_draw = getenv("WVKBD_IMMEDIATE_DRAW") &&
++        strcmp(getenv("WVKBD_IMMEDIATE_DRAW"), "1") == 0;
+     while (run_display) {
++        /* VFR compositors may defer callbacks for commits without damage.
++         * Submit completed input feedback before waiting for another frame. */
++        if (immediate_draw) {
++            drwsurf_flush_pending(&draw_surf);
++            drwsurf_flush_pending(&popup_draw_surf);
++        }
+         wl_display_flush(display);
+         poll(fds, 2, -1);
+ 

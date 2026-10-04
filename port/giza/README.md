@@ -92,14 +92,45 @@ User plugin/config changes preserve the packaged Omarchy tree.
 
 ## Performance checkpoint
 
-The user confirmed physical typing but reports roughly one second before the
-keyboard highlight and terminal glyph appear. Paired raw-touch/keyboard timing
-logs put event delivery around 1–4 ms, so presentation needs further inspection.
-A temporary keyboard build currently logs button timestamps for diagnosis; it
-does not log key labels. The raw-touch timing reader has been stopped.
+Physical typing and restored pressed-key highlights are confirmed by the user,
+who says typing feels a bit faster. Paired raw-touch/keyboard timing logs put
+event delivery around 1–4 ms. The timing-only keyboard instrumentation has been
+removed from the installed build.
 
-Enabling `debug.vfr` sharply reduced idle Xorg/Weston CPU work. A temporary
-four-core floor took effect, but the vendor input power controller restored the
-previous floor; no CPU-frequency or thermal-limit changes were persisted.
-Next, compare compositor capture timing against physical panel updates and
-inspect the legacy framebuffer driver's refresh path.
+A four-second `weston-simple-damage --verbose --width=160 --height=160` probe
+produced 32–33 frames through Hyprland with two software-rendering workers,
+compared with 236 through Weston directly. Both llvmpipe workers saturated
+while Xorg/Weston used little CPU. Four workers produced 46 frames with VFR;
+the final continuous-pacing setup produced 59. Short probes include startup
+and are not general application benchmarks.
+
+`giza-desktop` sets `LP_NUM_THREADS=4`. The root supervisor uses
+`giza-render-boost on` to hold the vendor dynamic-boost request `-1 16`
+(PRIO_MAX_CORES); `off` releases it with `-2 16`. A lock and marker prevent
+repeated `on` calls from adding reference-counted requests. This retains the
+interactive frequency governor and existing thermal/battery limits. Desktop
+exit releases the request. The helper can also release it manually. Keeping
+cores available can increase battery use; battery runtime has not been measured.
+
+VFR reduced idle CPU work but left keyboard presentation stale in a probe:
+the final unpressed state did not reach framebuffer memory within one second.
+It is therefore disabled again, as the bundle's original compatibility config
+recommends. Continuous pacing has a battery cost.
+
+`patches/wvkbd-immediate-feedback.patch` applies to the pinned wvkbd revision.
+Apply it before building and installing the keyboard described above. With
+`WVKBD_IMMEDIATE_DRAW=1`, it submits completed drawing after event dispatch,
+instead of waiting for a callback on an otherwise undamaged surface. The normal
+callback path remains available when the environment switch is absent. The
+launcher exports the switch for autostart and keyboard toggling.
+
+Synthetic 220-ms taps reached a changed highlight pixel after about 242–265 ms
+with immediate submission, compared with 370–375 ms without it. Final 80-ms
+taps showed feedback after 249–272 ms and returned to the normal color. The test
+used an isolated terminal running `read`, avoiding command execution or edits
+to the user's terminal. These measurements observe `/dev/fb0` memory, not the
+physical panel. Quick physical taps show highlights again according to the user.
+
+Sources: [Mesa environment variables](https://docs.mesa3d.org/envvars.html),
+[vendor boost interface](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.c),
+[vendor mode definitions](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.h).
