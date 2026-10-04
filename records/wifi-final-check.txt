@@ -1,0 +1,39 @@
+runuser -u omarchy -- nmcli general permissions; runuser -u omarchy -- ping -c 2 -W 2 1.1.1.1; nmcli -t -f GENERAL.STATE,GENERAL.REASON device show wlan0; nmcli -t -f GENERAL.STATE device show rndis0; cat /sys/class/power_supply/battery/capacity; test $(cat /var/tmp/giza-eudev-build-status) = 0; /opt/giza-eudev/bin/udevadm --version; ps -eo pid,ppid,comm | sed -n "/udevd\|NetworkManager\|wpa_supplicant\|6620_launcher/p"; mountpoint -q /mnt/giza-stock && umount /mnt/giza-stock; true; giza_rc=$?; printf '\nGIZA_COMMAND_6d7bc16b7f874a11a7ba57d99b428968=%s\n' "$giza_rc"
+
+[root@fire-giza /]# runuser -u omarchy -- nmcli general permissions; runuser -u omarchy -- ping -c 2 -W 2 1.1.1.1; nmcli -t -f GENERAL.STATE,GENERAL.REASON device show wlan0; nmcli -t -f GENERAL.STATE device show rndis0; cat /sys/class/power_supply/battery/capacity; test $(cat /var/tmp/giza-eudev-build-status) = 0; /opt/giza-eudev/bin/udevadm --version; ps -eo pid,ppid,comm | sed -n "/udevd\|NetworkManager\|wpa_supplicant\|6620_launcher/p"; mountpoint -q /mnt/giza-stock && umount /mnt/giza-stock; true; giza_rc=$?; printf '\nGIZA_COMMAND_6d7bc16b7f874a11a7ba57d99b428968=%s\n' "$giza_rc"
+PERMISSION                                                        VALUE
+org.freedesktop.NetworkManager.checkpoint-rollback                auth
+org.freedesktop.NetworkManager.enable-disable-connectivity-check  no
+org.freedesktop.NetworkManager.enable-disable-network             no
+org.freedesktop.NetworkManager.enable-disable-statistics          no
+org.freedesktop.NetworkManager.enable-disable-wifi                yes
+org.freedesktop.NetworkManager.enable-disable-wimax               no
+org.freedesktop.NetworkManager.enable-disable-wwan                no
+org.freedesktop.NetworkManager.network-control                    yes
+org.freedesktop.NetworkManager.reload                             auth
+org.freedesktop.NetworkManager.settings.modify.global-dns         auth
+org.freedesktop.NetworkManager.settings.modify.hostname           auth
+org.freedesktop.NetworkManager.settings.modify.own                yes
+org.freedesktop.NetworkManager.settings.modify.system             yes
+org.freedesktop.NetworkManager.sleep-wake                         no
+org.freedesktop.NetworkManager.wifi.scan                          yes
+org.freedesktop.NetworkManager.wifi.share.open                    no
+org.freedesktop.NetworkManager.wifi.share.protected               no
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=54 time=23.7 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=54 time=20.9 ms
+
+--- 1.1.1.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 20.891/22.301/23.711/1.410 ms
+GENERAL.STATE:100 (connected)
+GENERAL.REASON:0 (No reason given)
+GENERAL.STATE:10 (unmanaged)
+56
+251
+ 5024     1 6620_launcher
+18900     1 udevd
+18970     1 wpa_supplicant
+22406     1 NetworkManager
+
+COMMAND_EXIT=0

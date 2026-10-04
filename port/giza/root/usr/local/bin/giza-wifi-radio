@@ -1,0 +1,98 @@
+#!/usr/bin/python3
+"""Initialize the giza vendor radio using its preserved, read-only stock files."""
+import errno
+import fcntl
+import os
+from pathlib import Path
+import shutil
+import stat
+import subprocess
+import time
+
+
+def require(condition, message):
+    if not condition:
+        raise RuntimeError(message)
+
+
+def device(name):
+    numbers = (Path('/sys/class') / name / name / 'dev').read_text().strip()
+    major, minor = map(int, numbers.split(':'))
+    target = Path('/dev') / name
+    expected = os.makedev(major, minor)
+    if not target.exists():
+        os.mknod(target, stat.S_IFCHR | 0o600, expected)
+    info = target.stat()
+    require(stat.S_ISCHR(info.st_mode) and info.st_rdev == expected, 'Unexpected device node: ' + name)
+
+
+def main():
+    require(os.geteuid() == 0, 'Run as root')
+    release = Path('/etc/giza-native-release').read_text()
+    require('TARGET=giza-KFGIWI' in release, 'This helper is only for the giza experiment')
+    with open('/run/giza-wifi-radio.lock', 'w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        for field, expected in [('start', '282624'), ('size', '3306048')]:
+            require((Path('/sys/class/block/mmcblk0p19') / field).read_text().strip() == expected,
+                    'Original system partition geometry differs')
+        system = Path('/system')
+        system.mkdir(exist_ok=True)
+        if subprocess.run(['mountpoint', '-q', str(system)]).returncode:
+            subprocess.run(['mount', '-o', 'ro,noload', '/dev/mmcblk0p19', str(system)], check=True)
+        require(system.stat().st_dev == Path('/dev/mmcblk0p19').stat().st_rdev,
+                '/system does not contain the preserved stock partition')
+        mounts = [line.split() for line in Path('/proc/self/mountinfo').read_text().splitlines()]
+        require(any(row[4] == '/system' and 'ro' in row[5].split(',') for row in mounts),
+                'Stock partition must be read-only')
+        firmware = Path('/usr/lib/firmware/giza')
+        firmware.mkdir(parents=True, exist_ok=True)
+        for name in ['ROMv2_lm_patch_1_0_hdr.bin', 'ROMv2_lm_patch_1_1_hdr.bin', 'WIFI_RAM_CODE_8163', 'WMT_SOC.cfg']:
+            source = system / 'etc/firmware' / name
+            require(source.is_file(), 'Missing stock firmware: ' + name)
+            target = firmware / name
+            if not target.exists():
+                shutil.copyfile(source, target)
+        alias = firmware / 'WIFI_RAM_CODE'
+        if not alias.exists():
+            alias.symlink_to('WIFI_RAM_CODE_8163')
+        expected_path = Path('/etc/firmware')
+        if not expected_path.exists():
+            expected_path.symlink_to(firmware)
+        require((expected_path / 'WIFI_RAM_CODE').is_file(), 'Wi-Fi firmware path is unavailable')
+        device('wmtdetect')
+        if not Path('/sys/class/stpwmt/stpwmt').exists():
+            descriptor = os.open('/dev/wmtdetect', os.O_RDWR)
+            try:
+                chip = fcntl.ioctl(descriptor, 0x80047703, 0)
+                require(chip == 0x8163, 'Unexpected MediaTek chip')
+                fcntl.ioctl(descriptor, 0x40047701, chip)
+                try:
+                    fcntl.ioctl(descriptor, 0x80047704, chip)
+                except OSError as error:
+                    # The aggregate init also tries optional functions. Its
+                    # return value can be -1 even when WMT and Wi-Fi initialized.
+                    require(error.errno == errno.EPERM and Path('/sys/class/stpwmt/stpwmt').exists()
+                            and Path('/sys/class/wmtWifi/wmtWifi').exists()
+                            and Path('/sys/class/ieee80211/phy0').exists(), 'Vendor driver initialization failed')
+            finally:
+                os.close(descriptor)
+        device('stpwmt')
+        device('wmtWifi')
+        if subprocess.run(['pgrep', '-x', '6620_launcher'], stdout=subprocess.DEVNULL).returncode:
+            with open('/var/log/giza/wifi-launcher.log', 'ab') as log:
+                subprocess.Popen(['/system/bin/6620_launcher', '-p', '/system/etc/firmware/'],
+                                 stdin=subprocess.DEVNULL, stdout=log, stderr=log, start_new_session=True)
+            time.sleep(1)
+        if not Path('/sys/class/net/wlan0').exists():
+            with open('/dev/wmtWifi', 'wb', buffering=0) as radio:
+                radio.write(b'1')
+        deadline = time.monotonic() + 10
+        while not Path('/sys/class/net/wlan0').exists() and time.monotonic() < deadline:
+            time.sleep(0.1)
+        require(Path('/sys/class/net/wlan0').exists(), 'Wi-Fi interface did not appear')
+        subprocess.run(['ip', 'link', 'set', 'wlan0', 'up'], check=True)
+        print('giza Wi-Fi radio ready')
+
+
+if __name__ == '__main__':
+    main()

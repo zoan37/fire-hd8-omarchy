@@ -53,8 +53,12 @@ normal frequency governor and thermal limits remain in place. Physical touch
 reaches the keyboard handler in about 1–4 ms; software presentation remains
 the main limitation.
 
-USB networking and the diagnostic root shell work. Wi-Fi, audio, suspend,
-rotation, and broader application compatibility remain unverified. Current
+USB diagnostics and native Wi-Fi work. NetworkManager connects to the laptop’s
+saved Wi-Fi network, and HTTPS over `wlan0` returned 200 as the desktop user.
+Omarchy’s user-owned network panel shows the connected network, scan results,
+and live latency. Service restart/autoconnect passed; Wi-Fi after a full native
+reboot has not yet been tested. Audio, suspend, rotation, and broader application
+compatibility remain unverified. Current
 systemd cannot run on this 3.18 kernel, so a Bash PID 1 starts the experiment.
 
 The temporary desktop image remains installed in boot_x. Original partition

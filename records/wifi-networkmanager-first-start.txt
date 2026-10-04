@@ -1,0 +1,22 @@
+unset HISTFILE; python3 -c 'from pathlib import Path;import re,uuid,os; s=Path('"'"'/etc/giza-wifi.conf'"'"').read_text();ssid=bytes.fromhex(re.search(r'"'"'^ ssid=(.+)$'"'"',s,re.M)[1]);psk=re.search(r'"'"'^ psk=(.+)$'"'"',s,re.M)[1];d=Path('"'"'/etc/NetworkManager/system-connections'"'"');d.mkdir(mode=0o700,parents=True,exist_ok=True);p=d/'"'"'giza-wifi.nmconnection'"'"';c='"'"'[connection]\nid=giza-wifi\nuuid='"'"'+str(uuid.uuid4())+'"'"'\ntype=wifi\ninterface-name=wlan0\nautoconnect=true\n\n[wifi]\nmode=infrastructure\nssid='"'"'+'"'"';'"'"'.join(map(str,ssid))+'"'"';\n\n[wifi-security]\nkey-mgmt=wpa-psk\npsk='"'"'+psk+'"'"'\n\n[ipv4]\nmethod=auto\n\n[ipv6]\nmethod=auto\n'"'"';p.write_text(c);os.chmod(p,0o600);print('"'"'Root-only NetworkManager profile created'"'"')'; kill -TERM 5435 5597 5677; sleep 1; nohup env LD_LIBRARY_PATH=/opt/giza-eudev/lib NetworkManager --no-daemon >/var/log/giza/networkmanager.log 2>&1 </dev/null & sleep 4; nmcli -t -f DEVICE,TYPE,STATE device; nmcli -g GENERAL.STATE,GENERAL.REASON device show wlan0; pgrep -a wpa_supplicant; ping -I wlan0 -c 1 -W 2 1.1.1.1; giza_rc=$?; printf '\nGIZA_COMMAND_c640da096b81460595c6e0f2a4f1b9d0=%s\n' "$giza_rc"
+
+[root@fire-giza /]# unset HISTFILE; python3 -c 'from pathlib import Path;import re,uuid,os; s=Path('"'"'/etc/giza-wifi.conf'"'"').read_text();ssid=bytes.fromhex(re.search(r'"'"'^ ssid=(.+)$'"'"',s,re.M)[1]);psk=re.search(r'"'"'^ psk=(.+)$'"'"',s,re.M)[1];d=Path('"'"'/etc/NetworkManager/system-connections'"'"');d.mkdir(mode=0o700,parents=True,exist_ok=True);p=d/'"'"'giza-wifi.nmconnection'"'"';c='"'"'[connection]\nid=giza-wifi\nuuid='"'"'+str(uuid.uuid4())+'"'"'\ntype=wifi\ninterface-name=wlan0\nautoconnect=true\n\n[wifi]\nmode=infrastructure\nssid='"'"'+'"'"';'"'"'.join(map(str,ssid))+'"'"';\n\n[wifi-security]\nkey-mgmt=wpa-psk\npsk='"'"'+psk+'"'"'\n\n[ipv4]\nmethod=auto\n\n[ipv6]\nmethod=auto\n'"'"';p.write_text(c);os.chmod(p,0o600);print('"'"'Root-only NetworkManager profile created'"'"')'; kill -TERM 5435 5597 5677; sleep 1; nohup env LD_LIBRARY_PATH=/opt/giza-eudev/lib NetworkManager --no-daemon >/var/log/giza/networkmanager.log 2>&1 </dev/null & sleep 4; nmcli -t -f DEVICE,TYPE,STATE device; nmcli -g GENERAL.STATE,GENERAL.REASON device show wlan0; pgrep -a wpa_supplicant; ping -I wlan0 -c 1 -W 2 1.1.1.1; giza_rc=$?; printf '\nGIZA_COMMAND_c640da096b81460595c6e0f2a4f1b9d0=%s\n' "$giza_rc"
+Root-only NetworkManager profile created
+[1] 18953
+wlan0:wifi:connected
+rndis0:ethernet:unmanaged
+ifb0:ifb:unmanaged
+ifb1:ifb:unmanaged
+ip6tnl0:iptunnel:unmanaged
+sit0:iptunnel:unmanaged
+tunl0:iptunnel:unmanaged
+lo:loopback:unmanaged
+100 (connected)
+0 (No reason given)
+18970 /usr/bin/wpa_supplicant -u -s -O /run/wpa_supplicant
+PING 1.1.1.1 (1.1.1.1) from REDACTED_HOST_IP wlan0: 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=54 time=27.0 ms
+
+--- 1.1.1.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 27.003/27.003/27.003/0.000 ms

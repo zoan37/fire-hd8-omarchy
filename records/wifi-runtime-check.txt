@@ -1,0 +1,11 @@
+bash -n /sbin/giza-init /usr/local/bin/giza-wifi-start /usr/local/libexec/giza/build-eudev; env LD_LIBRARY_PATH=/opt/giza-eudev/lib ldd /usr/bin/NetworkManager | sed -n "/libudev\|not found/p"; stat -c "%a %U %n" /etc/giza-wifi.conf /etc/NetworkManager/system-connections/giza-wifi.nmconnection; test -s /run/giza-keep-running; test $(cat /var/tmp/giza-eudev-build-status) = 0; nmcli -t -f GENERAL.STATE,GENERAL.REASON dev show wlan0; runuser -u omarchy -- curl --interface wlan0 -fsS --max-time 20 -o /dev/null -w "HTTPS_STATUS=%{http_code}\n" https://archlinuxarm.org; giza_rc=$?; printf '\nGIZA_COMMAND_b48b94619a2c42a0b9495250b53e66e2=%s\n' "$giza_rc"
+
+[root@fire-giza /]# bash -n /sbin/giza-init /usr/local/bin/giza-wifi-start /usr/local/libexec/giza/build-eudev; env LD_LIBRARY_PATH=/opt/giza-eudev/lib ldd /usr/bin/NetworkManager | sed -n "/libudev\|not found/p"; stat -c "%a %U %n" /etc/giza-wifi.conf /etc/NetworkManager/system-connections/giza-wifi.nmconnection; test -s /run/giza-keep-running; test $(cat /var/tmp/giza-eudev-build-status) = 0; nmcli -t -f GENERAL.STATE,GENERAL.REASON dev show wlan0; runuser -u omarchy -- curl --interface wlan0 -fsS --max-time 20 -o /dev/null -w "HTTPS_STATUS=%{http_code}\n" https://archlinuxarm.org; giza_rc=$?; printf '\nGIZA_COMMAND_b48b94619a2c42a0b9495250b53e66e2=%s\n' "$giza_rc"
+        libudev.so.1 => /opt/giza-eudev/lib/libudev.so.1 (0x0000007f8f890000)
+600 root /etc/giza-wifi.conf
+600 root /etc/NetworkManager/system-connections/giza-wifi.nmconnection
+GENERAL.STATE:100 (connected)
+GENERAL.REASON:0 (No reason given)
+HTTPS_STATUS=200
+
+COMMAND_EXIT=0

@@ -1,0 +1,9 @@
+{
+  "verified": "native desktop screenshot inspected locally",
+  "panel": "giza.network user-owned clone of Omarchy network panel",
+  "network": "Connected; network name omitted",
+  "scan": "Nearby networks visible; names omitted",
+  "latency": "27 ms, zero packet loss",
+  "privacy": "Screenshot retained only in ignored reports because it includes network names, local addresses and user terminal text",
+  "recovery": "After NetworkManager restart, restarted only Quickshell supervisor to clear stale device references"
+}

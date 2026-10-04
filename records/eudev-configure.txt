@@ -1,0 +1,16 @@
+mkdir -p /var/tmp/giza-build; curl --interface wlan0 -fsSL https://github.com/eudev-project/eudev/releases/download/v3.2.14/eudev-3.2.14.tar.gz -o /var/tmp/giza-build/eudev-3.2.14.tar.gz; echo 8da4319102f24abbf7fff5ce9c416af848df163b29590e666d334cc1927f006f /var/tmp/giza-build/eudev-3.2.14.tar.gz | sha256sum -c -; tar -xzf /var/tmp/giza-build/eudev-3.2.14.tar.gz -C /var/tmp/giza-build; cd /var/tmp/giza-build/eudev-3.2.14; ./configure --prefix=/opt/giza-eudev --sysconfdir=/etc --disable-hwdb --disable-manpages --disable-kmod --disable-introspection > /var/log/giza/eudev-configure.log 2>&1; tail -12 /var/log/giza/eudev-configure.log; giza_rc=$?; printf '\nGIZA_COMMAND_5f7652559e724fdab7ef3a1920ff4d3b=%s\n' "$giza_rc"
+
+[root@fire-giza /]# mkdir -p /var/tmp/giza-build; curl --interface wlan0 -fsSL https://github.com/eudev-project/eudev/releases/download/v3.2.14/eudev-3.2.14.tar.gz -o /var/tmp/giza-build/eudev-3.2.14.tar.gz; echo 8da4319102f24abbf7fff5ce9c416af848df163b29590e666d334cc1927f006f /var/tmp/giza-build/eudev-3.2.14.tar.gz | sha256sum -c -; tar -xzf /var/tmp/giza-build/eudev-3.2.14.tar.gz -C /var/tmp/giza-build; cd /var/tmp/giza-build/eudev-3.2.14; ./configure --prefix=/opt/giza-eudev --sysconfdir=/etc --disable-hwdb --disable-manpages --disable-kmod --disable-introspection > /var/log/giza/eudev-configure.log 2>&1; tail -12 /var/log/giza/eudev-configure.log; giza_rc=$?; printf '\nGIZA_COMMAND_5f7652559e724fdab7ef3a1920ff4d3b=%s\n' "$giza_rc"
+/var/tmp/giza-build/eudev-3.2.14.tar.gz: OK
+checking for explicit_bzero... yes
+checking for library containing clock_gettime... none required
+checking for cos in -lm... yes
+checking for pkg-config... /usr/sbin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for blkid >= 2.20... yes
+checking for libselinux >= 2.1.9... no
+checking for mallinfo... yes
+checking for mallinfo2... yes
+checking whether unshare is declared... yes
+checking for gperf... no
+configure: error: *** gperf not found

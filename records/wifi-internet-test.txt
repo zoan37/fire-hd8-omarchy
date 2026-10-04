@@ -1,0 +1,22 @@
+nohup /usr/local/libexec/giza/busybox udhcpc -f -i wlan0 -s /usr/local/libexec/giza/wifi-dhcp-hook -p /run/giza-wifi-dhcp.pid > /var/log/giza/wifi-dhcp.log 2>&1 </dev/null & sleep 4; python3 -c "import subprocess; from pathlib import Path; print('DHCP lease obtained:', 'lease of' in Path('/var/log/giza/wifi-dhcp.log').read_text()); print('Wi-Fi IPv4 assigned:', bool(subprocess.check_output(['ip','-4','-o','addr','show','dev','wlan0'],text=True).strip()))"; ping -I wlan0 -c 2 -W 3 1.1.1.1; curl --interface wlan0 -I --max-time 15 https://archlinuxarm.org | head -8; giza_rc=$?; printf '\nGIZA_COMMAND_195c45be367447ccbb9c5d0f22df4c39=%s\n' "$giza_rc"
+
+[root@fire-giza /]# nohup /usr/local/libexec/giza/busybox udhcpc -f -i wlan0 -s /usr/local/libexec/giza/wifi-dhcp-hook -p /run/giza-wifi-dhcp.pid > /var/log/giza/wifi-dhcp.log 2>&1 </dev/null & sleep 4; python3 -c "import subprocess; from pathlib import Path; print('DHCP lease obtained:', 'lease of' in Path('/var/log/giza/wifi-dhcp.log').read_text()); print('Wi-Fi IPv4 assigned:', bool(subprocess.check_output(['ip','-4','-o','addr','show','dev','wlan0'],text=True).strip()))"; ping -I wlan0 -c 2 -W 3 1.1.1.1; curl --interface wlan0 -I --max-time 15 https://archlinuxarm.org | head -8; giza_rc=$?; printf '\nGIZA_COMMAND_195c45be367447ccbb9c5d0f22df4c39=%s\n' "$giza_rc"
+[1] 5677
+DHCP lease obtained: True
+Wi-Fi IPv4 assigned: True
+PING 1.1.1.1 (1.1.1.1) from REDACTED_HOST_IP wlan0: 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=54 time=29.6 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=54 time=25.1 ms
+
+--- 1.1.1.1 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 25.148/27.384/29.620/2.236 ms
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  0  16932   0      0   0      0      0      0                              0  0  16932   0      0   0      0      0      0                              0  0  16932   0      0   0      0      0      0                              0
+HTTP/2 200
+server: nginx/1.18.0
+date: Sun, 04 Oct 2026 02:54:19 GMT
+content-type: text/html; charset=utf-8
+content-length: 16932
+[HTTP credential header omitted]

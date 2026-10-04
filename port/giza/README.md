@@ -9,7 +9,7 @@ The tested display stack is Xorg with fbdev and evdev, Weston with its X11
 backend and pixman renderer, then a patched ARM64 Hyprland with software Mesa
 rendering. Omarchy's Quickshell and applications run in that native Arch ARM
 root filesystem. GPU acceleration is unavailable; graphics use llvmpipe. Broader application
-compatibility, wireless networking, and audio remain unverified.
+compatibility and audio remain unverified. Native wireless networking now works.
 
 Current systemd requires a newer kernel. `root/sbin/giza-init` is a temporary
 native PID 1 supervisor that starts diagnostics, D-Bus, Xorg, and the desktop.
@@ -134,3 +134,74 @@ physical panel. Quick physical taps show highlights again according to the user.
 Sources: [Mesa environment variables](https://docs.mesa3d.org/envvars.html),
 [vendor boost interface](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.c),
 [vendor mode definitions](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.h).
+
+## Native Wi-Fi checkpoint
+
+The tablet connects directly to the same Wi-Fi as the laptop, using its own
+radio and NetworkManager. This is not USB internet sharing. Both root and the
+desktop user reached the internet; an HTTPS request bound explicitly to
+`wlan0` returned 200. A NetworkManager restart reconnected without intervention.
+The actual Omarchy network panel shows Connected, nearby networks, and live
+ping latency. This checkpoint does not include a full cold-boot Wi-Fi test.
+
+`giza-wifi-radio` checks the model marker and original system partition's
+geometry before mounting partition 19 at `/system` with `ro,noload`. It uses
+preserved stock firmware and the small MediaTek `6620_launcher` hardware helper
+with its stock ARM64 dynamic loader/libraries; Android itself does not run.
+These vendor files are not redistributed. Their checksums are recorded in
+`records/wifi-stock-files.json`. The driver is already built into this kernel.
+Correct wmtdetect ioctl values are `0x80047703`, `0x40047701`, and `0x80047704`.
+The aggregate initialization can report EPERM for an unsupported optional
+function; the helper accepts this only when the Wi-Fi/WMT devices actually
+appear. It does not initialize an already initialized driver again.
+
+The driver loads `/etc/firmware/WIFI_RAM_CODE` directly, so an alias to the
+stock `WIFI_RAM_CODE_8163` is required. Targeted character-device creation avoids
+another broad mdev scan, which previously reset basic device permissions.
+The radio helper starts the vendor launcher and powers the Wi-Fi function on.
+
+Modern systemd/libudev needs statx mount-ID support absent in Linux 3.18.
+Without compatible device support, NetworkManager rejected wlan0 as unmanaged,
+reason 71. Eudev 3.2.14 fixes this without replacing packaged systemd libraries.
+`/usr/local/libexec/giza/build-eudev` downloads the official pinned release,
+checks its SHA-256, compiles natively, and installs under `/opt/giza-eudev`.
+Its install command also redirects udev configuration into that prefix.
+
+For a fresh experimental rootfs, first install the host-verified package sets
+listed in `records/wifi-package-manifest.json` and
+`records/eudev-build-package-manifest.json` (the latter adds gperf to the compiler
+already used for wvkbd), then run the eudev build helper as root. The build uses
+GCC, make, and pkgconf. No changes to the normal signature-required pacman
+configuration are needed. The separate prefix is selected only for eudev and
+NetworkManager processes with `LD_LIBRARY_PATH=/opt/giza-eudev/lib`.
+
+`giza-init` starts `giza-wifi-start` in the background after system D-Bus. It
+initializes the radio, starts eudev, announces only wlan0, and starts
+NetworkManager. USB rndis0 remains explicitly unmanaged. An idempotent startup
+check and service restart passed. Saved credentials exist only in mode-0600
+files on the tablet and are excluded from Git. Future networks can be selected
+from the Omarchy network panel; connecting to a different network has not been
+physically tested. A direct wpa_supplicant/BusyBox DHCP fallback was tested
+before NetworkManager; its optional DHCP hook remains available but is not
+started in the normal setup.
+
+A narrow local polkit rule lets user `omarchy` scan, connect, enable Wi-Fi, and
+manage connection profiles without a logind session. Other administrative
+NetworkManager actions keep their normal authorization requirements. The
+startup helper allows only group 1000 to use ICMP datagram sockets, restoring
+the network panel's latency display without making ping setuid.
+
+The bundled service-free switch is still needed by other desktop components.
+The stock network panel interprets it as Android-owned networking, so the
+panel was cloned using `omarchy plugin clone` with a distinct `giza.network`
+ID and adapted only under the user's configuration. The overlay reproduces
+that clone and selects it in `shell.json`; packaged Omarchy files stay intact.
+`giza-launch-shell --index-only` can refresh the prepared plugin catalog.
+After restarting NetworkManager, Quickshell held stale device references;
+restarting only its shell supervisor restored the connected panel without
+restarting Hyprland, the user's terminal, or keyboard. Full native boot
+integration remains to be exercised, and the next-boot recovery flag is still
+armed.
+
+Sources: [eudev 3.2.14 release](https://github.com/eudev-project/eudev/releases/tag/v3.2.14),
+[giza kernel driver source](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/tree/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/connectivity).

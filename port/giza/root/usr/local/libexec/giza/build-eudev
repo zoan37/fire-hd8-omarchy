@@ -1,0 +1,19 @@
+#!/bin/bash
+# Keep old-kernel device support isolated from Arch's packaged systemd/udev.
+set -euo pipefail
+[[ "$EUID" == 0 ]] || { echo "Run as root" >&2; exit 1; }
+command -v gperf >/dev/null
+work=/var/tmp/giza-build
+mkdir -p "$work"
+source_file="$work/eudev-3.2.14.tar.gz"
+if [[ ! -f "$source_file" ]]; then
+  curl -fsSL --max-time 120 https://github.com/eudev-project/eudev/releases/download/v3.2.14/eudev-3.2.14.tar.gz -o "$source_file.partial"
+  mv "$source_file.partial" "$source_file"
+fi
+printf '%s\n' "8da4319102f24abbf7fff5ce9c416af848df163b29590e666d334cc1927f006f $source_file" | sha256sum -c -
+tar -xzf "$source_file" -C "$work"
+cd "$work/eudev-3.2.14"
+./configure CFLAGS="-O2 -std=gnu11" --prefix=/opt/giza-eudev --sysconfdir=/etc \
+  --disable-hwdb --disable-manpages --disable-kmod --disable-introspection
+make -j2
+make install udevconfdir=/opt/giza-eudev/etc/udev

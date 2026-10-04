@@ -1,0 +1,64 @@
+timeout 20s sh -c "printf 1 > /dev/wmtWifi"; sleep 1; ls /sys/class/net; dmesg | grep -Ei "wmt|wlan|stp|patch|firmware" | tail -60; giza_rc=$?; printf '\nGIZA_COMMAND_23ef6396c36a48c298a1b7b57ecca23c=%s\n' "$giza_rc"
+
+[root@fire-giza /]# timeout 20s sh -c "printf 1 > /dev/wmtWifi"; sleep 1; ls /sys/class/net; dmesg | grep -Ei "wmt|wlan|stp|patch|firmware" | tail -60; giza_rc=$?; printf '\nGIZA_COMMAND_23ef6396c36a48c298a1b7b57ecca23c=%s\n' "$giza_rc"
+ifb0  ifb1  ip6tnl0  lo  rndis0  sit0  tunl0
+[ 2952.909050]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2952.910699]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2952.912110]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2952.913748]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2952.915159]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2952.916903]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2953.909045]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2953.910720]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2953.912141]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2953.913787]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2953.915203]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2953.916847]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2954.909037]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2954.910691]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2954.912124]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2954.913765]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2954.915176]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2954.916814]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2955.909014]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2955.910665]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2955.912081]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2955.913752]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2955.915171]  (0)[3205:kworker/0:1][name:osal&][WMT-LIB][E]wmt_lib_is_therm_ctrl_support(1194):thermal command can not be send: STP is not ready
+[ 2955.916815]  (0)[3205:kworker/0:1][name:osal&][WMT-EXP][E]_mtk_wcn_wmt_therm_ctrl(207):thermal ctrl function not supported
+[ 2989.891068]  (1)[4957:mtk_wmtd][name:osal&][WMT-CORE][E]opfunc_hif_conf(841):WMT-CORE: WMT HIF info added
+[ 2989.893299]  (1)[4957:mtk_wmtd][name:domain&]conn: Power-on latency exceeded, new value 10692 ns
+[ 2989.894555]  (1)[4957:mtk_wmtd][name:mtk_wcn_consys_hw&][WMT-CONSYS-HW][E]mtk_wcn_consys_hw_reg_ctrl(550):Read CONSYS chipId(0x00000000)
+[ 2989.979996]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF-EXP[I]mtk_wcn_btif_open:p_btif(0xffffffc000e601d8)
+[ 2989.981217]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF-EXP[I]mtk_wcn_btif_open:owner name:CONSYS_STP, recorded name:CONSYS_STP
+[ 2989.982651]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]_btif_lpbk_ctrl:loopback function disabled
+[ 2989.983838]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]_btif_controller_setup:succeed
+[ 2989.984902]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]_btif_tx_dma_setup:succeed
+[ 2989.985920]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]_btif_rx_dma_setup:succeed
+[ 2989.986882]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]btif_log_buf_reset:reset Tx log buffer
+[ 2989.987974]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]btif_log_buf_reset:reset Rx log buffer
+[ 2989.989176]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF[I]btif_open:BTIF's Tx Mode:1, Rx Mode(1)
+[ 2989.990271]  (1)[4957:mtk_wmtd][name:btif&]MTK-BTIF-EXP[I]mtk_wcn_btif_open:btif_open succeed
+[ 2990.585307]  (0)[4957:mtk_wmtd][name:osal&][STP] mtk_wcn_stp_psm_enable:[W] STP Not Ready, Dont do Sleep/Wakeup
+[ 3043.940310]  (2)[4957:mtk_wmtd][wlan]kalFirmwareOpen:(INIT ERROR)Open FW image: WIFI_RAM_CODE failed
+[ 3043.941478]  (2)[4957:mtk_wmtd][wlan]wlanProbe:(INIT ERROR)kalFirmwareImageMapping fail!
+[ 3043.942518]  (2)[4957:mtk_wmtd][wlan]wlanProbe:(INIT WARN)CONNSYS FW CPUINFO:
+[ 3043.943440]  (2)[4957:mtk_wmtd][wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]wlanProbe:(INIT WARN)0x0006969c [wlan]HifRegDump:(NIC WARN)HIF Reg 0x0 = 0x108163
+[ 3043.950795]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x4 = 0x0
+[ 3043.951695]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0xc = 0x0
+[ 3043.952595]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x10 = 0x0
+[ 3043.953505]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x14 = 0x0
+[ 3043.954416]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x18 = 0x0
+[ 3043.955328]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x1c = 0x0
+[ 3043.956239]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x20 = 0x0
+[ 3043.957150]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x24 = 0x0
+[ 3043.958060]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x38 = 0x0
+[ 3043.959013]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x3c = 0x0
+[ 3043.959915]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x40 = 0x0
+[ 3043.960826]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x44 = 0x0
+[ 3043.961737]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x48 = 0x0
+[ 3043.962648]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x4c = 0x0
+[ 3043.963559]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x54 = 0x0
+[ 3043.964471]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)HIF Reg 0x58 = 0x0
+[ 3043.965386]  (2)[4957:mtk_wmtd][wlan]HifRegDump:(NIC WARN)
+[ 3044.009317]  (1)[5088:sh][MTK-WIFI] WIFI_write: WMT turn on WIFI success!

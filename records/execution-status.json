@@ -45,7 +45,7 @@
     "correction": "Preserve busybox/busybox-extras basenames inside giza directory; add recovery smoke check; corrected overlay and initramfs built locally",
     "automatic_return": "Not reliable on first desktop attempt because the same helper naming bug affects reboot dispatch"
   },
-  "latest_linux_battery_percent": 57,
+  "latest_linux_battery_percent": 56,
   "desktop_latest": {
     "automatic_startup": "passed after reboot",
     "display": "800x1280@30 Hz; scale 1.25; XRGB8888; software Mesa",
@@ -54,13 +54,22 @@
     "touch": "Physical finger tapping and typing confirmed by user",
     "limitations": [
       "Xwayland disabled because initialization blocked compositor",
-      "Wi-Fi and audio not working",
+      "Audio not working; full-boot Wi-Fi integration not yet tested",
       "suspend/rotation/broader applications unverified",
       "Bash PID 1 because old kernel cannot run current systemd"
     ],
     "next_boot": "recovery flag armed; current timed return suppressed with /run/giza-keep-running",
     "idle": "stay-awake indicator set during development",
     "performance": "User reports typing a bit faster. Four llvmpipe workers and supported reversible four-core request enabled. Animation probe improved from 32\u201333 to 59 frames in four seconds. VFR reverted after stale final keyboard update; immediate keyboard submission measured 249\u2013272 ms from synthetic 80-ms tap to changed framebuffer pixel. Physical panel latency and battery runtime unmeasured.",
-    "next_step": "Continue normal usage; investigate graphics acceleration/peripherals separately"
+    "next_step": "Validate Wi-Fi after a full native boot, then investigate audio/suspend/rotation",
+    "wifi": {
+      "native_networkmanager": "connected; wlan0 state 100/reason 0",
+      "credentials": "Laptop active Wi-Fi copied locally with explicit user authorization; only root-readable device files; excluded from Git",
+      "internet": "Desktop-user HTTPS forced through wlan0 returned 200; desktop-user ICMP 2/2 passed",
+      "startup": "Idempotent radio/service startup passed; NetworkManager restart/autoconnect passed; cold-boot integration not tested",
+      "device_support": "Built-in MediaTek radio; read-only stock helper/firmware; isolated eudev 3.2.14 for old kernel",
+      "gui": "User clone giza.network shows connected network, nearby networks, and ~27 ms ping/0% loss; Quickshell restarted after NM restart to clear stale references",
+      "usb": "rndis0 remains unmanaged and root USB diagnostic shell reachable"
+    }
   }
 }

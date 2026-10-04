@@ -16,3 +16,7 @@ __pycache__/
 !/prepared/linux-release.json
 
 # Explicit sanitized records and reviewed text patches are versioned.
+
+# Connection secrets stay only on the tablet.
+giza-wifi.conf
+*.nmconnection

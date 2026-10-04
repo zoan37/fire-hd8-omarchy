@@ -1,0 +1,12 @@
+kill -TERM 18953; for n in $(seq 1 50); do kill -0 18953 2>/dev/null || break; sleep 0.1; done; giza-wifi-start; sleep 5; nmcli -t -f GENERAL.STATE,GENERAL.REASON device show wlan0; runuser -u omarchy -- curl --interface wlan0 -fsS --max-time 20 -o /dev/null -w "HTTPS_STATUS=%{http_code}\n" https://archlinuxarm.org; giza-wifi-start; giza_rc=$?; printf '\nGIZA_COMMAND_ea683640378a497c9f575cbe99880e31=%s\n' "$giza_rc"
+
+[root@fire-giza /]# kill -TERM 18953; for n in $(seq 1 50); do kill -0 18953 2>/dev/null || break; sleep 0.1; done; giza-wifi-start; sleep 5; nmcli -t -f GENERAL.STATE,GENERAL.REASON device show wlan0; runuser -u omarchy -- curl --interface wlan0 -fsS --max-time 20 -o /dev/null -w "HTTPS_STATUS=%{http_code}\n" https://archlinuxarm.org; giza-wifi-start; giza_rc=$?; printf '\nGIZA_COMMAND_ea683640378a497c9f575cbe99880e31=%s\n' "$giza_rc"
+giza Wi-Fi radio ready
+Native Wi-Fi startup complete
+GENERAL.STATE:100 (connected)
+GENERAL.REASON:0 (No reason given)
+HTTPS_STATUS=200
+giza Wi-Fi radio ready
+NetworkManager already running; Wi-Fi startup complete
+
+COMMAND_EXIT=0

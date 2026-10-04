@@ -1,0 +1,22 @@
+{
+  "purpose": "Native Linux framebuffer desktop experiment",
+  "requested": [
+    "gperf"
+  ],
+  "packages": [
+    {
+      "name": "gperf",
+      "version": "3.3-2",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/gperf-3.3-2-aarch64.pkg.tar.xz",
+      "filename": "gperf-3.3-2-aarch64.pkg.tar.xz",
+      "sha256": "8e6dd83edfd4355fa30b9630122a5eb0b1f28118bf354c8e154356c1be97782e",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    }
+  ],
+  "bundle": {
+    "version": "0.1.1",
+    "url": "https://github.com/BlackFireAlex/omarchy-android/releases/download/v0.1.1/omarchy-android-aarch64-0.1.1.bundle.tar",
+    "sha256": "7e9f1cd67533bc0d3988b5cb3831aef52f1527dd90391d9d868ed9345021cdb2"
+  }
+}

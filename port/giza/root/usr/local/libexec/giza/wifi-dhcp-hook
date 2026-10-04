@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+[[ "${interface:-}" == wlan0 ]] || exit 1
+case "${1:-}" in
+  bound|renew)
+    /usr/local/libexec/giza/busybox ifconfig "$interface" "$ip" netmask "$subnet" up
+    read -r -a routers <<<"${router:-}"
+    if [[ ${#routers[@]} -gt 0 ]]; then
+      ip route replace default via "${routers[0]}" dev "$interface" metric 600
+    fi
+    if [[ -n "${dns:-}" ]]; then
+      read -r -a servers <<<"$dns"
+      { for server in "${servers[@]}"; do printf 'nameserver %s\n' "$server"; done; } >/run/giza-wifi-resolv.conf
+      [[ -e /etc/resolv.conf.giza-original ]] || cp -a /etc/resolv.conf /etc/resolv.conf.giza-original
+      cat /run/giza-wifi-resolv.conf >/etc/resolv.conf
+    fi
+    ;;
+  deconfig)
+    ip -4 addr flush dev "$interface"
+    ;;
+esac

@@ -1,0 +1,132 @@
+{
+  "purpose": "Native Linux framebuffer desktop experiment",
+  "requested": [
+    "iw",
+    "wpa_supplicant",
+    "networkmanager"
+  ],
+  "packages": [
+    {
+      "name": "iw",
+      "version": "6.17-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/core/iw-6.17-1-aarch64.pkg.tar.xz",
+      "filename": "iw-6.17-1-aarch64.pkg.tar.xz",
+      "sha256": "e925035ffa55196d8627810ec30be3c4a87291ff61e8881aa22767d76c85f3e7",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "wpa_supplicant",
+      "version": "2:2.12-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/core/wpa_supplicant-2:2.12-1-aarch64.pkg.tar.xz",
+      "filename": "wpa_supplicant-2:2.12-1-aarch64.pkg.tar.xz",
+      "sha256": "d5c3968fb3c9292c1097da0de8b07e4309258cf4b03701c3525c97b3b2443183",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "pcsclite",
+      "version": "2.5.2-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/pcsclite-2.5.2-1-aarch64.pkg.tar.xz",
+      "filename": "pcsclite-2.5.2-1-aarch64.pkg.tar.xz",
+      "sha256": "17650c837779b3e2ead8cfb89f25c22267d8c6dce2c6b00ad9038a5a0d38b47d",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "networkmanager",
+      "version": "1.58.1-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/networkmanager-1.58.1-1-aarch64.pkg.tar.xz",
+      "filename": "networkmanager-1.58.1-1-aarch64.pkg.tar.xz",
+      "sha256": "5f88ab112b7e2aa714ed000dd1db0fe4b972b7f91f1450ece1481bc7c3207093",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libmm-glib",
+      "version": "1.24.2-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libmm-glib-1.24.2-1-aarch64.pkg.tar.xz",
+      "filename": "libmm-glib-1.24.2-1-aarch64.pkg.tar.xz",
+      "sha256": "e5c0233fbb1596d585c661efde113dfa5ebdea63402e01d270fb8d81897f0627",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libndp",
+      "version": "1.9-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libndp-1.9-1-aarch64.pkg.tar.xz",
+      "filename": "libndp-1.9-1-aarch64.pkg.tar.xz",
+      "sha256": "eb095019df469b96d728ef91cbf50e90ecd8482dcbda17fcbc3091b24e87e6c7",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libnewt",
+      "version": "0.52.25-2",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libnewt-0.52.25-2-aarch64.pkg.tar.xz",
+      "filename": "libnewt-0.52.25-2-aarch64.pkg.tar.xz",
+      "sha256": "957ba14b3781acaad75817096ddb1d3833f5abb128ad596276f4b2c08870e5a4",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "gpm",
+      "version": "1.20.7.r38.ge82d1a6-7",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/core/gpm-1.20.7.r38.ge82d1a6-7-aarch64.pkg.tar.xz",
+      "filename": "gpm-1.20.7.r38.ge82d1a6-7-aarch64.pkg.tar.xz",
+      "sha256": "bb43865ef5175a607337bbe4d90c3e05a3b7b216c8284c6b5a4625b0caadfaf4",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "slang",
+      "version": "2.3.3-4",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/slang-2.3.3-4-aarch64.pkg.tar.xz",
+      "filename": "slang-2.3.3-4-aarch64.pkg.tar.xz",
+      "sha256": "0eb1ebad4099190298e00cb68e3853d155d52eb8cb1157a7ec914d505279de70",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "pcre",
+      "version": "8.45-5",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/core/pcre-8.45-5-aarch64.pkg.tar.xz",
+      "filename": "pcre-8.45-5-aarch64.pkg.tar.xz",
+      "sha256": "a553cb6ea6ebf3b47133696c42c2d7adbc4be55c41666723590caf408d24b85b",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libnm",
+      "version": "1.58.1-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libnm-1.58.1-1-aarch64.pkg.tar.xz",
+      "filename": "libnm-1.58.1-1-aarch64.pkg.tar.xz",
+      "sha256": "9219404664cc04bcb9575f9a16d2eeb13f7aeaa062c601623a2c4c4571fb3013",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libteam",
+      "version": "1.32-3",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libteam-1.32-3-aarch64.pkg.tar.xz",
+      "filename": "libteam-1.32-3-aarch64.pkg.tar.xz",
+      "sha256": "2facc93c151ae9ac48d614acd38643deca05840d3cd4632a3ed4513f5a108fc8",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "mobile-broadband-provider-info",
+      "version": "20251101-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/mobile-broadband-provider-info-20251101-1-any.pkg.tar.xz",
+      "filename": "mobile-broadband-provider-info-20251101-1-any.pkg.tar.xz",
+      "sha256": "17b38aaeed03afe9c47f0bf7a9ae92787de939ae645950f48dabace4a25fa358",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    }
+  ],
+  "bundle": {
+    "version": "0.1.1",
+    "url": "https://github.com/BlackFireAlex/omarchy-android/releases/download/v0.1.1/omarchy-android-aarch64-0.1.1.bundle.tar",
+    "sha256": "7e9f1cd67533bc0d3988b5cb3831aef52f1527dd90391d9d868ed9345021cdb2"
+  }
+}

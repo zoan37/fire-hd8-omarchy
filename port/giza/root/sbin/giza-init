@@ -27,6 +27,8 @@ mountpoint -q /dev/shm || mount -t tmpfs -o mode=1777,size=128m tmpfs /dev/shm
 [[ -s /etc/machine-id ]] || dbus-uuidgen >/etc/machine-id
 dbus-uuidgen --ensure=/etc/machine-id
 dbus-daemon --system --fork --nopidfile
+# Radio initialization runs independently so display startup stays responsive.
+giza-wifi-start >>/var/log/giza/wifi-start.log 2>&1 &
 
 # Test boots always return to TWRP unless deliberately kept running by the
 # operator. The recovery flag was verified by the initramfs before this stage.

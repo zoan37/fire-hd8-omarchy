@@ -41,6 +41,7 @@ prepare_proot_plugin_index() {
 }
 
 prepare_proot_plugin_index
+[[ ${1:-} == --index-only ]] && exit 0
 export QS_DISABLE_FILE_WATCHER=1 QS_NO_RELOAD_POPUP=1
 export QT_QUICK_BACKEND=software QSG_RENDER_LOOP=basic QT_QPA_PLATFORMTHEME=
 exec /usr/share/omarchy/bin/omarchy-launch-shell >>"$HOME/.local/state/giza/quickshell.log" 2>&1

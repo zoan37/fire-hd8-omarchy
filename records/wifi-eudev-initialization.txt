@@ -1,0 +1,17 @@
+if [ -e /var/tmp/giza-udev.conf.before-eudev ]; then cp -a /var/tmp/giza-udev.conf.before-eudev /etc/udev/udev.conf; fi; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/bin/udevadm test /sys/class/net/wlan0 > /var/log/giza/wifi-eudev-test.log 2>&1; tail -8 /var/log/giza/wifi-eudev-test.log; ls /run/udev/data; env LD_LIBRARY_PATH=/opt/giza-eudev/lib ldd /usr/bin/NetworkManager | grep -E "udev|not found"; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/sbin/udevd --daemon; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/bin/udevadm trigger --action=add /sys/class/net/wlan0; sleep .5; ls /run/udev/data; cat /run/udev/data/n8 | head -6; giza_rc=$?; printf '\nGIZA_COMMAND_4929a7ff13d24d3399a9dd6f74a17cac=%s\n' "$giza_rc"
+
+[root@fire-giza /]# if [ -e /var/tmp/giza-udev.conf.before-eudev ]; then cp -a /var/tmp/giza-udev.conf.before-eudev /etc/udev/udev.conf; fi; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/bin/udevadm test /sys/class/net/wlan0 > /var/log/giza/wifi-eudev-test.log 2>&1; tail -8 /var/log/giza/wifi-eudev-test.log; ls /run/udev/data; env LD_LIBRARY_PATH=/opt/giza-eudev/lib ldd /usr/bin/NetworkManager | grep -E "udev|not found"; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/sbin/udevd --daemon; env LD_LIBRARY_PATH=/opt/giza-eudev/lib /opt/giza-eudev/bin/udevadm trigger --action=add /sys/class/net/wlan0; sleep .5; ls /run/udev/data; cat /run/udev/data/n8 | head -6; giza_rc=$?; printf '\nGIZA_COMMAND_4929a7ff13d24d3399a9dd6f74a17cac=%s\n' "$giza_rc"
+DEVPATH=/devices/soc/180f0000.wifi/net/wlan0
+DEVTYPE=wlan
+ID_NET_NAME_MAC=REDACTED_MAC_INTERFACE
+IFINDEX=8
+INTERFACE=wlan0
+SUBSYSTEM=net
+USEC_INITIALIZED=3846506702
+net.ifnames=0
+n8
+        libudev.so.1 => /opt/giza-eudev/lib/libudev.so.1 (0x0000007f95130000)
+n8
+I:3846506702
+E:ID_NET_NAME_MAC=REDACTED_MAC_INTERFACE
+E:net.ifnames=0

@@ -1,0 +1,37 @@
+#!/bin/bash
+# Native MediaTek support plus isolated old-kernel libudev for NetworkManager.
+set -euo pipefail
+[[ "$EUID" == 0 ]] || { echo "Run as root" >&2; exit 1; }
+exec 9>/run/giza-wifi-start.lock
+flock -n 9 || exit 0
+mkdir -p /var/log/giza
+[[ -x /opt/giza-eudev/sbin/udevd ]] || {
+  echo "Build isolated eudev with /usr/local/libexec/giza/build-eudev first" >&2
+  exit 1
+}
+giza-wifi-radio
+# Allow the desktop account to use ICMP datagram sockets for panel latency.
+printf '1000 1000\n' >/proc/sys/net/ipv4/ping_group_range
+export LD_LIBRARY_PATH=/opt/giza-eudev/lib
+if ! pgrep -x udevd >/dev/null; then
+  /opt/giza-eudev/sbin/udevd --daemon 9>&-
+fi
+# Only announce the Wi-Fi interface; leave the live input/display stack alone.
+/opt/giza-eudev/bin/udevadm trigger --action=add /sys/class/net/wlan0
+/opt/giza-eudev/bin/udevadm settle --timeout=10
+if pgrep -x NetworkManager >/dev/null; then
+  echo "NetworkManager already running; Wi-Fi startup complete"
+  exit 0
+fi
+# Prevent background services from retaining the startup lock.
+nohup NetworkManager --no-daemon 9>&- </dev/null \
+  >>/var/log/giza/networkmanager.log 2>&1 &
+for (( attempt=0; attempt<30; attempt++ )); do
+  if nmcli -t -f RUNNING general 2>/dev/null | /usr/bin/grep -qx running; then
+    echo "Native Wi-Fi startup complete"
+    exit 0
+  fi
+  sleep 0.5
+done
+echo "NetworkManager did not become ready; inspect its log" >&2
+exit 1

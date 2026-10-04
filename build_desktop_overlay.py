@@ -46,6 +46,28 @@ def main():
     ).encode()
     shell_config = json.loads((WORK / "rootfs" / home / ".config/omarchy/shell.json").read_text())
     shell_config["bar"]["layout"]["left"].insert(0, {"id": "giza.keyboard"})
+    # Clone only the network panel into user configuration. Keep the bundle's
+    # service-free switch elsewhere, but use real native NetworkManager here.
+    network = WORK / "rootfs/usr/share/omarchy/shell/plugins/panels/network"
+    clone = f"{home}/.config/omarchy/plugins/giza.network"
+    for path in network.rglob("*"):
+        if path.is_file():
+            files[f"{clone}/{path.relative_to(network)}"] = path.read_bytes()
+    manifest = json.loads(files[f"{clone}/manifest.json"])
+    manifest.update(id="giza.network", name="My Network")
+    manifest.setdefault("omarchy", {})["clonedFrom"] = "omarchy.network"
+    files[f"{clone}/manifest.json"] = (json.dumps(manifest, indent=2) + "\n").encode()
+    panel = files[f"{clone}/Panel.qml"].decode()
+    old = 'readonly property bool prootMode: Quickshell.env("OMARCHY_PROOT") === "1"'
+    if panel.count(old) != 1:
+        raise RuntimeError("Network panel compatibility switch changed upstream")
+    files[f"{clone}/Panel.qml.giza-original"] = panel.encode()
+    files[f"{clone}/Panel.qml"] = panel.replace(
+        old, 'readonly property bool prootMode: false // Native Linux NetworkManager').encode()
+    for section in shell_config["bar"]["layout"].values():
+        for widget in section:
+            if widget.get("id") == "omarchy.network":
+                widget["id"] = "giza.network"
     files[f"{home}/.config/omarchy/shell.json.giza-original"] = (
         WORK / "rootfs" / home / ".config/omarchy/shell.json").read_bytes()
     files[f"{home}/.config/omarchy/shell.json"] = (json.dumps(shell_config, indent=2) + "\n").encode()
@@ -60,6 +82,15 @@ def main():
     files["etc/pacman.d/mirrorlist"] = b"Server = https://ca.us.mirror.archlinuxarm.org/$arch/$repo\n"
     output = WORK / "giza-desktop-overlay.tar"
     with tarfile.open(output, "w") as archive:
+        directories = {str(parent) for name in files
+                       for parent in pathlib.PurePosixPath(name).parents
+                       if str(parent) != "."}
+        for name in sorted(directories, key=lambda value: (value.count("/"), value)):
+            item = tarfile.TarInfo(name)
+            item.type = tarfile.DIRTYPE
+            item.mode = 0o755
+            item.uid = item.gid = 1000 if name == "home/omarchy" or name.startswith("home/omarchy/") else 0
+            archive.addfile(item)
         for name, data in sorted(files.items()):
             item = tarfile.TarInfo(name)
             item.size = len(data)

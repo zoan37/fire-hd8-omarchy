@@ -1,0 +1,54 @@
+/var/tmp/giza-install-wifi-packages.sh; giza_rc=$?; printf '\nGIZA_COMMAND_ddc8ecbb063441a69bd3220813674f69=%s\n' "$giza_rc"
+
+[root@fire-giza /]# /var/tmp/giza-install-wifi-packages.sh; giza_rc=$?; printf '\nGIZA_COMMAND_ddc8ecbb063441a69bd3220813674f69=%s\n' "$giza_rc"
+loading packages...
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (13) gpm-1.20.7.r38.ge82d1a6-7  iw-6.17-1  libmm-glib-1.24.2-1
+              libndp-1.9-1  libnewt-0.52.25-2  libnm-1.58.1-1  libteam-1.32-3
+              mobile-broadband-provider-info-20251101-1
+              networkmanager-1.58.1-1  pcre-8.45-5  pcsclite-2.5.2-1
+              slang-2.3.3-4  wpa_supplicant-2:2.12-1
+
+Total Installed Size:  54.39 MiB
+
+:: Proceed with installation? [Y/n]
+( 0/13) checking keys in keyring                   [----------------------]   0%( 1/13) checking keys in keyring                   [#---------------------]   7%( 2/13) checking keys in keyring                   [###-------------------]  15%( 3/13) checking keys in keyring                   [#####-----------------]  23%( 4/13) checking keys in keyring                   [######----------------]  30%( 5/13) checking keys in keyring                   [########--------------]  38%( 6/13) checking keys in keyring                   [##########------------]  46%( 7/13) checking keys in keyring                   [###########-----------]  53%( 8/13) checking keys in keyring                   [#############---------]  61%( 9/13) checking keys in keyring                   [###############-------]  69%(10/13) checking keys in keyring                   [################------]  76%(11/13) checking keys in keyring                   [##################----]  84%(12/13) checking keys in keyring                   [####################--]  92%(13/13) checking keys in keyring                   [######################] 100%
+( 0/13) checking package integrity                 [----------------------]   0%( 1/13) checking package integrity                 [----------------------]   0%( 2/13) checking package integrity                 [----------------------]   0%( 3/13) checking package integrity                 [----------------------]   0%( 4/13) checking package integrity                 [----------------------]   0%( 5/13) checking package integrity                 [----------------------]   0%( 6/13) checking package integrity                 [----------------------]   0%( 7/13) checking package integrity                 [----------------------]   0%( 8/13) checking package integrity                 [----------------------]   0%( 9/13) checking package integrity                 [----------------------]   0%(10/13) checking package integrity                 [----------------------]   0%(11/13) checking package integrity                 [----------------------]   0%(12/13) checking package integrity                 [----------------------]   0%(13/13) checking package integrity                 [######################] 100%
+( 0/13) loading package files                      [----------------------]   0%( 1/13) loading package files                      [----------------------]   0%( 2/13) loading package files                      [----------------------]   0%( 3/13) loading package files                      [----------------------]   0%( 4/13) loading package files                      [----------------------]   0%( 5/13) loading package files                      [----------------------]   0%( 6/13) loading package files                      [----------------------]   0%( 7/13) loading package files                      [----------------------]   0%( 8/13) loading package files                      [----------------------]   0%( 9/13) loading package files                      [----------------------]   0%(10/13) loading package files                      [----------------------]   0%(11/13) loading package files                      [----------------------]   0%(12/13) loading package files                      [----------------------]   0%(13/13) loading package files                      [######################] 100%
+( 0/13) checking for file conflicts                [----------------------]   0%( 1/13) checking for file conflicts                [#---------------------]   7%( 2/13) checking for file conflicts                [###-------------------]  15%( 3/13) checking for file conflicts                [#####-----------------]  23%( 4/13) checking for file conflicts                [######----------------]  30%( 5/13) checking for file conflicts                [########--------------]  38%( 6/13) checking for file conflicts                [##########------------]  46%( 7/13) checking for file conflicts                [###########-----------]  53%( 8/13) checking for file conflicts                [#############---------]  61%( 9/13) checking for file conflicts                [###############-------]  69%(10/13) checking for file conflicts                [################------]  76%(11/13) checking for file conflicts                [##################----]  84%(12/13) checking for file conflicts                [####################--]  92%(13/13) checking for file conflicts                [######################] 100%
+:: Processing package changes...
+( 1/13) installing iw                              [----------------------]   0%( 1/13) installing iw                              [######################] 100%
+( 2/13) installing pcsclite                        [----------------------]   0%( 2/13) installing pcsclite                        [######################] 100%
+Optional dependencies for pcsclite
+    python: API call trace logging with the pcsc-spy [installed]
+    ccid: USB Chip/Smart Card Interface Devices driver
+( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [----------------------]   0%( 3/13) installing wpa_supplicant                  [################------]  73%( 3/13) installing wpa_supplicant                  [######################] 100%
+( 4/13) installing libmm-glib                      [----------------------]   0%( 4/13) installing libmm-glib                      [#####################-]  96%( 4/13) installing libmm-glib                      [######################] 100%
+( 5/13) installing libndp                          [----------------------]   0%( 5/13) installing libndp                          [######################] 100%
+( 6/13) installing gpm                             [----------------------]   0%( 6/13) installing gpm                             [######################] 100%
+( 7/13) installing pcre                            [----------------------]   0%( 7/13) installing pcre                            [################------]  76%( 7/13) installing pcre                            [######################] 100%
+( 8/13) installing slang                           [----------------------]   0%( 8/13) installing slang                           [###################---]  87%( 8/13) installing slang                           [######################] 100%
+( 9/13) installing libnewt                         [----------------------]   0%( 9/13) installing libnewt                         [######################] 100%
+Optional dependencies for libnewt
+    python: libnewt support with the _snack module [installed]
+    tcl: whiptcl support
+(10/13) installing libnm                           [----------------------]   0%(10/13) installing libnm                           [#####################-]  96%(10/13) installing libnm                           [######################] 100%
+(11/13) installing libteam                         [----------------------]   0%(11/13) installing libteam                         [######################] 100%
+(12/13) installing mobile-broadband-provider-info  [----------------------]   0%(12/13) installing mobile-broadband-provider-info  [######################] 100%
+(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [----------------------]   0%(13/13) installing networkmanager                  [#######---------------]  35%(13/13) installing networkmanager                  [###########-----------]  54%(13/13) installing networkmanager                  [###############-------]  70%(13/13) installing networkmanager                  [###################---]  89%(13/13) installing networkmanager                  [######################] 100%
+Optional dependencies for networkmanager
+    bluez: Bluetooth support
+    dhcpcd: alternative DHCP client
+    dnsmasq: connection sharing
+    firewalld: firewall support
+    iptables: connection sharing [installed]
+    iwd: wpa_supplicant alternative
+    libnvme: NBFT support [installed]
+    modemmanager: cellular network support
+    nftables: connection sharing [installed]
+    openresolv: alternative resolv.conf manager
+    pacrunner: PAC proxy support
+    polkit: let non-root users control networking [installed]
+    ppp: dialup connection support

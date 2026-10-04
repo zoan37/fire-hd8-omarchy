@@ -1,0 +1,30 @@
+{
+  "stock_mount": "read-only,noload",
+  "files": [
+    {
+      "path": "/system/bin/6620_launcher",
+      "sha256": "abeb4b8a7495bb4239a6f33f8d66b392baa64b2b0ba703d0df421c57fd116a7d",
+      "bytes": 31376
+    },
+    {
+      "path": "/system/etc/firmware/ROMv2_lm_patch_1_0_hdr.bin",
+      "sha256": "eb9d98e5beac86dc26caa140524b3a71ef5a4525054d69a6e22d92477a3ead24",
+      "bytes": 128304
+    },
+    {
+      "path": "/system/etc/firmware/ROMv2_lm_patch_1_1_hdr.bin",
+      "sha256": "1bf5423cb3d5291a9a0af69337ea7c066d3f59cad9e765e0762ca8dfb9974fa8",
+      "bytes": 62464
+    },
+    {
+      "path": "/system/etc/firmware/WIFI_RAM_CODE_8163",
+      "sha256": "d547a48e1bd8c2411fbfa21bf18ecf57b67d004b784bd2ec61d47171091dbb34",
+      "bytes": 372928
+    },
+    {
+      "path": "/system/etc/firmware/WMT_SOC.cfg",
+      "sha256": "302bd4462de99c028c04092e561c1500d65582ce42a93c4c72ccae6e2c99013d",
+      "bytes": 119
+    }
+  ]
+}
