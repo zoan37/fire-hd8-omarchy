@@ -86,7 +86,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--installed-test", action="store_true",
                         help="Temporary boot_x test that arms recovery from Linux init")
+    parser.add_argument("--desktop-test", action="store_true",
+                        help="Switch into the staged native Arch rootfs for a desktop test")
     args = parser.parse_args()
+    if args.installed_test and args.desktop_test:
+        parser.error("Choose only one test variant")
     init = INIT
     if args.installed_test:
         OUT = ROOT / "working/linux-installed-probe"
@@ -110,6 +114,9 @@ else
 fi''')
         init = init.replace(
             b'# A recovery flag is set separately before fastboot boot. Reboot returns to TWRP.\n(sleep 120; echo "Probe timeout; rebooting"; reboot -f) &\n', b'')
+    if args.desktop_test:
+        OUT = ROOT / "working/linux-desktop-probe"
+        init = (ROOT / "port/giza/initramfs-init.sh").read_bytes()
     OUT.mkdir(parents=True, exist_ok=True)
     data = gzip.decompress((ROOT / "prepared/linux/initramfs.gz").read_bytes())
     # The release assets wrap an already-gzipped ramdisk in a second gzip layer.
@@ -150,6 +157,12 @@ fi''')
                         requires_recovery_flag_before_boot=False,
                         init_writes="16-byte next-boot recovery flag in audited MISC partition",
                         automatic_reboot_condition="Linux init reaches verified recovery-flag write")
+    if args.desktop_test:
+        metadata.update(purpose="Native Arch/Omarchy desktop boot_x experiment",
+                        requires_recovery_flag_before_boot=False,
+                        init_writes="Audited MISC recovery flag and staged userdata rootfs logs/helpers",
+                        storage_mounts_in_init=True, automatic_reboot_seconds=600,
+                        automatic_reboot_condition="Staged native giza-init starts; keep-running flag absent")
     (OUT / "manifest.json").write_text(json.dumps(metadata, indent=2) + "\n")
     # Minimal musl userspace archive for a compatibility check under recovery.
     selected = {"bin/busybox", "lib/ld-musl-aarch64.so.1", "lib/libc.musl-aarch64.so.1"}

@@ -1,0 +1,4 @@
+#!/bin/bash
+export QS_DISABLE_FILE_WATCHER=1 QS_NO_RELOAD_POPUP=1
+exec quickshell -n -p /usr/share/omarchy/shell \
+  >>"$HOME/.local/state/giza/quickshell.log" 2>&1

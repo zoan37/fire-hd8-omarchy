@@ -1,0 +1,45 @@
+#!/bin/bash
+# Temporary native boot supervisor for a kernel too old for current systemd.
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export LANG=C.UTF-8
+mkdir -p /run/user/1000 /run/dbus /tmp/.X11-unix /var/log/giza
+chmod 1777 /tmp /tmp/.X11-unix
+chown omarchy:omarchy /run/user/1000
+chmod 0700 /run/user/1000
+exec >>/var/log/giza/init.log 2>&1
+echo "Native Arch Linux ARM boot; PID=$$"
+uname -a
+
+busybox=/usr/local/libexec/giza-busybox
+extras=/usr/local/libexec/giza-busybox-extras
+# USB diagnostic service remains available after the real root transition.
+"$extras" telnetd -b 172.16.42.1:23 -l /bin/bash
+"$busybox" ifconfig rndis0 172.16.42.1 netmask 255.255.255.0 up
+hostname fire-giza
+dbus-uuidgen --ensure=/etc/machine-id
+dbus-daemon --system --fork --nopidfile
+
+# Test boots always return to TWRP unless deliberately kept running by the
+# operator. The recovery flag was verified by the initramfs before this stage.
+(
+  sleep 600
+  if [[ ! -e /run/giza-keep-running ]]; then
+    echo "Desktop test timeout; returning to recovery"
+    sync
+    "$busybox" reboot -f
+  fi
+) &
+
+/usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset \
+  -logfile /var/log/giza/xorg.log vt1 &
+for (( attempt=0; attempt<100; attempt++ )); do
+  [[ -S /tmp/.X11-unix/X0 ]] && break
+  sleep 0.1
+done
+if [[ -S /tmp/.X11-unix/X0 ]]; then
+  runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy \
+    /usr/local/bin/giza-desktop >>/var/log/giza/desktop.log 2>&1 &
+else
+  echo "Xorg did not create its socket; inspect /var/log/giza/xorg.log"
+fi
+while true; do wait -n || sleep 1; done

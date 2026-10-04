@@ -1,0 +1,39 @@
+#!/bin/bash
+set -u
+export XDG_RUNTIME_DIR=/run/user/1000
+export DISPLAY=:0
+export LANG=C.UTF-8 LC_ALL=C.UTF-8
+export LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe
+export QT_QUICK_BACKEND=software
+export XDG_DATA_DIRS=/opt/omarchy-android/hyprland/share:/usr/local/share:/usr/share
+mkdir -p "$HOME/.local/state/giza"
+weston --backend=x11 --renderer=pixman --shell=kiosk --no-config \
+  --socket=wayland-giza --width=800 --height=1280 --idle-time=0 \
+  --log="$HOME/.local/state/giza/weston.log" &
+weston_pid=$!
+trap 'kill "$weston_pid" 2>/dev/null || true' EXIT
+for (( attempt=0; attempt<100; attempt++ )); do
+  [[ -S "$XDG_RUNTIME_DIR/wayland-giza" ]] && break
+  sleep 0.1
+done
+[[ -S "$XDG_RUNTIME_DIR/wayland-giza" ]] || exit 1
+
+export WAYLAND_DISPLAY=wayland-giza
+export XDG_SESSION_TYPE=wayland XDG_CURRENT_DESKTOP=Hyprland XDG_SESSION_DESKTOP=Hyprland
+export PATH=/opt/omarchy-android/hyprland/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib
+export AQ_NO_KMS_REQUIREMENT=1 AQ_NO_MODIFIERS=1 AQ_WAYLAND_REFRESH_MHZ=30000
+export HYPRLAND_EGL_SURFACELESS=1 HYPRLAND_EGL_NO_MODIFIERS=1
+export HYPRLAND_ANDROID_DMABUF=0 HYPRLAND_GL_DMABUF_EXPORT=0 HYPRLAND_SHM_DAMAGE=1
+export HYPRLAND_NO_SD_NOTIFY=1 HYPRLAND_NO_SD_VARS=1 HYPRLAND_NO_RT=1
+export QT_QPA_PLATFORM=wayland GDK_BACKEND=wayland SDL_VIDEODRIVER=wayland
+export NO_AT_BRIDGE=1 QT_ACCESSIBILITY=0 GTK_A11Y=none
+export OMARCHY_PATH=/usr/share/omarchy OMARCHY_GPU_MODE=software
+export OMARCHY_OUTPUT_WIDTH=800 OMARCHY_OUTPUT_HEIGHT=1280 OMARCHY_REFRESH_MHZ=30000 OMARCHY_SCALE=1.25
+# Reuse the bundle's service-free launcher compatibility switch. No PRoot
+# process is involved: this shell runs on the tablet's native Linux rootfs.
+export OMARCHY_PROOT=1
+export XWAYLAND_NO_GLAMOR=1
+dbus-run-session --config-file="$HOME/.config/omarchy/proot-session-bus.conf" \
+  /opt/omarchy-android/hyprland/bin/Hyprland \
+  --config "$HOME/.config/hypr/hyprland.lua"

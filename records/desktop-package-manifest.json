@@ -1,0 +1,79 @@
+{
+  "purpose": "Native Linux framebuffer desktop experiment",
+  "requested": [
+    "xorg-server",
+    "xf86-video-fbdev",
+    "xf86-input-evdev",
+    "weston"
+  ],
+  "packages": [
+    {
+      "name": "xorg-server",
+      "version": "21.1.24-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/xorg-server-21.1.24-1-aarch64.pkg.tar.xz",
+      "filename": "xorg-server-21.1.24-1-aarch64.pkg.tar.xz",
+      "sha256": "a76f4a9a9fb3d59100a99919c871431bc2ad8e8ab4776d5927a149001289920d",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "xf86-input-libinput",
+      "version": "1.5.0-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/xf86-input-libinput-1.5.0-1-aarch64.pkg.tar.xz",
+      "filename": "xf86-input-libinput-1.5.0-1-aarch64.pkg.tar.xz",
+      "sha256": "b1a3008f82b555ca6807aeaa8ddbd2237348b305bdfea1bbb4c2a31734200baf",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "xf86-video-fbdev",
+      "version": "0.5.1-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/xf86-video-fbdev-0.5.1-1-aarch64.pkg.tar.xz",
+      "filename": "xf86-video-fbdev-0.5.1-1-aarch64.pkg.tar.xz",
+      "sha256": "8956776cae1be5737ad9d10c83802c3345b73721c2fb2b920ede1319ebe27003",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "xf86-input-evdev",
+      "version": "2.11.0-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/xf86-input-evdev-2.11.0-1-aarch64.pkg.tar.xz",
+      "filename": "xf86-input-evdev-2.11.0-1-aarch64.pkg.tar.xz",
+      "sha256": "23df8acdcc0fb304d10e89336704782af9b5d0e039381935a7d208063712bf15",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "weston",
+      "version": "15.0.1-3",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/weston-15.0.1-3-aarch64.pkg.tar.xz",
+      "filename": "weston-15.0.1-3-aarch64.pkg.tar.xz",
+      "sha256": "2da79ea9f1059b5e068debbf6c5b4f650c59c9b6725d98479c5c99753d878f36",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "colord",
+      "version": "1.4.8-1",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/colord-1.4.8-1-aarch64.pkg.tar.xz",
+      "filename": "colord-1.4.8-1-aarch64.pkg.tar.xz",
+      "sha256": "816032d7b5019a3e8201f7c8bd44a7d0695085cdfe4ab47069e4e77138d887a0",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    },
+    {
+      "name": "libgusb",
+      "version": "0.4.9-2",
+      "url": "https://ca.us.mirror.archlinuxarm.org/aarch64/extra/libgusb-0.4.9-2-aarch64.pkg.tar.xz",
+      "filename": "libgusb-0.4.9-2-aarch64.pkg.tar.xz",
+      "sha256": "43cb6f36edbdfe17567550cbe30122da49a128299996656687ad1e780ef99b07",
+      "signer_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+      "signature_verified": true
+    }
+  ],
+  "bundle": {
+    "version": "0.1.1",
+    "url": "https://github.com/BlackFireAlex/omarchy-android/releases/download/v0.1.1/omarchy-android-aarch64-0.1.1.bundle.tar",
+    "sha256": "7e9f1cd67533bc0d3988b5cb3831aef52f1527dd90391d9d868ed9345021cdb2"
+  }
+}
