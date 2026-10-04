@@ -8,17 +8,18 @@ ROOT = pathlib.Path(__file__).resolve().parent
 
 def sanitize(text):
     text = re.sub(r"\bG000[A-Z0-9]+\b", "REDACTED_DEVICE_SERIAL", text)
-    text = re.sub(r"\b(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}\b", "REDACTED_MAC", text)
-    text = re.sub(r"\bwlx[0-9a-fA-F]{12}\b", "REDACTED_MAC_INTERFACE", text)
     text = re.sub(r"\b192\.168\.(?:\d{1,3}\.)\d{1,3}\b", "REDACTED_HOST_IP", text)
     # Host Wi-Fi interface lines contain globally routable IPv6 addresses.
     text = re.sub(r"^wlp[^\n]*", "[host Wi-Fi addresses omitted]", text, flags=re.M)
     text = re.sub(r"\x1b\[[0-9;?]*[A-Za-z]", "", text)
     text = re.sub(r"\x1b\][\s\S]*?(?:\x07|\x1b\\)", "", text)
     text = re.sub(r"\x00+", "\n[zero-filled log gap]\n", text)
+    # Remove terminal escapes before matching addresses split by color codes.
+    text = re.sub(r"\b(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}\b", "REDACTED_MAC", text)
+    text = re.sub(r"\bwlx[0-9a-fA-F]{12}\b", "REDACTED_MAC_INTERFACE", text)
     text = re.sub(r"^(?:Set-Cookie|Cookie|Authorization|Proxy-Authorization):[^\n]*",
                   "[HTTP credential header omitted]", text, flags=re.M | re.I)
-    return text
+    return "\n".join(line.rstrip() for line in text.splitlines()).rstrip() + "\n"
 
 
 def main():
