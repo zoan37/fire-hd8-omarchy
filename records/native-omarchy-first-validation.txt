@@ -1,0 +1,95 @@
+runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl reload; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl configerrors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl monitors; tail -55 /home/omarchy/.local/state/giza/quickshell.log; cat /proc/bus/input/devices; giza_rc=$?; printf '\nGIZA_COMMAND_430b20f793bb43808248f92ddf44cf09=%s\n' "$giza_rc"
+
+[root@fire-giza /]# runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl reload; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl configerrors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl monitors; tail -55 /home/omarchy/.local/state/giza/quickshell.log; cat /proc/bus/input/devices; giza_rc=$?; printf '\nGIZA_COMMAND_430b20f793bb43808248f92ddf44cf09=%s\n' "$giza_rc"
+HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)
+
+HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)
+
+HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)
+
+  INFO: Launching config: "/usr/share/omarchy/shell/shell.qml"
+  INFO: Shell ID: "c0240dfe8c8e8a421e1f8db23a03fc60" Path ID "c0240dfe8c8e8a421e1f8db23a03fc60"
+  INFO: Saving logs to "/run/user/1000/quickshell/by-id/p9onwr3q/log.qslog"
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="ACCDET"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input0
+U: Uniq=
+H: Handlers=kbd gpufreq_ib event0 dynamic_boost
+B: PROP=0
+B: EV=3
+B: KEY=40 0 0 0 0 0 0 1000000000 c000000000000 0
+
+I: Bus=0019 Vendor=2454 Product=6500 Version=0010
+N: Name="mtk-kpd"
+P: Phys=
+S: Sysfs=/devices/soc/10010000.keypad/input/input1
+U: Uniq=
+H: Handlers=kbd gpufreq_ib event1 dynamic_boost
+B: PROP=0
+B: EV=3
+B: KEY=1c000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="hall_sensors"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input2
+U: Uniq=
+H: Handlers=gpufreq_ib event2 dynamic_boost
+B: PROP=0
+B: EV=21
+B: SW=1
+
+I: Bus=0018 Vendor=dead Product=beef Version=28bb
+N: Name="goodix-ts"
+P: Phys=input/ts
+S: Sysfs=/devices/virtual/input/input3
+U: Uniq=
+H: Handlers=gpufreq_ib event3 dynamic_boost
+B: PROP=2
+B: EV=b
+B: KEY=0
+B: ABS=265800000000000
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="hwmdata"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input4
+U: Uniq=
+H: Handlers=gpufreq_ib event4 dynamic_boost
+B: PROP=0
+B: EV=5
+B: REL=6
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_alsps_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input5
+U: Uniq=
+H: Handlers=gpufreq_ib event5 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=6
+B: ABS=101
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_acc_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input6
+U: Uniq=
+H: Handlers=gpufreq_ib event6 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=c1
+B: ABS=107
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="m_gyro_input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input7
+U: Uniq=
+H: Handlers=gpufreq_ib event7 dynamic_boost
+B: PROP=0
+B: EV=d
+B: REL=c1
+B: ABS=107

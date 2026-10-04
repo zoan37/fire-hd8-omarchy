@@ -1,0 +1,47 @@
+cat /proc/312/wchan; cat /proc/312/syscall; cat /proc/312/stack; ps -L -p 312 -o pid,tid,pcpu,stat,wchan:24,comm; tail -70 /run/user/1000/hypr/*/hyprland.log; ls /usr/bin/strace /usr/bin/gdb /dev/uinput 2>/dev/null; ls -l /proc/312/fd | tail -20; pgrep -af grim; tail -12 /home/omarchy/.local/state/giza/quickshell.log; giza_rc=$?; printf '\nGIZA_COMMAND_dd03d1ff64e44d879fa3590af2b38f47=%s\n' "$giza_rc"
+
+[root@fire-giza /]# cat /proc/312/wchan; cat /proc/312/syscall; cat /proc/312/stack; ps -L -p 312 -o pid,tid,pcpu,stat,wchan:24,comm; tail -70 /run/user/1000/hypr/*/hyprland.log; ls /usr/bin/strace /usr/bin/gdb /dev/uinput 2>/dev/null; ls -l /proc/312/fd | tail -20; pgrep -af grim; tail -12 /home/omarchy/.local/state/giza/quickshell.log; giza_rc=$?; printf '\nGIZA_COMMAND_dd03d1ff64e44d879fa3590af2b38f47=%s\n' "$giza_rc"
+poll_schedule_timeout73 0x7fdfe67990 0x1 0x0 0x0 0x0 0x0 0x7fdfe678b0 0x7f816d1c6c
+[<ffffffc0000855ec>] __switch_to+0x6c/0x88
+[<ffffffc0001bf7ac>] poll_schedule_timeout+0x3c/0x70
+[<ffffffc0001c0aec>] do_sys_poll+0x384/0x460
+[<ffffffc0001c0ecc>] SyS_ppoll+0x1ac/0x1e0
+[<ffffffc00008442c>] el0_svc_naked+0x20/0x28
+[<ffffffffffffffff>] 0xffffffffffffffff
+  PID   TID %CPU STAT WCHAN                    COMMAND
+  312   312  3.5 Sl   poll_schedule_timeout    Hyprland
+  312   325  0.0 Sl   futex_wait_queue_me      Hyprland
+  312   326  0.3 Sl   futex_wait_queue_me      llvmpipe-0
+  312   327  0.2 Sl   futex_wait_queue_me      llvmpipe-1
+  312   328  0.0 Sl   futex_wait_queue_me      Hyprland
+  312   329  0.0 Sl   futex_wait_queue_me      Hyprland
+  312   330  0.0 SNl  futex_wait_queue_me      Hyprlan:disk$0
+  312   331  0.0 Sl   futex_wait_queue_me      pool-spawner
+  312   332  0.0 Sl   poll_schedule_timeout    gmain
+  312   333  0.0 Sl   poll_schedule_timeout    dconf worker
+  312   334  0.0 Sl   poll_schedule_timeout    gdbus
+  312   341  2.1 Sl   futex_wait_queue_me      [pango] fontcon
+/dev/uinput
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 33 -> anon_inode:[timerfd]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 34 -> socket:[9358]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 35 -> socket:[9359]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 36 -> socket:[9360]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 37 -> socket:[9361]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 38 -> socket:[9358]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 4 -> anon_inode:[eventpoll]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 40 -> /memfd:aquamarine-shm (deleted)
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 42 -> /memfd:aquamarine-shm (deleted)
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 43 -> /memfd:aquamarine-shm (deleted)
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 44 -> /memfd:weston-shared (deleted)
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 45 -> socket:[9440]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 46 -> socket:[9440]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 47 -> socket:[6201]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 48 -> socket:[6201]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 5 -> anon_inode:[eventfd]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 6 -> anon_inode:[eventfd]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 7 -> anon_inode:[signalfd]
+lrwx------ 1 omarchy omarchy 64 Jan  8 05:34 8 -> anon_inode:[timerfd]
+lr-x------ 1 omarchy omarchy 64 Jan  8 05:34 9 -> anon_inode:inotify
+  INFO: Launching config: "/usr/share/omarchy/shell/shell.qml"
+  INFO: Shell ID: "c0240dfe8c8e8a421e1f8db23a03fc60" Path ID "c0240dfe8c8e8a421e1f8db23a03fc60"
+  INFO: Saving logs to "/run/user/1000/quickshell/by-id/p9onwr3q/log.qslog"

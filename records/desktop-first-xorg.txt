@@ -1,0 +1,173 @@
+[     2.643]
+X.Org X Server 1.21.1.24
+X Protocol Version 11, Revision 0
+[     2.643] Current Operating System: Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64
+[     2.644] Kernel command line: console=tty0 console=ttyS0,921600n1 console=ttyMT0,921600n1 earlycon=uart8250,mmio32,0x11002000 root=/dev/ram vmalloc=496M androidboot.hardware=mt8163 androidboot.unlocked_kernel=true androidboot.rpmb_state=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.pl_version=6 androidboot.tee_version=102 androidboot.lk_version=1 androidboot.pl_build_desc=07d3bbd-20181011_014731 androidboot.lk_build_desc=f4a2747-20160909_050229 bootopt=64S3,32N2,64N2 loglevel=6 console=tty0 rdinit=/init net.ifnames=0 ipv6.disable=1 lcm=1-nt35521_wxga_dsi_vdo_giza fps=6000 vram=16777216 androidboot.selinux=enforce printk.disable_uart=1 bootprof.pl_t=4937 bootprof.lk_t=11413 boot_reason=4 androidboot.serialno=REDACTED_DEVICE_SERIAL androidboot.bootreason=wdt_by_pass_pwk nt35521_id=39 lp855x_vmax=28
+[     2.644]
+[     2.644] Current version of pixman: 0.46.4
+[     2.644] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[     2.644] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[     2.645] (++) Log file: "/var/log/giza/xorg.log", Time: Wed Jan  8 05:08:28 2020
+[     2.651] (++) Using config file: "/etc/X11/xorg.conf"
+[     2.651] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[     2.653] (==) ServerLayout "GizaLayout"
+[     2.653] (**) |-->Screen "GizaScreen" (0)
+[     2.653] (**) |   |-->Monitor "GizaPanel"
+[     2.654] (**) |   |-->Device "GizaFramebuffer"
+[     2.654] (**) |-->Input Device "GizaTouch"
+[     2.655] (**) |-->Input Device "GizaButtons"
+[     2.655] (**) Option "AllowMouseOpenFail" "true"
+[     2.655] (**) Option "BlankTime" "0"
+[     2.655] (**) Option "StandbyTime" "0"
+[     2.655] (**) Option "SuspendTime" "0"
+[     2.655] (**) Option "OffTime" "0"
+[     2.655] (**) Option "AutoAddDevices" "false"
+[     2.655] (**) Option "AutoAddGPU" "false"
+[     2.655] (**) Allowing byte-swapped clients
+[     2.655] (**) Not automatically adding devices
+[     2.655] (==) Automatically enabling devices
+[     2.655] (**) Not automatically adding GPU devices
+[     2.655] (==) Automatically binding GPU devices
+[     2.655] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[     2.658] (WW) The directory "/usr/share/fonts/misc" does not exist.
+[     2.658] 	Entry deleted from font path.
+[     2.658] (WW) `fonts.dir' not found (or not valid) in "/usr/share/fonts/TTF".
+[     2.658] 	Entry deleted from font path.
+[     2.658] 	(Run 'mkfontdir' on "/usr/share/fonts/TTF").
+[     2.658] (WW) The directory "/usr/share/fonts/OTF" does not exist.
+[     2.658] 	Entry deleted from font path.
+[     2.659] (WW) The directory "/usr/share/fonts/Type1" does not exist.
+[     2.659] 	Entry deleted from font path.
+[     2.659] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[     2.659] 	Entry deleted from font path.
+[     2.659] (WW) The directory "/usr/share/fonts/75dpi" does not exist.
+[     2.659] 	Entry deleted from font path.
+[     2.659] (==) FontPath set to:
+
+[     2.659] (==) ModulePath set to "/usr/lib/xorg/modules"
+[     2.659] (II) Module ABI versions:
+[     2.659] 	X.Org ANSI C Emulation: 0.4
+[     2.659] 	X.Org Video Driver: 25.2
+[     2.659] 	X.Org XInput driver : 24.4
+[     2.659] 	X.Org Server Extension : 10.0
+[     2.662] (++) using VT number 1
+
+[     2.662] (II) systemd-logind: logind integration requires -keeptty and -keeptty was not provided, disabling logind integration
+[     2.663] (II) no primary bus or device found
+[     2.663] (II) LoadModule: "glx"
+[     2.666] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[     2.696] (II) Module glx: vendor="X.Org Foundation"
+[     2.696] 	compiled for 1.21.1.24, module version = 1.0.0
+[     2.696] 	ABI class: X.Org Server Extension, version 10.0
+[     2.696] (II) LoadModule: "fbdev"
+[     2.696] (II) Loading /usr/lib/xorg/modules/drivers/fbdev_drv.so
+[     2.698] (II) Module fbdev: vendor="X.Org Foundation"
+[     2.698] 	compiled for 1.21.1.14, module version = 0.5.1
+[     2.698] 	Module class: X.Org Video Driver
+[     2.698] 	ABI class: X.Org Video Driver, version 25.2
+[     2.698] (II) LoadModule: "evdev"
+[     2.698] (II) Loading /usr/lib/xorg/modules/input/evdev_drv.so
+[     2.707] (II) Module evdev: vendor="X.Org Foundation"
+[     2.708] 	compiled for 1.21.1.13, module version = 2.11.0
+[     2.708] 	Module class: X.Org XInput Driver
+[     2.708] 	ABI class: X.Org XInput driver, version 24.4
+[     2.708] (II) FBDEV: driver for framebuffer: fbdev
+[     2.708] (WW) xf86OpenConsole: setsid failed: Operation not permitted
+[     2.708] (WW) Falling back to old probe method for fbdev
+[     2.708] (II) Loading sub module "fbdevhw"
+[     2.708] (II) LoadModule: "fbdevhw"
+[     2.709] (II) Loading /usr/lib/xorg/modules/libfbdevhw.so
+[     2.710] (II) Module fbdevhw: vendor="X.Org Foundation"
+[     2.710] 	compiled for 1.21.1.24, module version = 0.0.2
+[     2.710] 	ABI class: X.Org Video Driver, version 25.2
+[     2.711] (II) FBDEV(0): using /dev/fb0
+[     2.711] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+[     2.711] (II) FBDEV(0): Creating default Display subsection in Screen section
+	"GizaScreen" for depth/fbbpp 24/32
+[     2.711] (**) FBDEV(0): Depth 24, (--) framebuffer bpp 32
+[     2.711] (==) FBDEV(0): RGB weight 888
+[     2.711] (==) FBDEV(0): Default visual is TrueColor
+[     2.711] (==) FBDEV(0): Using gamma correction (1.0, 1.0, 1.0)
+[     2.711] (II) FBDEV(0): hardware: mtkfb (video memory: 12000kB)
+[     2.711] (DB) xf86MergeOutputClassOptions unsupported bus type 0
+[     2.712] (**) FBDEV(0): Option "fbdev" "/dev/fb0"
+[     2.712] (II) FBDEV(0): checking modes against framebuffer device...
+[     2.712] (II) FBDEV(0): checking modes against monitor...
+[     2.712] (II) FBDEV(0): Virtual size is 800x1280 (pitch 800)
+[     2.712] (**) FBDEV(0):  Built-in mode "current"
+[     2.712] (==) FBDEV(0): DPI set to (96, 96)
+[     2.712] (II) Loading sub module "fb"
+[     2.712] (II) LoadModule: "fb"
+[     2.712] (II) Module "fb" already built-in
+[     2.712] (**) FBDEV(0): using shadow framebuffer
+[     2.712] (II) Loading sub module "shadow"
+[     2.712] (II) LoadModule: "shadow"
+[     2.713] (II) Loading /usr/lib/xorg/modules/libshadow.so
+[     2.714] (II) Module shadow: vendor="X.Org Foundation"
+[     2.714] 	compiled for 1.21.1.24, module version = 1.1.0
+[     2.714] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[     2.806] (==) FBDEV(0): Backing store enabled
+[     2.808] (==) FBDEV(0): DPMS enabled
+[     2.808] (II) Initializing extension Generic Event Extension
+[     2.809] (II) Initializing extension SHAPE
+[     2.810] (II) Initializing extension MIT-SHM
+[     2.811] (II) Initializing extension XInputExtension
+[     2.814] (II) Initializing extension XTEST
+[     2.815] (II) Initializing extension BIG-REQUESTS
+[     2.816] (II) Initializing extension SYNC
+[     2.817] (II) Initializing extension XKEYBOARD
+[     2.818] (II) Initializing extension XC-MISC
+[     2.819] (II) Initializing extension SECURITY
+[     2.820] (II) Initializing extension XFIXES
+[     2.821] (II) Initializing extension RENDER
+[     2.822] (II) Initializing extension RANDR
+[     2.824] (II) Initializing extension COMPOSITE
+[     2.825] (II) Initializing extension DAMAGE
+[     2.826] (II) Initializing extension MIT-SCREEN-SAVER
+[     2.827] (II) Initializing extension DOUBLE-BUFFER
+[     2.828] (II) Initializing extension RECORD
+[     2.829] (II) Initializing extension DPMS
+[     2.830] (II) Initializing extension Present
+[     2.831] (II) Initializing extension DRI3
+[     2.831] (II) Initializing extension X-Resource
+[     2.831] (II) Initializing extension XVideo
+[     2.833] (II) Initializing extension XVideo-MotionCompensation
+[     2.833] (II) Initializing extension GLX
+[     2.834] (II) AIGLX: Screen 0 is not DRI2 capable
+[     3.418] (II) IGLX: Loaded and initialized swrast
+[     3.418] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[     3.418] (II) Initializing extension XFree86-VidModeExtension
+[     3.419] (II) Initializing extension XFree86-DGA
+[     3.419] (II) Initializing extension XFree86-DRI
+[     3.419] (II) Initializing extension DRI2
+[     3.522] (II) Using input driver 'evdev' for 'GizaTouch'
+[     3.522] (**) Option "CorePointer"
+[     3.522] (**) GizaTouch: always reports core events
+[     3.522] (**) evdev: GizaTouch: Device: "/dev/input/event3"
+[     3.522] (--) evdev: GizaTouch: Vendor 0xdead Product 0xbeef
+[     3.522] (--) evdev: GizaTouch: Found absolute axes
+[     3.522] (--) evdev: GizaTouch: Found absolute multitouch axes
+[     3.522] (II) evdev: GizaTouch: No buttons found, faking one.
+[     3.523] (II) evdev: GizaTouch: Forcing relative x/y axes to exist.
+[     3.523] (II) evdev: GizaTouch: Configuring as mouse
+[     3.523] (**) evdev: GizaTouch: YAxisMapping: buttons 4 and 5
+[     3.523] (**) evdev: GizaTouch: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[     3.523] (II) XINPUT: Adding extended input device "GizaTouch" (type: MOUSE, id 6)
+[     3.523] (II) evdev: GizaTouch: initialized for relative axes.
+[     3.523] (WW) evdev: GizaTouch: ignoring absolute axes.
+[     3.524] (**) GizaTouch: (accel) keeping acceleration scheme 1
+[     3.524] (**) GizaTouch: (accel) acceleration profile 0
+[     3.524] (**) GizaTouch: (accel) acceleration factor: 2.000
+[     3.524] (**) GizaTouch: (accel) acceleration threshold: 4
+[     3.524] (II) Using input driver 'evdev' for 'GizaButtons'
+[     3.524] (**) Option "CoreKeyboard"
+[     3.524] (**) GizaButtons: always reports core events
+[     3.524] (**) evdev: GizaButtons: Device: "/dev/input/event1"
+[     3.525] (--) evdev: GizaButtons: Vendor 0x2454 Product 0x6500
+[     3.525] (--) evdev: GizaButtons: Found keys
+[     3.525] (II) evdev: GizaButtons: Configuring as keyboard
+[     3.525] (II) XINPUT: Adding extended input device "GizaButtons" (type: KEYBOARD, id 7)
+[     3.525] (**) Option "xkb_rules" "evdev"

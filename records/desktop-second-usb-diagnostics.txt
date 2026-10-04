@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 83, in <module>
+    main()
+    ~~~~^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 77, in main
+    output, status = run(args.command, args.timeout)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 52, in run
+    with socket.create_connection(("172.16.42.1", 23), timeout=5) as connection:
+         ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/socket.py", line 874, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.14/socket.py", line 859, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+TimeoutError: timed out

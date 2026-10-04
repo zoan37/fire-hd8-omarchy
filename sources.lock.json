@@ -19,6 +19,11 @@
       "directory": "research/pmaports-amazon",
       "url": "https://github.com/hexdump0815/pmaports-amazon.git",
       "revision": "ddd2b2f63d6135239f866460345342ae5a1d8002"
+    },
+    {
+      "directory": "research/wvkbd",
+      "url": "https://github.com/jjsullivan5196/wvkbd.git",
+      "revision": "e14b53aff4fd1f471add6b21b3885c2cff945509"
     }
   ]
 }

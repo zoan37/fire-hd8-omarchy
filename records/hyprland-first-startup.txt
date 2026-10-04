@@ -1,0 +1,82 @@
+tail -65 /var/log/giza/desktop-live.log; pgrep -af "Hyprland|quickshell|omarchy-shell|Xorg|weston"; free -m; ls /run/user/1000/hypr; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl instances; giza_rc=$?; printf '\nGIZA_COMMAND_c84802b2075640c29714f1259cd09593=%s\n' "$giza_rc"
+
+[root@fire-giza /]# tail -65 /var/log/giza/desktop-live.log; pgrep -af "Hyprland|quickshell|omarchy-shell|Xorg|weston"; free -m; ls /run/user/1000/hypr; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl instances; giza_rc=$?; printf '\nGIZA_COMMAND_c84802b2075640c29714f1259cd09593=%s\n' "$giza_rc"
+
+                     YY    UJ
+                    YYY    UUJ
+                   XXXY    UUUU
+                  zXXXX    UUUUU
+                zzzzX        UUUUJ
+               cczzz          UUUUJ
+             vccccz            UUUUUJ
+            vvcccc              UUUUUJ
+           vvvvv                  UUUUJ
+          uuuvv                    UUUUJ
+         uuuuu                      UUUUU
+        nnnuu                        UUUUU
+       nnnnn                          YUUUU
+       xxnn                            YUUU
+       xxxn                            YYUU
+      xxxx                              YYUU
+      rxxx                              YYYY
+      rrrx                              YYYY
+       rrrx                            XXXY
+       rrrr                            XXXX
+        rrrr                          zzXX
+         rrrr                        zzzz
+          rrrrr                    ccczz
+           rrrrrx                vccccc
+             rrrrxxxx        uuvvvvvc
+                rrxxxxxxnnnnuuuuuv
+                    xxxxxnnnnu
+
+
+
+DEBUG ]: Old rlimit: soft -> 1024, hard -> 4096
+DEBUG ]: New rlimit: soft -> 4096, hard -> 4096
+WARN ]: WARNING: Hyprland is being launched without start-hyprland. This is highly advised against.
+DEBUG ]: Creating the EventLoopManager!
+DEBUG ]: Creating the KeybindManager!
+DEBUG ]: Creating the AnimationManager!
+DEBUG ]: Creating the DynamicPermissionManager!
+DEBUG ]: Creating the MonitorState!
+DEBUG ]: Creating the WorkspaceState!
+DEBUG ]: Creating the ConfigManager!
+DEBUG ]: [cfg] Config is either explicit or special.
+DEBUG ]: [cfg] Config is lua, loading lua mgr
+DEBUG ]: Creating the Error Overlay!
+DEBUG ]: Creating the LayoutManager!
+DEBUG ]: Creating the TokenManager!
+DEBUG ]: Creating the EventManager!
+DEBUG ]: Creating the PointerManager!
+DEBUG ]: Creating the AsyncResourceGatherer!
+dbus-daemon[311]: [session uid=1000 pid=311] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=312 comm="/opt/omarchy-android/hyprland/bin/Hyprland --confi" label="kernel")
+dbus-daemon[311]: [session uid=1000 pid=311] Successfully activated service 'ca.desrt.dconf'
+dbus-daemon[311]: [session uid=1000 pid=311] Reloaded configuration
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOn
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOff
+> Warning:          Could not resolve keysym XF86ActionOnSelection
+> Warning:          Could not resolve keysym XF86ContextualInsert
+> Warning:          Could not resolve keysym XF86ContextualQuery
+Errors from xkbcomp are not fatal to the X server
+267 /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-xrgb.log vt1
+308 weston --backend=x11 --renderer=pixman --shell=kiosk --no-config --socket=wayland-giza --width=800 --height=1280 --idle-time=0 --log=/home/omarchy/.local/state/giza/weston.log
+310 dbus-run-session --config-file=/home/omarchy/.config/omarchy/proot-session-bus.conf /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+312 /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+347 flock -n /run/user/1000/omarchy-shell-launch.lock giza-launch-shell
+349 quickshell -n -p /usr/share/omarchy/shell
+               total        used        free      shared  buff/cache   available
+Mem:            1357         224         731          16         435        1132
+Swap:              0           0           0
+5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606
+instance 5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606:
+        time: 1578461452
+        pid: 312
+        wl socket: wayland-1

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 83, in <module>
+    main()
+    ~~~~^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 77, in main
+    output, status = run(args.command, args.timeout)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 69, in run
+    raise TimeoutError(bytes(output).decode(errors="replace"))
+TimeoutError: pgrep -a Xorg || true; ls -l /tmp/.X0-lock /tmp/.X11-unix/X0 2>/dev/null; rm -f /tmp/.X0-lock /tmp/.X11-unix/X0; nohup /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-live.log vt1 </dev/null >/var/log/giza/xorg-live-console.log 2>&1 & sleep 2; tail -25 /var/log/giza/xorg-live.log; cat /var/log/giza/xorg-live-console.log | tail -8; sync; giza_rc=$?; printf '\nGIZA_COMMAND_c52c1cd4489d403d81deee75e9fc66c1=%s\n' "$giza_rc"
+
+
+[root@fire-giza /]# pgrep -a Xorg || true; ls -l /tmp/.X0-lock /tmp/.X11-unix/X0 2>/dev/null; rm -f /tmp/.X0-lock /tmp/.X11-unix/X0; nohup /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-live.log vt1 </dev/null >/var/log/giza/xorg-live-console.log 2>&1 & sleep 2; tail -25 /var/log/giza/xorg-live.log; cat /var/log/giza/xorg-live-console.log | tail -8; sync; giza_rc=$?; printf '\nGIZA_COMMAND_c52c1cd4489d403d81deee75e9fc66c1=%s\n' "$giza_rc"
+
+-r--r--r-- 1 root root 0 Jan  8 05:22 /tmp/.X0-lock
+srwxrwxrwx 1 root root 0 Jan  8 05:22 /tmp/.X11-unix/X0
+[1] 324

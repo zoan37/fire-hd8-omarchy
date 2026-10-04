@@ -13,6 +13,8 @@ def sanitize(text):
     # Host Wi-Fi interface lines contain globally routable IPv6 addresses.
     text = re.sub(r"^wlp[^\n]*", "[host Wi-Fi addresses omitted]", text, flags=re.M)
     text = re.sub(r"\x1b\[[0-9;?]*[A-Za-z]", "", text)
+    text = re.sub(r"\x1b\][\s\S]*?(?:\x07|\x1b\\)", "", text)
+    text = re.sub(r"\x00+", "\n[zero-filled log gap]\n", text)
     return text
 
 

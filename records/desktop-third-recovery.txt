@@ -1,0 +1,76 @@
+Native Arch Linux ARM boot; PID=1
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+giza-busybox-extras: applet not found
+giza-busybox: applet not found
+/sbin/giza-init: line 18: hostname: command not found
+UUID file '/etc/machine-id' should contain a hex string of length 32, not length 0, with no other text
+dbus[221]: Unknown username "colord" in message bus configuration file
+
+X.Org X Server 1.21.1.24
+X Protocol Version 11, Revision 0
+Current Operating System: Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64
+Kernel command line: console=tty0 console=ttyS0,921600n1 console=ttyMT0,921600n1 earlycon=uart8250,mmio32,0x11002000 root=/dev/ram vmalloc=496M androidboot.hardware=mt8163 androidboot.unlocked_kernel=true androidboot.rpmb_state=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.pl_version=6 androidboot.tee_version=102 androidboot.lk_version=1 androidboot.pl_build_desc=07d3bbd-20181011_014731 androidboot.lk_build_desc=f4a2747-20160909_050229 bootopt=64S3,32N2,64N2 loglevel=6 console=tty0 rdinit=/init net.ifnames=0 ipv6.disable=1 lcm=1-nt35521_wxga_dsi_vdo_giza fps=6000 vram=16777216 androidboot.selinux=enforce printk.disable_uart=1 bootprof.pl_t=4937 bootprof.lk_t=11413 boot_reason=4 androidboot.serialno=REDACTED_DEVICE_SERIAL androidboot.bootreason=wdt_by_pass_pwk nt35521_id=39 lp855x_vmax=28
+
+Current version of pixman: 0.46.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: "/var/log/giza/xorg.log", Time: Wed Jan  8 05:08:28 2020
+(++) Using config file: "/etc/X11/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOn
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOff
+> Warning:          Could not resolve keysym XF86ActionOnSelection
+> Warning:          Could not resolve keysym XF86ContextualInsert
+> Warning:          Could not resolve keysym XF86ContextualQuery
+Errors from xkbcomp are not fatal to the X server
+
+[zero-filled log gap]
+/usr/local/bin/giza-desktop: line 10: cannot redirect standard input from /dev/null: Permission denied
+/usr/local/bin/giza-desktop: line 1: /dev/null: Permission denied
+[    2.368691] <0> (0)[1:init]usb phy read default eye value, Addr: 0x5=0x77
+[    2.370546] <0> (0)[1:init]usb phy read eye value after set, Addr: 0x5=0x77
+[    2.371439] <0> (0)[1:init][name:g_android&][g_android][USB]enable_store: enable 0->1 case, device_desc.idVendor = 0x18d1, device_desc.idProduct = 0xd001
+[    2.565712] <0> (0)[217:mountpoint][name:musb_qmu&]QMU_WARN,<musb_disable_q_all 338>, disable_q_all
+[    2.624609] <1> (1)[223:dbus-daemon]random: dbus-daemon urandom read with 36 bits of entropy available
+[    2.667603] <0> (2)[226:busybox][name:mtkfb&][DISPCHECK]AEE is not enabled, will disable layer 3
+[    2.667709] <0> (2)[226:busybox][name:primary_display&][DISP]primary_display_trigger, change blocking to non blocking trigger
+[    2.683775] <2> (2)[226:busybox][name:primary_display&][DISP]primary_display_trigger, change blocking to non blocking trigger
+[    2.700466] <2> (0)[226:busybox][name:primary_display&][DISP]primary_display_trigger, change blocking to non blocking trigger
+[    2.713281] <2> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    2.713325] <2> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=CONNECTED
+[    2.713331] <2> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+[    2.858653] <0> (0)[0:swapper/0][name:musb_qmu&]QMU_WARN,<musb_disable_q_all 338>, disable_q_all
+[    2.859762] <0> (0)[0:swapper/0][name:g_android&][g_android][USB]android_disconnect:
+[    2.860748] <0> (0)[0:swapper/0][name:g_android&][g_android][USB]android_disconnect: dev->connected = 0
+[    2.862025] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: is_hwconnected=1
+[    2.863186] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: sent uevent USB_STATE=DISCONNECTED
+[    2.864497] <0> (0)[71:kworker/0:1][name:g_android&][g_android][USB]android_work: did not send zero uevent
+__bionic_open_tzdata: couldn't find any tzdata when looking for localtime!
+__bionic_open_tzdata: couldn't find any tzdata when looking for GMT!
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+-rwxr-xr-x    1 root     root        890480 Jan  1  1970 /data/omarchy-rootfs/usr/local/libexec/giza/busybox
+-rwxr-xr-x    1 root     root        104016 Jan  1  1970 /data/omarchy-rootfs/usr/local/libexec/giza/busybox-extras
+Native Arch/Omarchy desktop bring-up on giza
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 Linux
+1+0 records in
+1+0 records out
+NOTE: Waiting 10 seconds for the framebuffer /dev/fb0.
+If your device does not have a framebuffer, disable this with:
+no_framebuffer=true in <https://postmarketos.org/deviceinfo>
+Setting framebuffer mode to: U:800x1280p-0
+  Setting up an USB gadget through android_usb
+Starting unudhcpd
+  Using interface rndis0
+  Starting the DHCP daemon
+Trying to start server with parameters: Server IP addr: 172.16.42.1:67, client IP addr: 172.16.42.2, interface: rndis0
+29.04 37.98

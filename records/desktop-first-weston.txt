@@ -1,0 +1,24 @@
+Date: 2020-01-08 UTC
+[05:08:28.683] weston 15.0.1
+               https://wayland.freedesktop.org
+               Bug reports to: https://gitlab.freedesktop.org/wayland/weston/issues/
+               Build: 15.0.1
+[05:08:28.684] Command line: weston --backend=x11 --renderer=pixman --shell=kiosk --no-config --socket=wayland-giza --width=800 --height=1280 --idle-time=0 --log=/home/omarchy/.local/state/giza/weston.log
+[05:08:28.684] OS: Linux, 3.18.19, #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022, aarch64
+[05:08:28.684] Flight recorder: enabled, scopes subscribed: log
+[05:08:28.684] Starting with no config file.
+[05:08:28.685] Output repaint window is 7 ms maximum.
+[05:08:28.686] Loading module '/usr/lib/libweston-15/x11-backend.so'
+[05:08:29.431] Using Pixman renderer
+[05:08:29.466] Registered plugin API 'weston_windowed_output_api_x11_v2' of size 16
+[05:08:29.466] Color manager: no-op
+                 protocol support: no
+[05:08:29.466] Color representation not supported by renderer
+[05:08:29.466] Output 'screen0' attempts EOTF mode SDR and colorimetry mode default.
+[05:08:29.467] Output 'screen0' using color profile: stock sRGB color profile
+[05:08:29.469] Found visual, bits per value: 8, red_mask: 000000ff, green_mask: 0000ff00, blue_mask: 00ff0000
+[05:08:29.469] Visual depth is 24
+[05:08:29.469] Found format for depth 24, bpp: 32
+[05:08:29.469] Can't find appropriate format for SHM pixmap
+[05:08:29.469] Enabling output "screen0" failed.
+[05:08:29.469] Enabling output "screen0" failed.

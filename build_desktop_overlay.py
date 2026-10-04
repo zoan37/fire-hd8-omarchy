@@ -2,6 +2,7 @@
 """Package the native giza configuration without changing upstream Omarchy."""
 import io
 import gzip
+import json
 import pathlib
 import tarfile
 from build_linux_probe import read_newc
@@ -14,7 +15,7 @@ def main():
     payload = ROOT / "port/giza/root"
     files = {}
     for path in payload.rglob("*"):
-        if path.is_file():
+        if path.is_file() and "__pycache__" not in path.parts:
             files[str(path.relative_to(payload))] = path.read_bytes()
     # Stage the diagnostic helpers ahead of boot so their actual applet
     # dispatch can be checked under the recovery kernel.
@@ -40,8 +41,20 @@ def main():
     files[f"{home}/.config/hypr/looknfeel.lua.giza-original"] = original_look.read_bytes()
     files[f"{home}/.config/hypr/looknfeel.lua"] = (
         original_look.read_text() + "\n-- Keep the software-rendered giza desktop responsive.\n"
-        "hl.config({ animations = { enabled = false }, debug = { enable_stdout_logs = true } })\n"
+        "hl.config({ animations = { enabled = false }, debug = { enable_stdout_logs = true }, "
+        "xwayland = { enabled = false } })\n"
     ).encode()
+    shell_config = json.loads((WORK / "rootfs" / home / ".config/omarchy/shell.json").read_text())
+    shell_config["bar"]["layout"]["left"].insert(0, {"id": "giza.keyboard"})
+    files[f"{home}/.config/omarchy/shell.json.giza-original"] = (
+        WORK / "rootfs" / home / ".config/omarchy/shell.json").read_bytes()
+    files[f"{home}/.config/omarchy/shell.json"] = (json.dumps(shell_config, indent=2) + "\n").encode()
+    autostart = (WORK / "rootfs" / home / ".config/hypr/autostart.lua").read_text()
+    files[f"{home}/.config/hypr/autostart.lua"] = (autostart +
+        '\nhl.on("hyprland.start", function()\n'
+        '  hl.exec_cmd("flock -n $XDG_RUNTIME_DIR/giza-keyboard.lock wvkbd-mobintl -H 300")\n'
+        '  hl.exec_cmd("flock -n $XDG_RUNTIME_DIR/giza-terminal.lock foot")\n'
+        'end)\n').encode()
     files["etc/giza-native-release"] = b"GIZA_NATIVE_EXPERIMENT=1\nTARGET=giza-KFGIWI\n"
     files["etc/hostname"] = b"fire-giza\n"
     files["etc/pacman.d/mirrorlist"] = b"Server = https://ca.us.mirror.archlinuxarm.org/$arch/$repo\n"

@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+"""Select the native 32-bit channel order accepted by Xorg/Weston.
+
+BusyBox 1.35 accepts -rgba but does not implement that command-line option.
+Use the standard framebuffer ioctl and verify the kernel's returned bitfields.
+"""
+import fcntl
+import struct
+
+with open("/dev/fb0", "r+b", buffering=0) as framebuffer:
+    info = bytearray(160)
+    fcntl.ioctl(framebuffer, 0x4600, info, True)  # FBIOGET_VSCREENINFO
+    width, height = struct.unpack_from("<II", info)
+    depth = struct.unpack_from("<I", info, 24)[0]
+    if (width, height, depth) != (800, 1280, 32):
+        raise RuntimeError(f"Unexpected framebuffer: {width}x{height}, {depth} bpp")
+    for offset, channel_offset in [(32, 16), (44, 8), (56, 0), (68, 24)]:
+        struct.pack_into("<III", info, offset, channel_offset, 8, 0)
+    struct.pack_into("<I", info, 84, 0)  # FB_ACTIVATE_NOW
+    fcntl.ioctl(framebuffer, 0x4601, info, True)  # FBIOPUT_VSCREENINFO
+    fcntl.ioctl(framebuffer, 0x4600, info, True)
+    channels = [struct.unpack_from("<III", info, offset) for offset in (32, 44, 56, 68)]
+    expected = [(16, 8, 0), (8, 8, 0), (0, 8, 0), (24, 8, 0)]
+    if channels != expected:
+        raise RuntimeError(f"Framebuffer did not accept channel order: {channels}")
+    print(f"Framebuffer verified: {width}x{height}, 32 bpp, XRGB8888 masks", flush=True)

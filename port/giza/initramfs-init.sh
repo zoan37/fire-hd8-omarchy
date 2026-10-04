@@ -33,23 +33,21 @@ start_unudhcpd
 
 if ! mount -t ext4 -o rw,noatime /dev/mmcblk0p24 /data-root ||
    ! mount --bind /data-root/omarchy-rootfs /newroot ||
-   [ ! -x /newroot/sbin/giza-init ]; then
+   [ ! -x /newroot/sbin/giza-init ] ||
+   [ ! -s /newroot/usr/local/libexec/giza/busybox ] ||
+   [ ! -s /newroot/usr/local/libexec/giza/busybox-extras ]; then
     echo "Arch root filesystem unavailable; USB diagnostic shell remains available."
     telnetd -b 172.16.42.1:23 -l /bin/sh
     (sleep 120; reboot -f) &
     while true; do sleep 1; done
 fi
 
-# Keep the tested musl helpers alongside Arch's glibc. There is no Android
-# userspace, PRoot, or CPU emulation after switch_root.
-mkdir -p /newroot/usr/local/libexec/giza /newroot/usr/lib /newroot/var/log
-# BusyBox chooses its applet from argv[0]. Preserve a busybox-prefixed
-# basename so invoking this binary with an applet argument works.
-cp /bin/busybox /newroot/usr/local/libexec/giza/busybox
-cp /bin/busybox-extras /newroot/usr/local/libexec/giza/busybox-extras
-cp -L /lib/ld-musl-aarch64.so.1 /newroot/usr/lib/ld-musl-aarch64.so.1
-ln -sf ld-musl-aarch64.so.1 /newroot/usr/lib/libc.musl-aarch64.so.1
+# The checked overlay already contains the musl diagnostic helpers. Avoid
+# truncating/replacing them during early boot. After switch_root there is no
+# Android userspace, PRoot, or CPU emulation.
+mkdir -p /newroot/var/log
 cp /probe.log /newroot/var/log/giza-initramfs.log
+sync
 mkdir -p /newroot/dev /newroot/proc /newroot/sys /newroot/run
 mount --move /dev /newroot/dev
 mount --move /proc /newroot/proc

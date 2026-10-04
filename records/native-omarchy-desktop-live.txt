@@ -1,0 +1,139 @@
+uname -a; ps -eo pid,args | tail -n 25; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 layers; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 clients; cat /var/log/giza/touch.log; tail -n 25 /var/log/giza/xorg-touch.log; free -m; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_046c623897144b178f9fc04af9e33c91=%s\n' "$giza_rc"
+
+[root@fire-giza /]# uname -a; ps -eo pid,args | tail -n 25; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 layers; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 clients; cat /var/log/giza/touch.log; tail -n 25 /var/log/giza/xorg-touch.log; free -m; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_046c623897144b178f9fc04af9e33c91=%s\n' "$giza_rc"
+Linux fire-giza 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+  896 python3 -m http.server 9877 --bind 172.16.42.1 --directory /var/tmp/giza-share
+ 1231 python3 -c import base64; exec(base64.b64decode('ZnJvbSBodHRwLnNlcnZlciBpbXBvcnQgSFRUUFNlcnZlcixTaW1wbGVIVFRQUmVxdWVzdEhhbmRsZXIKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCmltcG9ydCBvcwpvcy5jaGRpcignL3Zhci90bXAvZ2l6YS1zaGFyZScpCmNsYXNzIEgoU2ltcGxlSFRUUFJlcXVlc3RIYW5kbGVyKToKIGRlZiBkb19QVVQoc2VsZik6CiAgbmFtZT1zZWxmLnBhdGgubHN0cmlwKCcvJykKICBpZiAnLycgaW4gbmFtZSBvciBuYW1lLnN0YXJ0c3dpdGgoJy4nKToKICAgc2VsZi5zZW5kX2Vycm9yKDQwMCk7IHJldHVybgogIHNpemU9aW50KHNlbGYuaGVhZGVyc1snQ29udGVudC1MZW5ndGgnXSkKICB3aXRoIG9wZW4obmFtZSwnd2InKSBhcyBmOgogICB3aGlsZSBzaXplOgogICAgY2h1bms9c2VsZi5yZmlsZS5yZWFkKG1pbihzaXplLDEwNDg1NzYpKTsgZi53cml0ZShjaHVuayk7IHNpemUtPWxlbihjaHVuaykKICBzZWxmLnNlbmRfcmVzcG9uc2UoMjAxKTsgc2VsZi5lbmRfaGVhZGVycygpCkhUVFBTZXJ2ZXIoKCcxNzIuMTYuNDIuMScsOTg3OCksSCkuc2VydmVfZm9yZXZlcigpCg=='))
+ 1254 /usr/bin/python3 /usr/local/bin/giza-touch-pointer
+ 1297 [kworker/u8:2]
+ 1305 [kworker/0:2]
+ 1405 /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-touch.log vt1
+ 1411 runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy /usr/local/bin/giza-desktop
+ 1415 /bin/bash /usr/local/bin/giza-desktop
+ 1417 weston --backend=x11 --renderer=pixman --shell=kiosk --no-config --socket=wayland-giza --width=800 --height=1280 --idle-time=0 --log=/home/omarchy/.local/state/giza/weston.log
+ 1418 dbus-run-session --config-file=/home/omarchy/.config/omarchy/proot-session-bus.conf /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+ 1419 dbus-daemon --nofork --print-address 4 --config-file /home/omarchy/.config/omarchy/proot-session-bus.conf
+ 1420 /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+ 1447 /usr/lib/dconf-service
+ 1538 foot
+ 1570 /bin/bash
+ 1754 /bin/sh -c wvkbd-mobintl -H 300 > /home/omarchy/.local/state/giza/keyboard.log 2>&1
+ 1758 wvkbd-mobintl -H 300
+ 1910 /usr/lib/upowerd
+ 1915 /usr/lib/polkit-1/polkitd --no-debug
+ 2178 /bin/bash /usr/share/omarchy/bin/omarchy-launch-shell
+ 2184 quickshell -n -p /usr/share/omarchy/shell
+ 2469 sleep 1
+ 2470 /bin/bash
+ 2472 ps -eo pid,args
+ 2473 tail -n 25
+
+
+Monitor WAYLAND-1 (ID 0):
+        800x1280@30.00000 at 0x0
+        description:
+        make:
+        model:
+        physical size (mm): 0x0
+        serial:
+        active workspace: 1 (1)
+        special workspace: 0 ()
+        reserved: 0 26 0 300
+        scale: 1.25
+        transform: 0
+        focused: yes
+        dpmsStatus: 1
+        vrr: false
+        solitary: 0
+        solitaryBlockedBy: windowed mode,missing candidate
+        activelyTearing: false
+        tearingBlockedBy: next frame is not torn,user settings,not supported by monitor,missing candidate
+        directScanoutTo: 0
+        directScanoutBlockedBy: user settings,software renders/cursors,missing candidate
+        disabled: false
+        currentFormat: XRGB8888
+        mirrorOf: none
+        availableModes: 800x1280@30.00Hz
+        colorManagementPreset: srgb
+        sdrBrightness: 1.00
+        sdrSaturation: 1.00
+        sdrMinLuminance: 0.20
+        sdrMaxLuminance: 80
+        hardwareCursorsInUse: false
+
+
+Monitor WAYLAND-1:
+        Layer level 0 (background):
+                Layer 7fb82b8b60: xywh: 0 0 640 1024, a: 1, namespace: omarchy-background, pid: 2184
+        Layer level 1 (bottom):
+        Layer level 2 (top):
+                Layer 7fb8858a00: xywh: 0 0 640 26, a: 1, namespace: omarchy-bar, pid: 2184
+        Layer level 3 (overlay):
+                Layer 7fb2c39b10: xywh: 0 724 640 300, a: 1, namespace: wvkbd, pid: 1758
+
+
+
+Window 7fb4edaae0 -> omarchy@fire-giza:/:
+        mapped: 1
+        hidden: 0
+        visible: 1
+        acceptsInput: 1
+        at: 12,38
+        size: 616,674
+        workspace: 1 (1)
+        floating: 0
+        monitor: 0
+        class: foot
+        title: omarchy@fire-giza:/
+        initialClass: foot
+        initialTitle: foot
+        pid: 1538
+        xwayland: 0
+        pinned: 0
+        pinFullscreened: 0
+        fullscreen: 0
+        fullscreenClient: 0
+        fullscreenHandler: default
+        allowedOverFullscreen: 1
+        grouped: 0
+        tags: default-opacity*, terminal*
+        swallowing: 0
+        focusHistoryID: 0
+        inhibitingIdle: 0
+        xdgTag:
+        xdgDescription:
+        contentType: none
+        tearingHint: 0
+        stableID: 18000000
+
+
+Goodix pointer adapter ready
+[   925.368] (II) Using input driver 'evdev' for 'GizaTouch'
+[   925.368] (**) Option "CorePointer"
+[   925.368] (**) GizaTouch: always reports core events
+[   925.368] (**) evdev: GizaTouch: Device: "/dev/input/giza-touch-pointer"
+[   925.368] (--) evdev: GizaTouch: Vendor 0x1 Product 0x1
+[   925.368] (--) evdev: GizaTouch: Found 1 mouse buttons
+[   925.368] (--) evdev: GizaTouch: Found absolute axes
+[   925.368] (--) evdev: GizaTouch: Found x and y absolute axes
+[   925.368] (--) evdev: GizaTouch: Found absolute touchscreen
+[   925.368] (II) evdev: GizaTouch: Configuring as touchscreen
+[   925.368] (**) evdev: GizaTouch: YAxisMapping: buttons 4 and 5
+[   925.368] (**) evdev: GizaTouch: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[   925.368] (II) evdev: GizaTouch: initialized for absolute axes.
+[   925.369] (**) GizaTouch: (accel) keeping acceleration scheme 1
+[   925.369] (**) GizaTouch: (accel) acceleration profile 0
+[   925.369] (**) GizaTouch: (accel) acceleration factor: 2.000
+[   925.369] (**) GizaTouch: (accel) acceleration threshold: 4
+[   925.369] (II) Using input driver 'evdev' for 'GizaButtons'
+[   925.369] (**) Option "CoreKeyboard"
+[   925.369] (**) GizaButtons: always reports core events
+[   925.369] (**) evdev: GizaButtons: Device: "/dev/input/event1"
+[   925.369] (--) evdev: GizaButtons: Vendor 0x2454 Product 0x6500
+[   925.369] (--) evdev: GizaButtons: Found keys
+[   925.369] (II) evdev: GizaButtons: Configuring as keyboard
+[   925.369] (**) Option "xkb_rules" "evdev"
+               total        used        free      shared  buff/cache   available
+Mem:            1357         433          63          34         912         923
+Swap:              0           0           0
+58

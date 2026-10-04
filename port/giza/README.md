@@ -1,14 +1,15 @@
 # Experimental native desktop port
 
 This is an unfinished hardware experiment for giza, the 2016 Fire HD 8. The
-postmarketOS Linux 3.18.19 kernel has booted on the tablet. The first desktop
-test reached an Xorg-style cursor; the complete desktop remains unverified.
+postmarketOS Linux 3.18.19 kernel has booted on the tablet. Hyprland, Omarchy's real Quickshell shell, a terminal, and wvkbd have rendered
+on the tablet. Physical tapping and typing remain unconfirmed.
 
 The kernel exposes `/dev/fb0` and vendor Mali interfaces, but no DRM device.
-The proposed display stack is Xorg with fbdev and evdev, Weston with its X11
+The tested display stack is Xorg with fbdev and evdev, Weston with its X11
 backend and pixman renderer, then a patched ARM64 Hyprland with software Mesa
 rendering. Omarchy's Quickshell and applications run in that native Arch ARM
-root filesystem. Performance and touch behavior remain unknown.
+root filesystem. GPU acceleration is unavailable; graphics use llvmpipe. Broader application
+compatibility, wireless networking, and audio remain unverified.
 
 Current systemd requires a newer kernel. `root/sbin/giza-init` is a temporary
 native PID 1 supervisor that starts diagnostics, D-Bus, Xorg, and the desktop.
@@ -53,7 +54,38 @@ package transfers, pacman dependencies, and key executable versions.
 
 Do not flash the desktop image until the filesystem is healthy and staging
 succeeds. The earlier data filesystem error was repaired and a final offline
-check passed. The present checkpoint requires physical recovery restart to
-retrieve first-boot logs and install the corrected BusyBox helper names.
+check passed. Native USB diagnostics and the corrected BusyBox helpers now work. Xwayland
+is disabled because its initialization blocked Hyprland's main thread. The
+framebuffer helper sets XRGB8888 channel masks without changing the 32-bit
+pixel depth. Switching Xorg to 16-bit depth caused early resets and is avoided.
 Preserve original partition backups and the tested recovery route. There is
 no finished unattended installer.
+
+## Tablet input
+
+`giza-touch-pointer` reads the Goodix MT slots and exposes the first contact as
+an absolute pointer with click events through `/dev/uinput`. Xorg reads the
+stable `/dev/input/giza-touch-pointer` alias. This provides single-finger
+pointer interaction; it does not implement multitouch gestures or rotation.
+
+The keyboard source revision is pinned in `sources.lock.json`. The official
+ARM compiler packages were verified before installation; their manifest is in
+`records/keyboard-build-package-manifest.json`. To prepare that package set:
+
+```sh
+python prepare_desktop_packages.py --packages gcc make pkgconf --manifest reports/keyboard-build-package-manifest.json
+```
+
+The source was transferred to the native tablet, compiled with
+`make -j2 wvkbd-mobintl`, then installed as `/usr/local/bin/wvkbd-mobintl`.
+The rootfs must contain that binary before automatic desktop startup. Its
+`-H 300` option gives a 300-logical-pixel keyboard. The user plugin adds a
+**Keys** button; `giza-toggle-keyboard` sends SIGRTMIN to show/hide the keyboard.
+Startup uses locks to prevent duplicate keyboards and terminals. An XTest
+pointer test clicked the Keys button, typed a letter through wvkbd into foot,
+and removed it with the keyboard's Backspace key. This verifies the desktop
+input path but does not replace a physical finger test.
+
+`giza-launch-shell` creates the bundle's required plugin index and then invokes
+its packaged launcher. Omitting that index previously produced an empty bar.
+User plugin/config changes preserve the packaged Omarchy tree.

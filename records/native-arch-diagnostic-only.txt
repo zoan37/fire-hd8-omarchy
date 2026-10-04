@@ -1,0 +1,60 @@
+uname -a; cat /proc/1/comm; tail -25 /var/log/giza/init.log; ip address; ps -ef | tail -12; giza_rc=$?; printf '\nGIZA_COMMAND_cea204bd073a4bb2899bd223c78ff6bb=%s\n' "$giza_rc"
+
+[root@fire-giza /]# uname -a; cat /proc/1/comm; tail -25 /var/log/giza/init.log; ip address; ps -ef | tail -12; giza_rc=$?; printf '\nGIZA_COMMAND_cea204bd073a4bb2899bd223c78ff6bb=%s\n' "$giza_rc"
+Linux fire-giza 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+giza-init
+        Before reporting problems, check http://wiki.x.org
+        to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+        (++) from command line, (!!) notice, (II) informational,
+        (WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: "/var/log/giza/xorg.log", Time: Wed Jan  8 05:08:28 2020
+(++) Using config file: "/etc/X11/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOn
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOff
+> Warning:          Could not resolve keysym XF86ActionOnSelection
+> Warning:          Could not resolve keysym XF86ContextualInsert
+> Warning:          Could not resolve keysym XF86ContextualQuery
+Errors from xkbcomp are not fatal to the X server
+
+[zero-filled log gap]
+Native Arch Linux ARM boot; PID=1
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+dbus[223]: Unknown username "colord" in message bus configuration file
+Desktop startup deferred for native USB diagnostics
+1: lo: <LOOPBACK> mtu 65536 qdisc noop state DOWN group default qlen 0
+    link/loopback REDACTED_MAC brd REDACTED_MAC
+2: ifb0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 32
+    link/ether REDACTED_MAC brd REDACTED_MAC
+3: ifb1: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 32
+    link/ether REDACTED_MAC brd REDACTED_MAC
+4: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 0
+    link/ipip 0.0.0.0 brd 0.0.0.0
+5: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 0
+    link/sit 0.0.0.0 brd 0.0.0.0
+6: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 0
+    link/tunnel6 :: brd ::
+7: rndis0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether REDACTED_MAC brd REDACTED_MAC
+    inet 172.16.42.1/24 brd 172.16.42.255 scope global rndis0
+       valid_lft forever preferred_lft forever
+root       195     1  0 05:25 ?        00:00:00 unudhcpd -i rndis0 -s 172.16.42.1 -c 172.16.42.2
+root       197     2  0 05:25 ?        00:00:00 [jbd2/mmcblk0p24]
+root       198     2  0 05:25 ?        00:00:00 [ext4-rsv-conver]
+root       204     2  0 05:25 ?        00:00:00 [kworker/0:1H]
+root       219     1  0 05:25 ?        00:00:00 /usr/local/libexec/giza/busybox-extras telnetd -b 172.16.42.1:23 -l /bin/bash
+dbus       224     1  0 05:25 ?        00:00:00 dbus-daemon --system --fork --nopidfile
+root       225     1  0 05:25 ?        00:00:00 /bin/bash /sbin/giza-init
+root       227   225  0 05:25 ?        00:00:00 sleep 600
+root       228     2  0 05:25 ?        00:00:00 [kworker/3:1H]
+root       239   219 50 05:25 pts/0    00:00:00 /bin/bash
+root       244   239 99 05:25 pts/0    00:00:00 ps -ef
+root       245   239  0 05:25 pts/0    00:00:00 tail -12

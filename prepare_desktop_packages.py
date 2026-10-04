@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Download and verify the ARM packages for the native framebuffer experiment."""
 import base64
+import argparse
 import concurrent.futures
 import hashlib
 import json
@@ -45,7 +46,8 @@ def download(url, path):
     return path
 
 
-def main():
+def main(requested=None, output=None):
+    requested = requested or REQUESTED
     DOWNLOADS.mkdir(parents=True, exist_ok=True)
     available = {}
     for repo in ("core", "extra"):
@@ -103,7 +105,7 @@ def main():
                         continue
             resolve(dep)
 
-    for name in REQUESTED:
+    for name in requested:
         resolve(name, force=True)
 
     keyring = download(
@@ -143,13 +145,17 @@ def main():
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         results = list(executor.map(fetch, selected.values()))
     manifest = {"purpose": "Native Linux framebuffer desktop experiment",
-                "requested": REQUESTED, "packages": results,
+                "requested": requested, "packages": results,
                 "bundle": {"version": "0.1.1", "url":
                     "https://github.com/BlackFireAlex/omarchy-android/releases/download/v0.1.1/omarchy-android-aarch64-0.1.1.bundle.tar",
                     "sha256": "7e9f1cd67533bc0d3988b5cb3831aef52f1527dd90391d9d868ed9345021cdb2"}}
-    (ROOT / "reports/desktop-package-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    (output or ROOT / "reports/desktop-package-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(f"Verified {len(results)} packages. No device changes performed.")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--packages", nargs="+", default=REQUESTED)
+    parser.add_argument("--manifest", type=pathlib.Path)
+    args = parser.parse_args()
+    main(args.packages, args.manifest)

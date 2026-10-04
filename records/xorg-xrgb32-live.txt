@@ -1,0 +1,26 @@
+echo Launching_Xorg_XRGB32; sync; nohup /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-xrgb.log vt1 </dev/null >/var/log/giza/xorg-xrgb-console.log 2>&1 & sleep 2; pgrep -a Xorg; tail -20 /var/log/giza/xorg-xrgb.log; sync; giza_rc=$?; printf '\nGIZA_COMMAND_d6c7021b6f2643e3a91393309f6e73f0=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo Launching_Xorg_XRGB32; sync; nohup /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-xrgb.log vt1 </dev/null >/var/log/giza/xorg-xrgb-console.log 2>&1 & sleep 2; pgrep -a Xorg; tail -20 /var/log/giza/xorg-xrgb.log; sync; giza_rc=$?; printf '\nGIZA_COMMAND_d6c7021b6f2643e3a91393309f6e73f0=%s\n' "$giza_rc"
+Launching_Xorg_XRGB32
+[1] 267
+267 /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset -logfile /var/log/giza/xorg-xrgb.log vt1
+[    35.299] (II) evdev: GizaTouch: Forcing relative x/y axes to exist.
+[    35.299] (II) evdev: GizaTouch: Configuring as mouse
+[    35.299] (**) evdev: GizaTouch: YAxisMapping: buttons 4 and 5
+[    35.299] (**) evdev: GizaTouch: EmulateWheelButton: 4, EmulateWheelInertia: 10, EmulateWheelTimeout: 200
+[    35.299] (II) XINPUT: Adding extended input device "GizaTouch" (type: MOUSE, id 6)
+[    35.299] (II) evdev: GizaTouch: initialized for relative axes.
+[    35.299] (WW) evdev: GizaTouch: ignoring absolute axes.
+[    35.301] (**) GizaTouch: (accel) keeping acceleration scheme 1
+[    35.301] (**) GizaTouch: (accel) acceleration profile 0
+[    35.301] (**) GizaTouch: (accel) acceleration factor: 2.000
+[    35.301] (**) GizaTouch: (accel) acceleration threshold: 4
+[    35.301] (II) Using input driver 'evdev' for 'GizaButtons'
+[    35.301] (**) Option "CoreKeyboard"
+[    35.301] (**) GizaButtons: always reports core events
+[    35.301] (**) evdev: GizaButtons: Device: "/dev/input/event1"
+[    35.301] (--) evdev: GizaButtons: Vendor 0x2454 Product 0x6500
+[    35.301] (--) evdev: GizaButtons: Found keys
+[    35.301] (II) evdev: GizaButtons: Configuring as keyboard
+[    35.301] (II) XINPUT: Adding extended input device "GizaButtons" (type: KEYBOARD, id 7)
+[    35.301] (**) Option "xkb_rules" "evdev"

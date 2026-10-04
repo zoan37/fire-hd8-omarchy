@@ -1,0 +1,1 @@
+cat: can't open '/sys/fs/pstore/console-ramoops': No such file or directory

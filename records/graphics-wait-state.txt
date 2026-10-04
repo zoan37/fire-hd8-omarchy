@@ -1,0 +1,31 @@
+python3 -c 'import pathlib,struct
+for pid in (267,308,312,349):
+ p=pathlib.Path('"'"'/proc'"'"')/str(pid)
+ if not p.exists(): continue
+ print('"'"'PID'"'"',pid,'"'"'WCHAN'"'"', (p/'"'"'wchan'"'"').read_text(),'"'"'SYSCALL'"'"',(p/'"'"'syscall'"'"').read_text().strip())
+ s=(p/'"'"'syscall'"'"').read_text().split()
+ if s and s[0]=='"'"'73'"'"':
+  address=int(s[1],16)
+  with (p/'"'"'mem'"'"').open('"'"'rb'"'"',buffering=0) as m:
+   m.seek(address); fd,event,revent=struct.unpack('"'"'iHH'"'"',m.read(8))
+  print('"'"'POLL_FD'"'"',fd, '"'"'target'"'"',(p/'"'"'fd'"'"'/str(fd)).readlink(),'"'"'events'"'"',event)
+'; giza_rc=$?; printf '\nGIZA_COMMAND_fc0e3c23817d4f80be91b502f44d94c6=%s\n' "$giza_rc"
+
+[root@fire-giza /]# python3 -c 'import pathlib,struct
+> for pid in (267,308,312,349):
+>  p=pathlib.Path('"'"'/proc'"'"')/str(pid)
+>  if not p.exists(): continue
+>  print('"'"'PID'"'"',pid,'"'"'WCHAN'"'"', (p/'"'"'wchan'"'"').read_text(),'"'"'SYSCALL'"'"',(p/'"'"'syscall'"'"').read_text().strip())
+>  s=(p/'"'"'syscall'"'"').read_text().split()
+>  if s and s[0]=='"'"'73'"'"':
+>   address=int(s[1],16)
+>   with (p/'"'"'mem'"'"').open('"'"'rb'"'"',buffering=0) as m:
+>    m.seek(address); fd,event,revent=struct.unpack('"'"'iHH'"'"',m.read(8))
+>   print('"'"'POLL_FD'"'"',fd, '"'"'target'"'"',(p/'"'"'fd'"'"'/str(fd)).readlink(),'"'"'events'"'"',event)
+> '; giza_rc=$?; printf '\nGIZA_COMMAND_fc0e3c23817d4f80be91b502f44d94c6=%s\n' "$giza_rc"
+PID 267 WCHAN SyS_epoll_wait SYSCALL 22 0x3 0x7fc5154f58 0x100 0xffffffffffffffff 0x0 0x8 0x7fc5154f10 0x7f9bc61c6c
+PID 308 WCHAN SyS_epoll_wait SYSCALL 22 0x4 0x7ff300bf28 0x20 0xffffffffffffffff 0x0 0x8 0x7ff300bec0 0x7f9b875094
+PID 312 WCHAN poll_schedule_timeout SYSCALL 73 0x7fdfe67990 0x1 0x0 0x0 0x0 0x0 0x7fdfe678b0 0x7f816d1c6c
+POLL_FD 36 target socket:[9360] events 1
+PID 349 WCHAN poll_schedule_timeout SYSCALL 73 0x7ffc5c0970 0x1 0x0 0x0 0x8 0x0 0x7ffc5c08f0 0x7f8d851c6c
+POLL_FD 16 target socket:[5567] events 1

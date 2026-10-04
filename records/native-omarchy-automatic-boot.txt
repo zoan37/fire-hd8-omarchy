@@ -1,0 +1,92 @@
+uname -a; cat /proc/1/comm; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 layers; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 clients; cat /var/log/giza/touch.log; free -m; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_b379c3e352b84d8c8c4325c675d072dc=%s\n' "$giza_rc"
+
+[root@fire-giza /]# uname -a; cat /proc/1/comm; export XDG_RUNTIME_DIR=/run/user/1000; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 layers; /opt/omarchy-android/hyprland/bin/hyprctl -i 0 clients; cat /var/log/giza/touch.log; free -m; cat /sys/class/power_supply/battery/capacity; giza_rc=$?; printf '\nGIZA_COMMAND_b379c3e352b84d8c8c4325c675d072dc=%s\n' "$giza_rc"
+Linux fire-giza 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+giza-init
+ok
+
+
+Monitor WAYLAND-1 (ID 0):
+        800x1280@30.00000 at 0x0
+        description:
+        make:
+        model:
+        physical size (mm): 0x0
+        serial:
+        active workspace: 1 (1)
+        special workspace: 0 ()
+        reserved: 0 26 0 300
+        scale: 1.25
+        transform: 0
+        focused: yes
+        dpmsStatus: 1
+        vrr: false
+        solitary: 0
+        solitaryBlockedBy: windowed mode,missing candidate
+        activelyTearing: false
+        tearingBlockedBy: next frame is not torn,user settings,not supported by monitor,missing candidate
+        directScanoutTo: 0
+        directScanoutBlockedBy: user settings,software renders/cursors,missing candidate
+        disabled: false
+        currentFormat: XRGB8888
+        mirrorOf: none
+        availableModes: 800x1280@30.00Hz
+        colorManagementPreset: srgb
+        sdrBrightness: 1.00
+        sdrSaturation: 1.00
+        sdrMinLuminance: 0.20
+        sdrMaxLuminance: 80
+        hardwareCursorsInUse: false
+
+
+Monitor WAYLAND-1:
+        Layer level 0 (background):
+                Layer 7f831543d0: xywh: 0 0 640 1024, a: 1, namespace: omarchy-background, pid: 331
+        Layer level 1 (bottom):
+        Layer level 2 (top):
+                Layer 7f841671c0: xywh: 0 0 640 26, a: 1, namespace: omarchy-bar, pid: 331
+        Layer level 3 (overlay):
+                Layer 7f81092ae0: xywh: 0 724 640 300, a: 1, namespace: wvkbd, pid: 326
+
+
+
+Window 7f83163340 -> omarchy@fire-giza:/:
+        mapped: 1
+        hidden: 0
+        visible: 1
+        acceptsInput: 1
+        at: 12,38
+        size: 616,674
+        workspace: 1 (1)
+        floating: 0
+        monitor: 0
+        class: foot
+        title: omarchy@fire-giza:/
+        initialClass: foot
+        initialTitle: foot
+        pid: 327
+        xwayland: 0
+        pinned: 0
+        pinFullscreened: 0
+        fullscreen: 0
+        fullscreenClient: 0
+        fullscreenHandler: default
+        allowedOverFullscreen: 1
+        grouped: 0
+        tags: default-opacity*, terminal*
+        swallowing: 0
+        focusHistoryID: 0
+        inhibitingIdle: 0
+        xdgTag:
+        xdgDescription:
+        contentType: none
+        tearingHint: 0
+        stableID: 18000000
+
+
+Goodix pointer adapter ready
+Goodix pointer adapter ready
+               total        used        free      shared  buff/cache   available
+Mem:            1357         416         642          36         351         940
+Swap:              0           0           0
+58

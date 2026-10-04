@@ -1,0 +1,81 @@
+ss -xap | grep -E "9360|5567|Hyprland|weston|Xwayland"; ps -ef | grep -E "Xwayland|Hyprland|dbus|quickshell"; tail -35 /var/log/giza/desktop-live.log; cat /proc/312/net/unix | grep -E "9360|5567|wayland|hypr"; ls -ld /dev/shm; cat /proc/349/fdinfo/16; giza_rc=$?; printf '\nGIZA_COMMAND_1478dd8e80dd42bab119bf13f9463f62=%s\n' "$giza_rc"
+
+[root@fire-giza /]# ss -xap | grep -E "9360|5567|Hyprland|weston|Xwayland"; ps -ef | grep -E "Xwayland|Hyprland|dbus|quickshell"; tail -35 /var/log/giza/desktop-live.log; cat /proc/312/net/unix | grep -E "9360|5567|wayland|hypr"; ls -ld /dev/shm; cat /proc/349/fdinfo/16; giza_rc=$?; printf '\nGIZA_COMMAND_1478dd8e80dd42bab119bf13f9463f62=%s\n' "$giza_rc"
+u_str ESTAB    0      0                                                                                                    * 5567            * 0    users:(("quickshell",pid=349,fd=16))
+u_str ESTAB    0      0                                                                             /run/user/1000/wayland-1 6201            * 0    users:(("Hyprland",pid=312,fd=48),("Hyprland",pid=312,fd=47))
+u_str ESTAB    0      0                                                                                                    * 9129            * 0    users:(("weston",pid=308,fd=15),("weston",pid=308,fd=13))
+u_str LISTEN   0      0                                                                          /run/user/1000/wayland-giza 9136            * 0    users:(("weston",pid=308,fd=18),("weston",pid=308,fd=17))
+u_str ESTAB    0      0                                                                                                    * 9158            * 0    users:(("Hyprland",pid=312,fd=32),("Hyprland",pid=312,fd=14))
+u_str LISTEN   0      0                                                                             /run/user/1000/wayland-1 9160            * 0    users:(("Hyprland",pid=312,fd=17),("Hyprland",pid=312,fd=16))
+u_str ESTAB    0      0                                                                                                    * 9164            * 0    users:(("Hyprland",pid=312,fd=25))
+u_str ESTAB    0      0                                                                                                    * 9180            * 0    users:(("Xwayland",pid=340,fd=5))
+u_str LISTEN   0      0      /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket2.sock 9330            * 0    users:(("Hyprland",pid=312,fd=11),("Hyprland",pid=312,fd=10))
+u_str ESTAB    0      0                                                                          /run/user/1000/wayland-giza 9341            * 0    users:(("weston",pid=308,fd=20),("weston",pid=308,fd=19))
+u_str LISTEN   0      0       /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket.sock 9342            * 0    users:(("Hyprland",pid=312,fd=21),("Hyprland",pid=312,fd=20))
+u_str LISTEN   0      0                                                                                   /tmp/.X11-unix/X1_ 9353            * 0    users:(("Xwayland",pid=340,fd=28),("Hyprland",pid=312,fd=28))
+u_str LISTEN   0      0                                                                                    /tmp/.X11-unix/X1 9355            * 0    users:(("Xwayland",pid=340,fd=29),("Hyprland",pid=312,fd=29))
+u_str ESTAB    0      0                                                                                                    * 9358            * 0    users:(("Hyprland",pid=312,fd=38),("Hyprland",pid=312,fd=34))
+u_str ESTAB    0      0                                                                                                    * 9359            * 0    users:(("Hyprland",pid=312,fd=35))
+u_str ESTAB    0      0                                                                                                    * 9360            * 0    users:(("Hyprland",pid=312,fd=36))
+u_str ESTAB    0      0                                                                                                    * 9361            * 0    users:(("Xwayland",pid=340,fd=37),("Hyprland",pid=312,fd=37))
+u_str ESTAB    0      0                                                                             /run/user/1000/wayland-1 9440            * 0    users:(("Hyprland",pid=312,fd=46),("Hyprland",pid=312,fd=45))
+dbus       226     1  0 05:29 ?        00:00:00 dbus-daemon --system --fork --nopidfile
+omarchy    310   306  0 05:30 ?        00:00:00 dbus-run-session --config-file=/home/omarchy/.config/omarchy/proot-session-bus.conf /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+omarchy    311   310  0 05:30 ?        00:00:00 dbus-daemon --nofork --print-address 4 --config-file /home/omarchy/.config/omarchy/proot-session-bus.conf
+omarchy    312   310  4 05:30 ?        00:00:11 /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+omarchy    340   312  0 05:30 ?        00:00:00 /usr/bin/Xwayland -shm :1 -rootless -core -listenfd 28 -listenfd 29 -displayfd 40 -wm 37
+omarchy    349   347  0 05:30 ?        00:00:00 quickshell -n -p /usr/share/omarchy/shell
+root       556   550  0 05:35 pts/0    00:00:00 grep -E Xwayland|Hyprland|dbus|quickshell
+
+DEBUG ]: Old rlimit: soft -> 1024, hard -> 4096
+DEBUG ]: New rlimit: soft -> 4096, hard -> 4096
+WARN ]: WARNING: Hyprland is being launched without start-hyprland. This is highly advised against.
+DEBUG ]: Creating the EventLoopManager!
+DEBUG ]: Creating the KeybindManager!
+DEBUG ]: Creating the AnimationManager!
+DEBUG ]: Creating the DynamicPermissionManager!
+DEBUG ]: Creating the MonitorState!
+DEBUG ]: Creating the WorkspaceState!
+DEBUG ]: Creating the ConfigManager!
+DEBUG ]: [cfg] Config is either explicit or special.
+DEBUG ]: [cfg] Config is lua, loading lua mgr
+DEBUG ]: Creating the Error Overlay!
+DEBUG ]: Creating the LayoutManager!
+DEBUG ]: Creating the TokenManager!
+DEBUG ]: Creating the EventManager!
+DEBUG ]: Creating the PointerManager!
+DEBUG ]: Creating the AsyncResourceGatherer!
+dbus-daemon[311]: [session uid=1000 pid=311] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=312 comm="/opt/omarchy-android/hyprland/bin/Hyprland --confi" label="kernel")
+dbus-daemon[311]: [session uid=1000 pid=311] Successfully activated service 'ca.desrt.dconf'
+dbus-daemon[311]: [session uid=1000 pid=311] Reloaded configuration
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOn
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOff
+> Warning:          Could not resolve keysym XF86ActionOnSelection
+> Warning:          Could not resolve keysym XF86ContextualInsert
+> Warning:          Could not resolve keysym XF86ContextualQuery
+Errors from xkbcomp are not fatal to the X server
+ffffffc0553d21c0: 00000002 00000000 00010000 0001 01  9330 /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket2.sock
+ffffffc0553d0000: 00000002 00000000 00010000 0001 01  9342 /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket.sock
+ffffffc05390d680: 00000002 00000000 00010000 0001 01  9136 /run/user/1000/wayland-giza
+ffffffc055250780: 00000002 00000000 00010000 0001 01  9160 /run/user/1000/wayland-1
+ffffffc055253840: 00000003 00000000 00000000 0001 02     0 /run/user/1000/wayland-1
+ffffffc055252d00: 00000002 00000000 00000000 0001 02     0 /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket.sock
+ffffffc0543e8780: 00000003 00000000 00000000 0001 03  9360
+ffffffc0551f7840: 00000003 00000000 00000000 0001 03  5567
+ffffffc0552521c0: 00000002 00000000 00000000 0001 02     0 /run/user/1000/wayland-1
+ffffffc0543e9a40: 00000003 00000000 00000000 0001 03  9440 /run/user/1000/wayland-1
+ffffffc0552503c0: 00000003 00000000 00000000 0001 03  9341 /run/user/1000/wayland-giza
+ffffffc0551f7480: 00000003 00000000 00000000 0001 03  6201 /run/user/1000/wayland-1
+ffffffc055252580: 00000002 00000000 00000000 0001 02     0 /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket.sock
+ffffffc05390f0c0: 00000002 00000000 00000000 0001 02     0 /run/user/1000/hypr/5c897c03500d98ff6be4d04663a6217f25601a62_1578461452_368961606/.socket.sock
+ls: cannot access '/dev/shm': No such file or directory
+pos:    0
+flags:  02000002
+mnt_id: 7

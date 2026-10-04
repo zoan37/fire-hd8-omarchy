@@ -1,0 +1,2 @@
+/usr/local/bin/giza-desktop: line 10: cannot redirect standard input from /dev/null: Permission denied
+/usr/local/bin/giza-desktop: line 1: /dev/null: Permission denied

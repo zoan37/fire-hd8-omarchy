@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "giza.keyboard",
+  "name": "Tablet keyboard",
+  "version": "1.0.0",
+  "description": "Show or hide the tablet's on-screen keyboard",
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "Keyboard.qml"},
+  "barWidget": {"displayName": "Tablet keyboard", "defaultSection": "left", "allowMultiple": false}
+}

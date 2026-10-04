@@ -1,0 +1,8 @@
+e2fsck 1.42.9 (28-Dec-2013)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/block/mmcblk0p24: 82375/807840 files (0.1% non-contiguous), 1535262/3228032 blocks
+GIZA_FSCK_EXIT=0

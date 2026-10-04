@@ -16,33 +16,39 @@ Omarchy installer** and does not support newer Fire HD 8 models.
 - The tablet displayed the postmarketOS splash. A USB network connection and
   root shell worked, and charging was reported.
 - The framebuffer is 800 × 1280, 32 bpp. The Goodix touchscreen driver is
-  detected; interactive touch behavior has not yet been verified.
+  detected; a native input adapter now exposes an absolute click pointer; physical taps remain unconfirmed.
 - The test returned automatically to TWRP. The full original boot partition
   was restored and verified against its original SHA256.
 
-**Full Omarchy has not yet run.** The kernel lacks DRM display support.
-The next experiment uses Xorg's framebuffer driver, Weston, and patched ARM64
-Hyprland userspace. The first test reached an Xorg-style cursor, but the complete
-desktop remains unverified on this device.
+**Native Hyprland, the Omarchy shell, a terminal, and an on-screen keyboard
+have now rendered on the tablet.** This remains an experimental ARM port with
+software graphics and a temporary boot supervisor, rather than a supported
+Omarchy installation.
 
 ## Latest checkpoint
 
-An offline filesystem repair fixed the earlier ext4 accounting error after a
-physical recovery restart. The full ARM64 userspace extracted, seven verified
-display packages installed, and native Hyprland/Weston/Xorg version checks
-succeeded under recovery. A final offline filesystem check passed cleanly.
+The native display stack is Xorg/fbdev → Weston/pixman → patched ARM64
+Hyprland/llvmpipe. A framebuffer channel-order correction makes Weston work.
+Xwayland is disabled because its startup blocked the compositor. Hyprland's
+configuration reload and error checks pass; its output is 800 × 1280 at 30 Hz
+and scale 1.25. Omarchy's real Quickshell bar and wallpaper are visible.
 
-The first desktop test image was flashed and its entire boot_x partition read
-back successfully. The user saw the postmarketOS splash followed by an outlined
-X cursor, consistent with Xorg starting. USB networking responds to ping, but
-the diagnostic shell did not start. A BusyBox helper naming mistake was found
-and corrected locally; the correction has not yet been installed. The same
-mistake affects the first test's automatic restart, so physical return to TWRP
-is needed to retrieve logs and continue.
+A small native adapter converts the Goodix driver's multitouch positions into
+an absolute click pointer for Xorg. Physical touch and typing confirmation are
+still pending. The wvkbd on-screen keyboard was compiled on the tablet from a
+pinned source revision. Simulated pointer clicks verified typing into the terminal and the show/hide
+button. A user plugin adds a
+**Keys** button to Omarchy's bar. A terminal and keyboard start with the desktop.
 
-The temporary desktop boot image is currently installed in boot_x. The original
-verified backup remains local and can be restored with `test_desktop_boot.py
---restore` from TWRP. Full Omarchy has not yet appeared on screen.
+USB networking and the diagnostic root shell work. Wi-Fi, audio, suspend,
+rotation, and broader application compatibility remain unverified. Current
+systemd cannot run on this 3.18 kernel, so a Bash PID 1 starts the experiment.
+
+The temporary desktop image remains installed in boot_x. Original partition
+backups and TWRP are preserved. The next boot is armed for recovery, and the
+10-minute test timer can be suppressed with `/run/giza-keep-running`.
+`test_desktop_boot.py --restore` restores the verified original boot image
+from TWRP. There is no finished unattended installer.
 
 ## Files
 

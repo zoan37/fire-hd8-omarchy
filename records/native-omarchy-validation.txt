@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 83, in <module>
+    main()
+    ~~~~^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 77, in main
+    output, status = run(args.command, args.timeout)
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zoan/Documents/GitHub/fire-hd8-omarchy/usb_shell.py", line 69, in run
+    raise TimeoutError(bytes(output).decode(errors="replace"))
+TimeoutError: runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 grim /home/omarchy/.local/state/giza/first-native-omarchy.png; /usr/local/libexec/giza/busybox-extras httpd -p 172.16.42.1:9877 -h /home/omarchy/.local/state/giza; tail -25 /home/omarchy/.local/state/giza/quickshell.log; giza_rc=$?; printf '\nGIZA_COMMAND_081d1bd8a2c4420290827da353bf4bcd=%s\n' "$giza_rc"
+
+
+[root@fire-giza /]# runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 reload; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 configerrors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 LD_LIBRARY_PATH=/opt/omarchy-android/aquamarine/lib /opt/omarchy-android/hyprland/bin/hyprctl -i 0 monitors; runuser -u omarchy -- env XDG_RUNTIME_DIR=/run/user/1000 WAYLAND_DISPLAY=wayland-1 grim /home/omarchy/.local/state/giza/first-native-omarchy.png; /usr/local/libexec/giza/busybox-extras httpd -p 172.16.42.1:9877 -h /home/omarchy/.local/state/giza; tail -25 /home/omarchy/.local/state/giza/quickshell.log; giza_rc=$?; printf '\nGIZA_COMMAND_081d1bd8a2c4420290827da353bf4bcd=%s\n' "$giza_rc"
+
+Hyprland IPC didn't respond in time
+
+Couldn't read (6)
+Hyprland IPC didn't respond in time
+
+Couldn't read (6)
+Hyprland IPC didn't respond in time
+
+Couldn't read (6)

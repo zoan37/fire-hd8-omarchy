@@ -1,0 +1,35 @@
+Native Arch Linux ARM boot; PID=1
+Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64 GNU/Linux
+giza-busybox-extras: applet not found
+giza-busybox: applet not found
+/sbin/giza-init: line 18: hostname: command not found
+UUID file '/etc/machine-id' should contain a hex string of length 32, not length 0, with no other text
+dbus[221]: Unknown username "colord" in message bus configuration file
+
+X.Org X Server 1.21.1.24
+X Protocol Version 11, Revision 0
+Current Operating System: Linux (none) 3.18.19 #5-postmarketOS SMP PREEMPT Sat Feb 19 15:50:45 UTC 2022 aarch64
+Kernel command line: console=tty0 console=ttyS0,921600n1 console=ttyMT0,921600n1 earlycon=uart8250,mmio32,0x11002000 root=/dev/ram vmalloc=496M androidboot.hardware=mt8163 androidboot.unlocked_kernel=true androidboot.rpmb_state=1 androidboot.secure_cpu=1 androidboot.prod=1 androidboot.pl_version=6 androidboot.tee_version=102 androidboot.lk_version=1 androidboot.pl_build_desc=07d3bbd-20181011_014731 androidboot.lk_build_desc=f4a2747-20160909_050229 bootopt=64S3,32N2,64N2 loglevel=6 console=tty0 rdinit=/init net.ifnames=0 ipv6.disable=1 lcm=1-nt35521_wxga_dsi_vdo_giza fps=6000 vram=16777216 androidboot.selinux=enforce printk.disable_uart=1 bootprof.pl_t=4937 bootprof.lk_t=11413 boot_reason=4 androidboot.serialno=REDACTED_DEVICE_SERIAL androidboot.bootreason=wdt_by_pass_pwk nt35521_id=39 lp855x_vmax=28
+
+Current version of pixman: 0.46.4
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(++) Log file: "/var/log/giza/xorg.log", Time: Wed Jan  8 05:08:28 2020
+(++) Using config file: "/etc/X11/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+The XKEYBOARD keymap compiler (xkbcomp) reports:
+> Warning:          Multiple symbols for level 1/group 1 on key <FK23>
+>                   Using F23, ignoring XF86TouchpadOff
+> Warning:          Symbol map for key <FK23> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Symbol map for key <FK24> redefined
+>                   Using last definition for conflicting fields
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOn
+> Warning:          Could not resolve keysym XF86ElectronicPrivacyScreenOff
+> Warning:          Could not resolve keysym XF86ActionOnSelection
+> Warning:          Could not resolve keysym XF86ContextualInsert
+> Warning:          Could not resolve keysym XF86ContextualQuery
+Errors from xkbcomp are not fatal to the X server

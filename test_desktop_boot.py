@@ -70,12 +70,16 @@ def main():
     temporary.write_bytes(payload)
     flag_path = ROOT / "working/desktop/boot-flag.bin"
     flag_path.write_bytes(flag)
-    adb("push", str(temporary), "/tmp/giza-boot-transfer.bin")
+    # Repeating a verified desktop boot need not rewrite an identical image.
+    boot_write_required = current != payload
+    if boot_write_required:
+        adb("push", str(temporary), "/tmp/giza-boot-transfer.bin")
     adb("push", str(flag_path), "/tmp/giza-boot-flag.bin")
-    actual = shell("sha256sum /tmp/giza-boot-transfer.bin").split()[0].decode()
-    if actual != digest(payload):
-        raise RuntimeError("Boot transfer validation failed")
-    shell("dd if=/tmp/giza-boot-transfer.bin of=/dev/block/mmcblk0p7 bs=4096 conv=notrunc && sync")
+    if boot_write_required:
+        actual = shell("sha256sum /tmp/giza-boot-transfer.bin").split()[0].decode()
+        if actual != digest(payload):
+            raise RuntimeError("Boot transfer validation failed")
+        shell("dd if=/tmp/giza-boot-transfer.bin of=/dev/block/mmcblk0p7 bs=4096 conv=notrunc && sync")
     readback = adb("exec-out", "dd if=/dev/block/mmcblk0p7 bs=512 count=32536 2>/dev/null")
     if readback != payload:
         raise RuntimeError("Boot readback mismatch; recovery remains installed")
@@ -84,7 +88,7 @@ def main():
     shell("dd if=/tmp/giza-boot-flag.bin of=/dev/block/mmcblk0p21 bs=16 count=1 conv=notrunc && sync")
     if adb("exec-out", "dd if=/dev/block/mmcblk0p21 bs=16 count=1 2>/dev/null") != flag:
         raise RuntimeError("Boot flag readback mismatch")
-    record = {"action": "restore" if args.restore else "desktop test", "partition": "boot_x / mmcblk0p7", "bytes": len(payload), "sha256": digest(payload), "full_readback_verified": True}
+    record = {"action": "restore" if args.restore else "desktop test", "partition": "boot_x / mmcblk0p7", "bytes": len(payload), "sha256": digest(payload), "boot_partition_written": boot_write_required, "full_readback_verified": True}
     (ROOT / "reports/desktop-boot-write.json").write_text(json.dumps(record, indent=2) + "\n")
     print(json.dumps(record), flush=True)
     adb("reboot")

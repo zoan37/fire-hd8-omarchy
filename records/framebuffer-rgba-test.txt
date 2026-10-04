@@ -1,0 +1,12 @@
+echo Testing_32bit_RGBA_channel_order; sync; /usr/local/libexec/giza/busybox fbset -rgba 8/16,8/8,8/0,8/24; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_015e1cc67ca246a4a99e945a3e337a92=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo Testing_32bit_RGBA_channel_order; sync; /usr/local/libexec/giza/busybox fbset -rgba 8/16,8/8,8/0,8/24; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_015e1cc67ca246a4a99e945a3e337a92=%s\n' "$giza_rc"
+Testing_32bit_RGBA_channel_order
+
+mode "800x1280-0"
+        # D: 0.000 MHz, H: 0.000 kHz, V: 0.000 Hz
+        geometry 800 1280 800 1280 32
+        timings 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295
+        accel false
+        rgba 8/0,8/8,8/16,8/24
+endmode

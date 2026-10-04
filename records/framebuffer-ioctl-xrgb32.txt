@@ -1,0 +1,12 @@
+touch /run/giza-keep-running; /usr/local/libexec/giza/busybox ifconfig lo up; /usr/local/bin/giza-framebuffer; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_6dd25b54ecfc4f5ca08e09e3f1656e5e=%s\n' "$giza_rc"
+
+[root@fire-giza /]# touch /run/giza-keep-running; /usr/local/libexec/giza/busybox ifconfig lo up; /usr/local/bin/giza-framebuffer; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_6dd25b54ecfc4f5ca08e09e3f1656e5e=%s\n' "$giza_rc"
+Framebuffer verified: 800x1280, 32 bpp, XRGB8888 masks
+
+mode "800x1280-0"
+        # D: 0.000 MHz, H: 0.000 kHz, V: 0.000 Hz
+        geometry 800 1280 800 1280 32
+        timings 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295
+        accel false
+        rgba 8/16,8/8,8/0,8/24
+endmode

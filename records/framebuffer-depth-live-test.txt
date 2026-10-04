@@ -1,0 +1,13 @@
+echo FBSET_DEPTH_STATUS; /usr/local/libexec/giza/busybox fbset -depth 16; echo depth_return=$?; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_7b3bffb53e5e4815b6e4d1b6ee7e3431=%s\n' "$giza_rc"
+
+[root@fire-giza /]# echo FBSET_DEPTH_STATUS; /usr/local/libexec/giza/busybox fbset -depth 16; echo depth_return=$?; /usr/local/libexec/giza/busybox fbset; sync; giza_rc=$?; printf '\nGIZA_COMMAND_7b3bffb53e5e4815b6e4d1b6ee7e3431=%s\n' "$giza_rc"
+FBSET_DEPTH_STATUS
+depth_return=0
+
+mode "800x1280-0"
+        # D: 0.000 MHz, H: 0.000 kHz, V: 0.000 Hz
+        geometry 800 1280 800 1280 16
+        timings 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295 4294967295
+        accel false
+        rgba 5/11,6/5,5/0,0/0
+endmode

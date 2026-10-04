@@ -1,0 +1,6 @@
+#!/bin/bash
+if pgrep -x wvkbd-mobintl >/dev/null; then
+  pkill -RTMIN -x wvkbd-mobintl
+else
+  wvkbd-mobintl -H 300 >>"$HOME/.local/state/giza/keyboard.log" 2>&1 &
+fi

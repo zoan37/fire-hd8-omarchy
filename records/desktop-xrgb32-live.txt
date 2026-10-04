@@ -1,0 +1,55 @@
+nohup runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy /usr/local/bin/giza-desktop </dev/null >/var/log/giza/desktop-live.log 2>&1 & sleep 4; pgrep -af "weston|Hyprland|quickshell"; tail -30 /var/log/giza/desktop-live.log; tail -18 /home/omarchy/.local/state/giza/weston.log; sync; giza_rc=$?; printf '\nGIZA_COMMAND_cad87176b28b446d8b0aa647fe86a5b6=%s\n' "$giza_rc"
+
+[root@fire-giza /]# nohup runuser -u omarchy -- env HOME=/home/omarchy USER=omarchy LOGNAME=omarchy /usr/local/bin/giza-desktop </dev/null >/var/log/giza/desktop-live.log 2>&1 & sleep 4; pgrep -af "weston|Hyprland|quickshell"; tail -30 /var/log/giza/desktop-live.log; tail -18 /home/omarchy/.local/state/giza/weston.log; sync; giza_rc=$?; printf '\nGIZA_COMMAND_cad87176b28b446d8b0aa647fe86a5b6=%s\n' "$giza_rc"
+[1] 301
+308 weston --backend=x11 --renderer=pixman --shell=kiosk --no-config --socket=wayland-giza --width=800 --height=1280 --idle-time=0 --log=/home/omarchy/.local/state/giza/weston.log
+310 dbus-run-session --config-file=/home/omarchy/.config/omarchy/proot-session-bus.conf /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+312 /opt/omarchy-android/hyprland/bin/Hyprland --config /home/omarchy/.config/hypr/hyprland.lua
+        rrrr                          zzXX
+         rrrr                        zzzz
+          rrrrr                    ccczz
+           rrrrrx                vccccc
+             rrrrxxxx        uuvvvvvc
+                rrxxxxxxnnnnuuuuuv
+                    xxxxxnnnnu
+
+
+
+DEBUG ]: Old rlimit: soft -> 1024, hard -> 4096
+DEBUG ]: New rlimit: soft -> 4096, hard -> 4096
+WARN ]: WARNING: Hyprland is being launched without start-hyprland. This is highly advised against.
+DEBUG ]: Creating the EventLoopManager!
+DEBUG ]: Creating the KeybindManager!
+DEBUG ]: Creating the AnimationManager!
+DEBUG ]: Creating the DynamicPermissionManager!
+DEBUG ]: Creating the MonitorState!
+DEBUG ]: Creating the WorkspaceState!
+DEBUG ]: Creating the ConfigManager!
+DEBUG ]: [cfg] Config is either explicit or special.
+DEBUG ]: [cfg] Config is lua, loading lua mgr
+DEBUG ]: Creating the Error Overlay!
+DEBUG ]: Creating the LayoutManager!
+DEBUG ]: Creating the TokenManager!
+DEBUG ]: Creating the EventManager!
+DEBUG ]: Creating the PointerManager!
+DEBUG ]: Creating the AsyncResourceGatherer!
+dbus-daemon[311]: [session uid=1000 pid=311] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=312 comm="/opt/omarchy-android/hyprland/bin/Hyprland --confi" label="kernel")
+dbus-daemon[311]: [session uid=1000 pid=311] Successfully activated service 'ca.desrt.dconf'
+[05:30:51.945] Found visual, bits per value: 8, red_mask: 00ff0000, green_mask: 0000ff00, blue_mask: 000000ff
+[05:30:51.945] Visual depth is 24
+[05:30:51.945] Found format for depth 24, bpp: 32
+[05:30:51.945] Will use x8r8g8b8 format for SHM surfaces
+[05:30:51.945] x11 output 800x1280, window id 2097157
+[05:30:51.946] Output 'screen0' enabled with head(s) screen0
+[05:30:51.946] Compositor capabilities:
+               arbitrary surface rotation: yes
+               screen capture uses y-flip: no
+               cursor planes: no
+               arbitrary resolutions: no
+               view mask clipping: yes
+               explicit sync: no
+               color operations: no
+               color representation: no
+               presentation clock: CLOCK_MONOTONIC_RAW, id 4
+               presentation clock resolution: 0.000000001 s
+[05:30:51.946] Loading module '/usr/lib/weston/kiosk-shell.so'

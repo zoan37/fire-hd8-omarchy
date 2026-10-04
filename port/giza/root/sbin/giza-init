@@ -2,6 +2,7 @@
 # Temporary native boot supervisor for a kernel too old for current systemd.
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export LANG=C.UTF-8
+mountpoint -q /tmp || mount -t tmpfs -o mode=1777,size=192m tmpfs /tmp
 mkdir -p /run/user/1000 /run/dbus /tmp/.X11-unix /var/log/giza
 chmod 1777 /tmp /tmp/.X11-unix
 chown omarchy:omarchy /run/user/1000
@@ -12,10 +13,18 @@ uname -a
 
 busybox=/usr/local/libexec/giza/busybox
 extras=/usr/local/libexec/giza/busybox-extras
+# mdev's default nodes are root-only; normal desktop users need these devices.
+chmod 0666 /dev/null /dev/zero /dev/full /dev/random /dev/urandom /dev/tty /dev/ptmx
+mkdir -p /dev/pts
+mountpoint -q /dev/pts || mount -t devpts devpts /dev/pts -o mode=0620,gid=5
+mkdir -p /dev/shm
+mountpoint -q /dev/shm || mount -t tmpfs -o mode=1777,size=128m tmpfs /dev/shm
 # USB diagnostic service remains available after the real root transition.
 "$extras" telnetd -b 172.16.42.1:23 -l /bin/bash
 "$busybox" ifconfig rndis0 172.16.42.1 netmask 255.255.255.0 up
-hostname fire-giza
+"$busybox" ifconfig lo up
+"$busybox" hostname fire-giza
+[[ -s /etc/machine-id ]] || dbus-uuidgen >/etc/machine-id
 dbus-uuidgen --ensure=/etc/machine-id
 dbus-daemon --system --fork --nopidfile
 
@@ -30,6 +39,20 @@ dbus-daemon --system --fork --nopidfile
   fi
 ) &
 
+sync
+if [[ -e /etc/giza-defer-desktop ]]; then
+  echo "Desktop startup deferred for native USB diagnostics"
+  sync
+  while true; do wait -n || sleep 1; done
+fi
+
+giza-touch-pointer >>/var/log/giza/touch.log 2>&1 &
+for (( attempt=0; attempt<100; attempt++ )); do
+  [[ -e /dev/input/giza-touch-pointer ]] && break
+  sleep 0.05
+done
+giza-framebuffer
+"$busybox" fbset
 /usr/lib/Xorg :0 -config /etc/X11/xorg.conf -nolisten tcp -ac -noreset \
   -logfile /var/log/giza/xorg.log vt1 &
 for (( attempt=0; attempt<100; attempt++ )); do
