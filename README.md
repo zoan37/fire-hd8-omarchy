@@ -67,6 +67,23 @@ backups and TWRP are preserved. The next boot is armed for recovery, and the
 `test_desktop_boot.py --restore` restores the verified original boot image
 from TWRP. There is no finished unattended installer.
 
+## Keyboard lag: follow-up from the Moto port
+
+The [Moto G Power 2025 Omarchy port](https://github.com/zoan37/moto-g-power-2025-omarchy)
+now has working GPU rendering and direct KMS display output. Its terminal
+commit-to-frame callback fell from roughly 114 ms on the initial software
+desktop to 13–16 ms on the GPU path. This suggests investigating Fire's
+rendering/presentation bottleneck, rather than only its keyboard event handling.
+
+Fire already includes the same immediate-feedback keyboard patch. Its
+1–4 ms touch-to-keyboard timing and 249–272 ms framebuffer-highlight timing
+measure different stages; the latter is not a measured terminal-letter delay.
+The remaining typing lag has not been fixed by this documentation update.
+
+See [the comparison and next experiments](port/giza/README.md#typing-latency-lessons-from-moto-g-power-2025).
+The Fire's older GPU, kernel and fbdev display need separate compatibility
+work; Moto's driver binaries and product-check patch are not a drop-in port.
+
 ## Files
 
 - `inspect_tablet.py`: read-only checks for the original Fire OS environment.

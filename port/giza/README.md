@@ -131,6 +131,93 @@ used an isolated terminal running `read`, avoiding command execution or edits
 to the user's terminal. These measurements observe `/dev/fb0` memory, not the
 physical panel. Quick physical taps show highlights again according to the user.
 
+## Typing latency: lessons from Moto G Power 2025
+
+Comparison recorded 2026-10-07. The user still remembers a delay between
+pressing Fire's on-screen keyboard and seeing the letter in the terminal.
+This section records a follow-up investigation, not a deployed Fire fix.
+
+The related [Moto port](https://github.com/zoan37/moto-g-power-2025-omarchy)
+has progressed from software rendering to patched Mesa/Kbase on Mali-G57,
+then from nested Weston to direct DRM/KMS Hyprland at 120 Hz. Its
+[GPU bring-up record](https://github.com/zoan37/moto-g-power-2025-omarchy/blob/main/notes/gpu-bringup-20261007.md#gpu-desktop-is-now-the-default-direct-to-the-panel-at-120-hz)
+reports the following terminal timing:
+
+| Moto path | Tap to PTY | Foot commit to frame callback |
+| --- | ---: | ---: |
+| Initial llvmpipe + nested Weston | 2.5 ms | 114 ms |
+| Mesa/Kbase GPU + direct KMS at 120 Hz | 7 ms | 13–16 ms |
+
+The implication for Fire is that fast input delivery can coexist with slow
+visible updates. Fire's paired touch/keyboard logs put event delivery around
+1–4 ms; its synthetic-tap highlight test observed 249–272 ms before a changed
+pixel in framebuffer memory. Those values are not directly comparable to
+Moto's PTY/frame-callback test: they measure different stages and neither
+measures panel illumination. A repeatable terminal-letter test on Fire is
+needed before claiming an improvement in typing latency.
+
+### What transfers
+
+- **Immediate keyboard feedback is already present.** Fire's
+  `patches/wvkbd-immediate-feedback.patch` and Moto's vendored keyboard both
+  flush completed input feedback with `WVKBD_IMMEDIATE_DRAW=1`. Reapplying it
+  is unlikely to address the remaining software-compositor cost.
+- **Measure input and presentation separately.** Use Moto's
+  [input timing probe](https://github.com/zoan37/moto-g-power-2025-omarchy/blob/main/scripts/measure-vegas-input.py)
+  as a method reference. Adapt its Ilitek event injection, device discovery,
+  terminal setup, transport, display geometry and timestamps to Fire's
+  Goodix/Xorg/USB-shell path; do not run the phone-specific script unchanged.
+  Keep samples in an isolated terminal and record timing rather than typed data.
+- **Validate acceleration off-screen first.** Moto's EGL, shader/readback,
+  fence and compositor-style probes show how to establish actual rendered
+  pixels before replacing the working desktop. Driver loading or an EGL
+  extension string alone does not prove successful rendering.
+- **Inspect the frame path.** Fire currently traverses Hyprland/llvmpipe →
+  Weston/pixman → Xorg/fbdev. Its small animation probe was much faster
+  directly through Weston than through Hyprland, which supports investigating
+  Hyprland's software-rendering cost. This is evidence for a bottleneck, not
+  proof that removing one layer will improve real terminal typing.
+
+### Compatibility differences and next experiments
+
+Fire's saved kernel log identifies GPU `0x0720 r1p0` and exposes `/dev/mali0`,
+while `/dev/dri` was absent. See the committed
+[hardware evidence](../../records/native-linux-hardware-details.txt) and
+[first-boot report](../../records/native-linux-first-boot.txt).
+Amazon identifies the 2016 Fire HD 8 GPU as
+[Mali-T720 MP2](https://developer.amazon.com/docs/device-specs/ft-device-specifications-firehd-models.html).
+Mesa classifies T720 as Midgard v4, compared with Moto's Valhall v9 G57.
+Its current [Panfrost table](https://docs.mesa3d.org/drivers/panfrost.html)
+lists T720 at OpenGL ES 2.0 / OpenGL 2.1. This hardware support listing does
+not establish compatibility with Fire's vendor kernel or with Hyprland.
+Current upstream [Hyprland EGL setup](https://github.com/hyprwm/Hyprland/blob/main/src/render/OpenGL.cpp)
+requests GLES 3.2, falling back to 3.0. The actual pinned ARM fork and candidate
+driver must therefore be checked for their API/extension requirements; a
+working GLES 2 render probe would be an intermediate milestone.
+
+The next useful sequence is:
+
+1. Measure Fire's terminal input receipt, commit/frame callback and changed
+   framebuffer pixels using one monotonic timeline. Retain the current desktop
+   as the baseline and test one change at a time.
+2. Survey the existing vendor Mali API/version, accessible device nodes and
+   supported buffer-import/export paths without replacing drivers. Determine
+   whether a matching userspace driver or a Fire-specific Mesa backend can
+   render to a private off-screen target on this Linux 3.18 kernel.
+3. Validate pixels and clean teardown, then check the renderer capabilities
+   required by the pinned Hyprland build. Moto's r48 Valhall binary, hardcoded
+   model-check instruction and 64→72-byte JM adapter are specific to its
+   tested library/kernel pair and must not be reused blindly on T720.
+4. If acceleration is viable, test a nested GPU compositor before considering
+   a display-backend change. Direct KMS requires an actual working DRM display
+   device; Fire's current framebuffer path cannot obtain that by copying
+   Moto's launcher or changing the refresh setting.
+
+Keep the existing four-worker setting, reversible core request and thermal
+limits as the known baseline. Increasing CPU requests or enabling VFR again
+without measuring presentation would not reproduce Moto's GPU improvement.
+Fire GPU acceleration and faster terminal-letter presentation remain unverified.
+
 Sources: [Mesa environment variables](https://docs.mesa3d.org/envvars.html),
 [vendor boost interface](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.c),
 [vendor mode definitions](https://github.com/hexdump0815/linux-amazon-mediatek-mt8163-kernel-source/blob/Fire_HD8_6th_Gen-5.3.6.4-20201006/drivers/misc/mediatek/dynamic_boost/dynamic_boost.h).
