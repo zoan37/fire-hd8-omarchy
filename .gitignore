@@ -20,3 +20,13 @@ __pycache__/
 # Connection secrets stay only on the tablet.
 giza-wifi.conf
 *.nmconnection
+
+# Additional local credentials and publication audit/backups.
+/private/
+/artifacts/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx

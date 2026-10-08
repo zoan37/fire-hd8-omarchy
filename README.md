@@ -115,3 +115,11 @@ must be obtained from their authors under their distribution terms.
 
 Run `python sanitize_records.py` to refresh the committed diagnostic records
 from local raw reports. It does not access or modify the tablet.
+
+## License and related work
+
+Original code and documentation use the [MIT license](LICENSE). Upstream
+components and patches retain their own terms; see [attribution](THIRD_PARTY.md).
+
+Related experiment: [Omarchy on Moto G Power 2025](https://github.com/zoan37/moto-g-power-2025-omarchy),
+with native Mali-G57 GPU acceleration.

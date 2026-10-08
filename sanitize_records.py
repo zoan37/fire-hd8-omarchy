@@ -2,6 +2,7 @@
 """Export diagnostic evidence without device serials or host network addresses."""
 import pathlib
 import re
+import ipaddress
 
 ROOT = pathlib.Path(__file__).resolve().parent
 
@@ -17,6 +18,16 @@ def sanitize(text):
     # Remove terminal escapes before matching addresses split by color codes.
     text = re.sub(r"\b(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}\b", "REDACTED_MAC", text)
     text = re.sub(r"\bwlx[0-9a-fA-F]{12}\b", "REDACTED_MAC_INTERFACE", text)
+    def ipv6(match):
+        try:
+            address = ipaddress.IPv6Address(match.group())
+        except ValueError:
+            return match.group()
+        if address.is_loopback or address.is_unspecified:
+            return match.group()
+        return "REDACTED_IPV6"
+    text = re.sub(r"(?<![\w:])(?:[0-9a-fA-F]{0,4}:){2,}[0-9a-fA-F]{0,4}(?![\w:])",
+                  ipv6, text)
     text = re.sub(r"^(?:Set-Cookie|Cookie|Authorization|Proxy-Authorization):[^\n]*",
                   "[HTTP credential header omitted]", text, flags=re.M | re.I)
     return "\n".join(line.rstrip() for line in text.splitlines()).rstrip() + "\n"
